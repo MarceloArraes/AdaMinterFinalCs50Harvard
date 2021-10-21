@@ -1,0 +1,14 @@
+{
+  "name": "cnodejs",
+  "version": "1.0.0",
+  "description": "to serve me nodejs files in-out ",
+  "main": "cnodejs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
