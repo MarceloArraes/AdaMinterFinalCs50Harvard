@@ -1,0 +1,7 @@
+name: unsig
+channels:
+  - defaults
+dependencies:
+  - python=3.8.10=hdb3f193_7
+  - numpy=1.20.2=py38h2d18471_0
+  - pillow=8.2.0=py38he98fc37_0

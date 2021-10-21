@@ -1,0 +1,143 @@
+#img_art {
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#submit_unsig {
+  margin: 5px;
+  min-width: 130px;
+  height: 40px;
+  color: rgba(220, 236, 241, 0.938);
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 55px;
+  border: none;
+  background: #2196f3;
+  box-shadow: 2px 2px 4px #bbc8ec, -1px -1px 3px #fff;
+  color: #080808;
+}
+#submit_unsig:active {
+  box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+}
+.container {
+  outline: 10% solid var(--color-primary-dark);
+  box-shadow: 200px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "div1 div4 div3"
+    "div5 div5 div6"
+    "div5 div5 div6";
+}
+
+.div1 {
+  padding: 25%;
+  border-radius: 10px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "multipliers multipliers multipliers"
+    "rotations rotations rotations";
+  grid-area: div1;
+}
+
+.multipliers {
+  grid-area: multipliers;
+}
+
+.rotations {
+  grid-area: rotations;
+}
+
+.div3 {
+  padding: 25%;
+  border-radius: 10px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "distributions distributions distributions"
+    "colors colors colors";
+  grid-area: div3;
+}
+
+.distributions {
+  grid-area: distributions;
+}
+
+.colors {
+  grid-area: colors;
+}
+
+.div5 {
+  border-radius: 10px;
+  border: 1px solid;
+  grid-area: div5;
+}
+
+.div4 {
+  border-radius: 10px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "unsig_data unsig_data unsig_data"
+    "unsig_data unsig_data unsig_data"
+    "submit_unsig submit_unsig submit_unsig";
+  grid-area: div4;
+}
+
+.unsig_data {
+  padding-left: 20%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid;
+  grid-area: unsig_data;
+}
+
+.submit_unsig {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: submit_unsig;
+}
+
+#initial {
+  background: radial-gradient(
+      ellipse farthest-side at 76% 77%,
+      rgba(245, 228, 212, 0.25) 4%,
+      rgba(255, 255, 255, 0) calc(4% + 1px)
+    ),
+    radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%),
+    linear-gradient(135deg, #ff0000 0%, #000036 100%),
+    radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%),
+    linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
+  background-blend-mode: normal, normal, screen, overlay, normal;
+}
+
+/* .metadata-container,
+.payment-container {
+  display: none;
+}
+ */

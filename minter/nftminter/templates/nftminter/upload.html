@@ -1,0 +1,269 @@
+{% extends "nftminter/layout.html" %}
+
+{% block body %}
+
+<div id="upload"></div>
+
+
+<script type="text/babel">
+
+  function CreateProject() {
+    let caracteres = "aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbb";
+    const tamain = caracteres.length;
+    console.log(tamain);
+    const [metadata, setMetadata] = useState({
+      title: "",
+      author: "",
+      description: "",
+      fileWebLink: "",
+      arweaveId: "",
+      nsfw: "",
+    });
+    const [payAdress, setPayAdress] = useState("");
+
+    const fieldUpdater = (name) => {
+      console.log("Tracker 1 funcionando");
+      console.log(name);
+
+      function isTitle(evt) {
+        var regex = /[A-Za-z0-9_]{0,32}/;
+
+        console.log(event.keyCode);
+        console.log(event.charCode);
+
+        if (regex.test(evt)) {
+          var title = evt.match(regex)[0];
+          return title;
+        } else {
+          return metadata["title"];
+        }
+      }
+
+      function isOpcional(evt) {
+        var regex = /[\w\s\uhhhh\u{hhhhh}u{hhhh}.@/:$%&*#!¨()\-+=]{0,64}/;
+
+        console.log(evt.length);
+
+        if (regex.test(evt) && evt.length <= 63) {
+          var title = evt.match(regex)[0];
+          return title;
+        } else {
+          return metadata[event.target.name];
+        }
+      }
+
+      if (event.target.name == "title") {
+        console.log("entered title if");
+        setMetadata({
+          ...metadata,
+          [event.target.name]: isTitle(event.target.value),
+        });
+        return;
+      }
+      if (
+        event.target.name == "description" ||
+        event.target.name == "author" ||
+        event.target.name == "fileWebLink" ||
+        event.target.name == "arweaveId"
+      ) {
+        setMetadata({
+          ...metadata,
+          [event.target.name]: isOpcional(event.target.value),
+        });
+        return;
+      } else if (event.target.name == "nsfw") {
+        console.log("entered checkbox");
+        console.log(event.target.checked);
+
+        setMetadata({
+          ...metadata,
+          [event.target.name]: event.target.checked,
+        });
+      }
+    };
+
+    function displayImg() {
+      var file = document.getElementById("file").files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        var image = document.createElement("img");
+        // the result image data
+        image.src = e.target.result;
+        document.body.appendChild(image);
+        document.getElementById("submit_img").style.display = "none";
+        document.getElementById("file").style.display = "none";
+        document.querySelector(".metadata-container").style.display = "block";
+      };
+      // you have to declare the file loading
+      reader.readAsDataURL(file);
+    }
+
+    function displayMetadata() {
+      console.log(metadata);
+      document.querySelector(".payment-container").style.display = "block";
+      if (metadata.nsfw) {
+        document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
+      } else {
+        document.querySelector("#NSFW-checkbox").innerHTML = "";
+      }
+    }
+    
+    function fetchFees() {
+      //requisitar o get-fees.js
+      externalJs()
+      fetch('http://localhost:3000/')
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result)
+        });
+
+      return 234123;
+    }
+    function sendPaymentAdress(address) {
+      fetchFees();
+      //fazer o get-balance antes pra ver se tem saldo.
+      //
+      // enviar metadata+endereço+imagem para o registro na blockchain e no IPFS ao mesmo tempo.
+    }
+
+    return (
+      <div id="projectCreate">
+        <div className="image-container">
+          <p>
+            <h1>Upload Image</h1>
+          </p>
+          <input type="file" name="filename" id="file" />
+          <input type="submit" id="submit_img" onClick={displayImg} />
+        </div>
+        <div className="metadata-container">
+          <label>
+            Metadata:
+            <div>
+              Title:
+              <p>
+                <input
+                  type="text"
+                  onChange={fieldUpdater}
+                  name="title"
+                  value={metadata.title}
+                />
+              </p>
+            </div>
+            <div>
+              Author:
+              <p>
+                <input
+                  type="text"
+                  onChange={fieldUpdater}
+                  name="author"
+                  value={metadata.author}
+                />
+              </p>
+            </div>
+            <div>
+              Description:
+              <p>
+                <input
+                  type="text"
+                  onChange={fieldUpdater}
+                  name="description"
+                  value={metadata.description}
+                />
+              </p>
+            </div>
+            <div>
+              File Web Link:
+              <p>
+                <input
+                  type="text"
+                  onChange={fieldUpdater}
+                  name="fileWebLink"
+                  value={metadata.fileWebLink}
+                />
+              </p>
+            </div>
+            <div>
+              Arweave ID:
+              <p>
+                <input
+                  type="text"
+                  onChange={fieldUpdater}
+                  name="arweaveId"
+                  value={metadata.arweaveId}
+                />
+              </p>
+            </div>
+            <div>
+              NSFW:
+              <p>
+                <input type="checkbox" onChange={fieldUpdater} name="nsfw" />
+              </p>
+            </div>
+            <div>
+              <input
+                type="submit"
+                id="submit_metadata"
+                onClick={displayMetadata}
+              />
+            </div>
+          </label>
+        </div>
+        <div className="payment-container">
+          <div>
+            Title:
+            <p>
+              <a>{metadata.title}</a>
+            </p>
+            Author:
+            <p>
+              <a>{metadata.author}</a>
+            </p>
+            Description:
+            <p>
+              <a>{metadata.description}</a>
+            </p>
+            Web Link:
+            <p>
+              <a>{metadata.fileWebLink}</a>
+            </p>
+            Arwave Id:
+            <p>
+              <a>{metadata.arweaveId}</a>
+            </p>
+            <p>
+              <a id="NSFW-checkbox">{metadata.nsfw}</a>
+            </p>
+          </div>
+          <div className="payment-fee"></div>
+          <div className="payment-adress">
+            <input
+              type="text"
+              onChange={() => setPayAdress(this)}
+              name="adress"
+              value={payAdress}
+            />
+            <input
+              type="submit"
+              id="submit_adress"
+              onClick={sendPaymentAdress}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  class Initial extends React.Component {
+    render() {
+      return (
+        <div>
+          <CreateProject />
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<Initial />, document.querySelector("#upload"));
+</script>
+{% endblock %}
