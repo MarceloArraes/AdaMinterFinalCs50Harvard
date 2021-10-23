@@ -110,15 +110,20 @@
     }
     
     function fetchFees() {
-      //requisitar o get-fees.js
-      externalJs()
-      fetch('http://localhost:3000/')
+
+      fetch('node',{
+            method: "post",
+             headers: {
+                 "Content-Type": "application/json"
+            },
+            body: JSON.stringify(metadata)
+ })
         .then((response) => response.json())
         .then((result) => {
           console.log(result)
+          return result;
         });
 
-      return 234123;
     }
     function sendPaymentAdress(address) {
       fetchFees();

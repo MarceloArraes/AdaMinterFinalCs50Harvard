@@ -15,6 +15,12 @@ const path = require("path");
 
 const dir = path.join(os.homedir(), "minter2/minter/nftminter");
 
+console.log("ENTERED FEE");
+
+
+function exportFee(metadata2) {
+  console.log(`yup simple as that ${metadata2}`);
+
 const shelleyPath = path.join(
   os.homedir(),
   "cardano-my-node",
@@ -83,3 +89,7 @@ const tx = {
 
 const raw = feeCalcule(tx);
 console.log(raw);
+return raw;
+};
+
+module.exports = exportFee;

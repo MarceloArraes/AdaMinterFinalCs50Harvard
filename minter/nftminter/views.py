@@ -11,12 +11,24 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 import random
 import js2py
+from django.views.decorators.csrf import csrf_exempt
+import requests
+
+
 
 def index(request):
     return render(request, "nftminter/index.html")
 
+@csrf_exempt
 def node(request):
-    return HttpResponseRedirect("http://localhost:3000/")
+    if(request.method == 'POST'):
+        metadata = json.loads(request.body)
+        print(f"this is the method: {request.method}. \n and the body title:{metadata['title']}")
+    url = 'http://localhost:3000/'
+    headers = {'metadata': json.dumps(metadata)}
+    response = requests.get(url, headers=headers)
+    print(response)
+    return JsonResponse({"message": metadata, 'fee':"fee value"}, status=201)
 
 def upload(request):
     return render(request, "nftminter/upload.html")
