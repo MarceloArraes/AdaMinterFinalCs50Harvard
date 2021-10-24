@@ -10,6 +10,7 @@ cardano-cli transaction calculate-min-fee
  */
 
 const CardanocliJs = require("cardanocli-js");
+const { json } = require("express");
 const os = require("os");
 const path = require("path");
 
@@ -18,8 +19,12 @@ const dir = path.join(os.homedir(), "minter2/minter/nftminter");
 console.log("ENTERED FEE");
 
 
-function exportFee(metadata2) {
-  console.log(`yup simple as that ${metadata2}`);
+function exportFee(meta) {
+  console.log(`export Fee metadata: ${meta}`);
+  meta = JSON.parse(meta)
+  console.log(`export Fee metadata: ${meta["title"]}`);
+  console.log(`export Fee metadata: ${meta['title']}`);
+
 
 const shelleyPath = path.join(
   os.homedir(),
@@ -52,9 +57,9 @@ const mintScript = {
 
 const policy = cardanocliJs.transactionPolicyid(mintScript);
 
-ASSET_NAME = "MarceloNFT";
+ASSET_NAME = meta["title"];
 
-const MARCELOCOIN = policy + ".MarceloNFT";
+const COIN = policy + "." + ASSET_NAME;
 
 const metadata = {
   721: {
@@ -62,11 +67,12 @@ const metadata = {
       [ASSET_NAME]: {
         name: ASSET_NAME,
         image: "ipfs://QmQqzMTavQgT4f4T5v6PWBp7XNKtoPmC9jvn12WPT3gkSE",
-        description: "Super Fancy Berry Space Green NFT",
+        description: meta["description"],
         type: "image/png",
-        src: "ipfs://Qmaou5UzxPmPKVVTM9GzXPrDufP55EDZCtQmpy3T64ab9N",
+        src: meta["fileWebLink"],
         // other properties of your choice
-        authors: ["Thaline", "Ssanguinetti"],
+        authors: meta["author"],
+        nsfw: meta["nsfw"],
       },
     },
   },
@@ -77,18 +83,18 @@ const tx = {
   txOut: [
     {
       address: wallet.paymentAddr,
-      value: { ...wallet.balance().value, [MARCELOCOIN]: 1 },
+      value: { ...wallet.balance().value, [COIN]: 1 },
     },
   ],
   mint: [
-    { action: "mint", quantity: 1, asset: MARCELOCOIN, script: mintScript },
+    { action: "mint", quantity: 1, asset: COIN, script: mintScript },
   ],
   metadata,
   witnessCount: 2,
 };
 
 const raw = feeCalcule(tx);
-console.log(raw);
+console.log(metadata['721']);
 return raw;
 };
 

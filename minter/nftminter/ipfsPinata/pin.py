@@ -10,8 +10,11 @@ print ("img_path", img_path)
 print(sys.argv)
 
 
+#Windows NODE_PATH:
+#node_path = 'C:\\Program Files\\nodejs\\node.exe'
+#Linux NODE_PATH:
+node_path = '/usr/bin/node'
 
-node_path = 'C:\\Program Files\\nodejs\\node.exe'
 print(f'{node_path}')
 
 base_metadata = json.load(open(metadata_path))

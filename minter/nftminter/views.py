@@ -22,13 +22,16 @@ def index(request):
 @csrf_exempt
 def node(request):
     if(request.method == 'POST'):
-        metadata = json.loads(request.body)
-        print(f"this is the method: {request.method}. \n and the body title:{metadata['title']}")
+        metadataOrigem = json.loads(request.body)
+        print(f"this is the method: {request.method}. \n and the body title:{metadataOrigem['title']}")
     url = 'http://localhost:3000/'
-    headers = {'metadata': json.dumps(metadata)}
+    headers = {'metadata': json.dumps(metadataOrigem)}
+    #fee_value = {'fee':json.dumps(fee)}
     response = requests.get(url, headers=headers)
     print(response)
-    return JsonResponse({"message": metadata, 'fee':"fee value"}, status=201)
+    cnodeReturned = json.loads(response.content)
+    print(cnodeReturned["metadata"])
+    return JsonResponse({"metadata": cnodeReturned["metadata"], 'fee':cnodeReturned["fee"]}, status=201)
 
 def upload(request):
     return render(request, "nftminter/upload.html")
