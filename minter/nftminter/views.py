@@ -13,14 +13,33 @@ import random
 import js2py
 from django.views.decorators.csrf import csrf_exempt
 import requests
-
+import random
 
 
 def index(request):
     return render(request, "nftminter/index.html")
 
 @csrf_exempt
+def balanceCheck(request):
+    metadataOrigem = json.loads(request.body)
+    print("entering BalanceCheck on Views.")
+    url = 'http://localhost:3000/balanceCheck'
+    headers = {'metadata': json.dumps(metadataOrigem)}
+    #fee_value = {'fee':json.dumps(fee)}
+    response = requests.get(url, headers=headers)
+    cnodeReturned = json.loads(response.content)
+    print(cnodeReturned["balance"])
+
+    return JsonResponse({"balance": cnodeReturned["balance"]})
+
+
+@csrf_exempt
 def node(request):
+    #here i have to implement something to fix the random to the user/browser. LOCALSTORAGE maybe? 
+    profitfee = 3000000.0
+    #profitfee = random.uniform(3.1,3.2)
+    #profitfee = round(profitfee *1000000,4)
+    #profitfee = 3000000
     if(request.method == 'POST'):
         metadataOrigem = json.loads(request.body)
         print(f"this is the method: {request.method}. \n and the body title:{metadataOrigem['title']}")
@@ -28,10 +47,8 @@ def node(request):
     headers = {'metadata': json.dumps(metadataOrigem)}
     #fee_value = {'fee':json.dumps(fee)}
     response = requests.get(url, headers=headers)
-    print(response)
     cnodeReturned = json.loads(response.content)
-    print(cnodeReturned["metadata"])
-    return JsonResponse({"metadata": cnodeReturned["metadata"], 'fee':cnodeReturned["fee"]}, status=201)
+    return JsonResponse({"metadata": cnodeReturned["metadata"], 'fee':float(cnodeReturned["fee"])+profitfee, 'wallet':cnodeReturned["wallet"]}, status=201)
 
 def upload(request):
     return render(request, "nftminter/upload.html")
@@ -95,10 +112,6 @@ def register(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "nftminter/register.html")
-
-
-
-
 
 @csrf_exempt
 def createUnsig(request):

@@ -1,6 +1,15 @@
 // create get-balance.js
 const cardano = require("./cardano");
 
-const sender = cardano.wallet("ADAPI2");
+function getWalletData(walletname){
 
-console.log(sender.balance().value, sender.paymentAddr);
+const sender = cardano.wallet(walletname);
+
+const senderadress = sender.paymentAddr;
+const balanceValue = sender.balance().value;
+
+return JSON.stringify({senderadress, balanceValue})
+
+}
+
+module.exports = getWalletData;

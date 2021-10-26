@@ -10,7 +10,6 @@
   function CreateProject() {
     let caracteres = "aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbb";
     const tamain = caracteres.length;
-    console.log(tamain);
     const [metadata, setMetadata] = useState({
       title: "",
       author: "",
@@ -19,17 +18,12 @@
       arweaveId: "",
       nsfw: "",
     });
-    const [payAdress, setPayAdress] = useState("");
+    const [receiverBalance, setReceiverBalance] = useState(0);
+    const [fees, setFees]=useState(0)
 
     const fieldUpdater = (name) => {
-      console.log("Tracker 1 funcionando");
-      console.log(name);
-
       function isTitle(evt) {
         var regex = /[A-Za-z0-9_]{0,32}/;
-
-        console.log(event.keyCode);
-        console.log(event.charCode);
 
         if (regex.test(evt)) {
           var title = evt.match(regex)[0];
@@ -42,8 +36,6 @@
       function isOpcional(evt) {
         var regex = /[\w\s\uhhhh\u{hhhhh}u{hhhh}.@/:$%&*#!¨()\-+=]{0,64}/;
 
-        console.log(evt.length);
-
         if (regex.test(evt) && evt.length <= 63) {
           var title = evt.match(regex)[0];
           return title;
@@ -53,7 +45,6 @@
       }
 
       if (event.target.name == "title") {
-        console.log("entered title if");
         setMetadata({
           ...metadata,
           [event.target.name]: isTitle(event.target.value),
@@ -72,13 +63,19 @@
         });
         return;
       } else if (event.target.name == "nsfw") {
-        console.log("entered checkbox");
-        console.log(event.target.checked);
 
-        setMetadata({
+        if(event.target.checked){
+          setMetadata({
           ...metadata,
-          [event.target.name]: event.target.checked,
+          [event.target.name]: 'true',
         });
+        }else if(!event.target.checked){
+          setMetadata({
+          ...metadata,
+          [event.target.name]: 'false',
+        });
+        }
+
       }
     };
 
@@ -99,19 +96,47 @@
       reader.readAsDataURL(file);
     }
 
-    function displayMetadata() {
-      console.log(metadata);
+    async function displayMetadata() {
       document.querySelector(".payment-container").style.display = "block";
       if (metadata.nsfw) {
         document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
       } else {
         document.querySelector("#NSFW-checkbox").innerHTML = "";
       }
-    }
-    
-    function fetchFees() {
+      var balance = await balanceCheck()
+      console.log("DISPLAY METADATA BALANCE LOG");
+      console.log(balance.balance);
 
-      fetch('node',{
+      setReceiverBalance(balance.balance)
+
+      let metaAndFee= await fetchFees()
+
+      setFees(metaAndFee.fee)
+
+      console.log("FEE: ");
+      console.log(metaAndFee.fee);
+
+      document.querySelector('.fee').innerHTML = metaAndFee.fee;
+      document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
+
+    }
+
+/*     setInterval(async function(){ 
+        var newBalance = await balanceCheck()
+
+        if(newBalance == fees+receiverBalance)
+          console.log("MONEY ENTERED");
+        else{
+          console.log("setInterval: ");
+          console.log(newBalance);
+          console.log(fees);
+          console.log(receiverBalance);
+        }
+       }, 4500); */
+
+    
+    async function fetchFees() {
+      let fees = await fetch('node',{
             method: "post",
              headers: {
                  "Content-Type": "application/json"
@@ -123,13 +148,51 @@
           console.log(result)
           return result;
         });
-
+        return fees
     }
-    function sendPaymentAdress(address) {
-      fetchFees();
+    
+    async function balanceCheck() {
+      let balance = await fetch('balanceCheck',{
+            method: "post",
+             headers: {
+                 "Content-Type": "application/json"
+            },
+            body: JSON.stringify(metadata)
+ })
+        .then((response) => response.json())
+        .then((result) => {
+          return result;
+        });
+        return balance;
+    }
+
+    async function copyAdress(address) {
+        /* Get the text field */
+        var copyText = document.querySelector(".content")
+
+      /* Select the text field */
+      //copyText.select();
+      //copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.innerHTML);
+
+      /* Alert the copied text */
+      alert("Copied the text: " + copyText.innerHTML);
+
+      /* let metaAndFee= await fetchFees()
+      console.log(metaAndFee.fee);
+
+      document.querySelector('.fee').innerHTML = metaAndFee.fee;
+      document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress; */
       //fazer o get-balance antes pra ver se tem saldo.
-      //
       // enviar metadata+endereço+imagem para o registro na blockchain e no IPFS ao mesmo tempo.
+      var newBalance = await balanceCheck()
+      console.log(newBalance['balance']);
+      console.log(fees);
+      console.log(receiverBalance);
+      console.log(fees+receiverBalance);
+      
     }
 
     return (
@@ -242,16 +305,13 @@
           </div>
           <div className="payment-fee"></div>
           <div className="payment-adress">
-            <input
-              type="text"
-              onChange={() => setPayAdress(this)}
-              name="adress"
-              value={payAdress}
-            />
+            <p className="fee"></p>
+            <p className="content"></p>
             <input
               type="submit"
-              id="submit_adress"
-              onClick={sendPaymentAdress}
+              value="Copy Adress"
+              id="copy_adress"
+              onClick={copyAdress}
             />
           </div>
         </div>
