@@ -118,22 +118,40 @@
 
       document.querySelector('.fee').innerHTML = metaAndFee.fee;
       document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
-
     }
 
-/*     setInterval(async function(){ 
+/*      setInterval(async function(){ 
         var newBalance = await balanceCheck()
 
         if(newBalance == fees+receiverBalance)
           console.log("MONEY ENTERED");
         else{
           console.log("setInterval: ");
-          console.log(newBalance);
+          console.log(newBalance['balance']);
           console.log(fees);
           console.log(receiverBalance);
+          console.log(fees+receiverBalance);
         }
-       }, 4500); */
+         }, 5000);  */
+         useEffect(() => {
+          const timer = setInterval(async() => {
+            var newBalance = await balanceCheck()
+            console.log("setInterval: ");
+            console.log(newBalance['balance']);
+            console.log(fees);
+            console.log(receiverBalance);
+            console.log(fees+receiverBalance);
+            if(newBalance['balance']==fees+receiverBalance){
+              console.log("ABSOLUTE SUCESS!!!!!!!!");
+              clearInterval(timer);
+            }
+              else {console.log("Not Payed yet!");
+            }
 
+          }, 10000);
+               // clearing interval
+    return () => clearInterval(timer);
+  });
     
     async function fetchFees() {
       let fees = await fetch('node',{
@@ -170,21 +188,12 @@
         /* Get the text field */
         var copyText = document.querySelector(".content")
 
-      /* Select the text field */
-      //copyText.select();
-      //copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
       /* Copy the text inside the text field */
       navigator.clipboard.writeText(copyText.innerHTML);
 
       /* Alert the copied text */
-      alert("Copied the text: " + copyText.innerHTML);
+      alert("Copied: " + copyText.innerHTML);
 
-      /* let metaAndFee= await fetchFees()
-      console.log(metaAndFee.fee);
-
-      document.querySelector('.fee').innerHTML = metaAndFee.fee;
-      document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress; */
       //fazer o get-balance antes pra ver se tem saldo.
       // enviar metadata+endereço+imagem para o registro na blockchain e no IPFS ao mesmo tempo.
       var newBalance = await balanceCheck()
