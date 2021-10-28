@@ -4,6 +4,20 @@ const path = require("path");
 
 const dir = path.join(os.homedir(), "minter2/minter/nftminter");
 
+console.log("Mint Asset js file");
+
+function exportMintConfirmation(meta, walletAdress){
+
+  console.log("exportMintConfirmation function");
+  console.log(meta);
+  console.log(walletAdress);
+
+
+  //will substitute all TXout wallet.paymentAddr for the adress from the input.
+  //Maybe i will be able to mint using my local wallet and send to the client.
+  // It would be great to get the adress of the user only looking at the transaction history of the wallet adapi2;
+  // but that seems dificult for know, so i will ask the user for their adress instead.
+
 const shelleyPath = path.join(
   os.homedir(),
   "cardano-my-node",
@@ -15,6 +29,8 @@ const cardanocliJs = new CardanocliJs({
   dir: dir,
   shelleyGenesisPath: shelleyPath,
 });
+const wallet = cardanocliJs.wallet("ADAPI2");
+console.log(wallet.paymentAddr);
 
 const createTransaction = (tx) => {
   let raw = cardanocliJs.transactionBuildRaw(tx);
@@ -33,9 +49,6 @@ const signTransaction = (wallet, tx, script) => {
   });
 };
 
-const wallet = cardanocliJs.wallet("ADAPI2");
-console.log(wallet.paymentAddr);
-
 const mintScript = {
   keyHash: cardanocliJs.addressKeyHash(wallet.name),
   type: "sig",
@@ -44,10 +57,12 @@ const mintScript = {
 const policy = cardanocliJs.transactionPolicyid(mintScript);
 
 console.log(policy);
-ASSET_NAME = "MarceloNFT";
 
-const MARCELOCOIN = policy + ".MarceloNFT";
-console.log(MARCELOCOIN);
+ASSET_NAME = meta["title"];
+
+const COIN = policy + "." + ASSET_NAME;
+
+console.log(COIN);
 
 const metadata = {
   721: {
@@ -55,11 +70,12 @@ const metadata = {
       [ASSET_NAME]: {
         name: ASSET_NAME,
         image: "ipfs://QmQqzMTavQgT4f4T5v6PWBp7XNKtoPmC9jvn12WPT3gkSE",
-        description: "Super Fancy Berry Space Green NFT",
+        description: meta["description"],
         type: "image/png",
-        src: "ipfs://Qmaou5UzxPmPKVVTM9GzXPrDufP55EDZCtQmpy3T64ab9N",
+        src: meta["fileWebLink"],
         // other properties of your choice
-        authors: ["Thaline", "Ssanguinetti"],
+        authors: meta["author"],
+        nsfw: meta["nsfw"],
       },
     },
   },
@@ -69,12 +85,12 @@ const tx = {
   txIn: wallet.balance().utxo,
   txOut: [
     {
-      address: wallet.paymentAddr,
-      value: { ...wallet.balance().value, [MARCELOCOIN]: 1 },
+      address: walletAdress,
+      value: { ...wallet.balance().value, [COIN]: 1 },
     },
   ],
   mint: [
-    { action: "mint", quantity: 1, asset: MARCELOCOIN, script: mintScript },
+    { action: "mint", quantity: 1, asset: COIN, script: mintScript },
   ],
   metadata,
   witnessCount: 2,
@@ -87,3 +103,10 @@ console.log(signed);
 console.log(cardanocliJs.transactionView({ txFile: signed }));
 const txHash = cardanocliJs.transactionSubmit(signed);
 console.log(txHash);
+
+//just a confirmation for now.
+return JSON.stringify({txHash, signed})
+
+}
+
+module.exports = exportMintConfirmation;

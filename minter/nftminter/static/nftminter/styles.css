@@ -5,7 +5,7 @@
   display: none;
 }
 
-#submit_unsig {
+#submit_unsig,button {
   margin: 5px;
   min-width: 130px;
   height: 40px;
@@ -23,7 +23,7 @@
   box-shadow: 2px 2px 4px #bbc8ec, -1px -1px 3px #fff;
   color: #080808;
 }
-#submit_unsig:active {
+button,#submit_unsig:active {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
 .container {

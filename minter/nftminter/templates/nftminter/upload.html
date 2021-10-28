@@ -19,7 +19,9 @@
       nsfw: "",
     });
     const [receiverBalance, setReceiverBalance] = useState(0);
-    const [fees, setFees]=useState(0)
+    const [fees, setFees]=useState(0);
+    
+    let paytest = false;
 
     const fieldUpdater = (name) => {
       function isTitle(evt) {
@@ -80,6 +82,8 @@
     };
 
     function displayImg() {
+      //here i have to implement the registration on the FPS
+      //Also i have to limit the size and type of the files.
       var file = document.getElementById("file").files[0];
       var reader = new FileReader();
 
@@ -104,13 +108,12 @@
         document.querySelector("#NSFW-checkbox").innerHTML = "";
       }
       var balance = await balanceCheck()
+      let metaAndFee= await fetchFees()
+
       console.log("DISPLAY METADATA BALANCE LOG");
       console.log(balance.balance);
 
       setReceiverBalance(balance.balance)
-
-      let metaAndFee= await fetchFees()
-
       setFees(metaAndFee.fee)
 
       console.log("FEE: ");
@@ -120,20 +123,8 @@
       document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
     }
 
-/*      setInterval(async function(){ 
-        var newBalance = await balanceCheck()
-
-        if(newBalance == fees+receiverBalance)
-          console.log("MONEY ENTERED");
-        else{
-          console.log("setInterval: ");
-          console.log(newBalance['balance']);
-          console.log(fees);
-          console.log(receiverBalance);
-          console.log(fees+receiverBalance);
-        }
-         }, 5000);  */
          useEffect(() => {
+           if(fees>0){
           const timer = setInterval(async() => {
             var newBalance = await balanceCheck()
             console.log("setInterval: ");
@@ -141,17 +132,26 @@
             console.log(fees);
             console.log(receiverBalance);
             console.log(fees+receiverBalance);
-            if(newBalance['balance']==fees+receiverBalance){
+            if(newBalance['balance']==fees+receiverBalance && fees>0 && receiverBalance!=newBalance['balance'] || paytest){
               console.log("ABSOLUTE SUCESS!!!!!!!!");
+              //CANCELED i will call it on the submit of the user adress//now i can call for the mint-asset 
+              //Here i will code the revealing of the className="useradress-container"
+              document.getElementById("submit_img").style.display = "none";
+              document.getElementById("file").style.display = "none";
+              document.querySelector(".metadata-container").style.display = "none";
+              document.querySelector(".useradress-container").style.display = "block";
               clearInterval(timer);
+
             }
               else {console.log("Not Payed yet!");
             }
-
-          }, 10000);
+          
+          }, 4000);
                // clearing interval
     return () => clearInterval(timer);
-  });
+        }
+        else console.log("Waiting metadata");
+  },[fees]);
     
     async function fetchFees() {
       let fees = await fetch('node',{
@@ -168,6 +168,31 @@
         });
         return fees
     }
+
+    async function fetchMinter(mintInfo){
+      let minted = await fetch('mintAsset',{
+            method: "post",
+             headers: {
+                 "Content-Type": "application/json"
+            },
+            //Another way to send the data.
+
+            /*body: JSON.stringify({
+              metadata:metadata,
+              adress: adress
+            }) */
+            body: JSON.stringify(mintInfo)
+
+ })
+        .then((response) => response.json())
+        .then((result) => {
+          console.log("result from fetchMinter: ");
+          console.log(result);
+          return result;
+        });
+        return minted;
+    }
+
     
     async function balanceCheck() {
       let balance = await fetch('balanceCheck',{
@@ -184,7 +209,19 @@
         return balance;
     }
 
-    async function copyAdress(address) {
+    async function mintAsset() {
+      let adress = document.querySelector("#user_adress").value
+      var mintInfo = {"adress": adress};
+      
+      Object.assign(mintInfo, metadata)
+        
+      let cnodeReturn = await fetchMinter(mintInfo);
+
+      console.log("Return from fetchMinter() on mintAsset(): ");
+      console.log(cnodeReturn);
+    }
+
+    async function copyAdress() {
         /* Get the text field */
         var copyText = document.querySelector(".content")
 
@@ -201,6 +238,7 @@
       console.log(fees);
       console.log(receiverBalance);
       console.log(fees+receiverBalance);
+      paytest = true;
       
     }
 
@@ -324,6 +362,16 @@
             />
           </div>
         </div>
+        <div className="useradress-container">
+            <p>Payment confirmed.</p>
+            <p>Paste the adress that you want to receive the NFT:</p>
+            <input id="user_adress" type="text" />
+            <button
+              type="button"
+              value="Submit Adress"
+              onClick={mintAsset}
+            >Submit Adress</button>
+          </div>
       </div>
     );
   }

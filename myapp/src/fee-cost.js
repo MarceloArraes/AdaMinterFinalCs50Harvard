@@ -20,10 +20,8 @@ console.log("ENTERED FEE");
 
 
 function exportFee(meta) {
-  //console.log(`export Fee metadata: ${meta}`);
-  meta = JSON.parse(meta)
-  //console.log(`export Fee metadata title: ${meta['title']}`);
 
+  meta = JSON.parse(meta)
 
 const shelleyPath = path.join(
   os.homedir(),
@@ -92,9 +90,8 @@ const tx = {
   witnessCount: 2,
 };
 
-const raw = feeCalcule(tx);
-//console.log(metadata['721']);
-return raw;
+const fee = feeCalcule(tx);
+return fee;
 };
 
 module.exports = exportFee;

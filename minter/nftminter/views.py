@@ -31,6 +31,24 @@ def balanceCheck(request):
     print(cnodeReturned["balance"])
 
     return JsonResponse({"balance": cnodeReturned["balance"]})
+    
+@csrf_exempt
+def mintAsset(request):
+    mintData = json.loads(request.body)
+    print("entering mintAsset on Views.")
+    print(mintData)
+
+
+    url = 'http://localhost:3000/mintAsset'
+    headers = {'metadata': json.dumps(mintData)}
+    response = requests.get(url, headers=headers)
+    cnodeReturned = json.loads(response.content)
+    print(cnodeReturned["message"])
+    print(cnodeReturned["metadata"])
+    print(cnodeReturned["mintConfirmation"])
+    return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "mintConfirmation":cnodeReturned["mintConfirmation"]})
+    
+    
 
 
 @csrf_exempt

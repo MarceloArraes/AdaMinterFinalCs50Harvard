@@ -13,4 +13,5 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("node", views.node, name="node"),
     path("balanceCheck", views.balanceCheck, name="balanceCheck"),
+    path("mintAsset", views.mintAsset, name="mintAsset"),
 ]

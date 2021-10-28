@@ -10,15 +10,33 @@ app.use(cors())
 
 app.get('/balanceCheck', (req, res) => {
   console.log("entered balancheCheck on CNODEJS");
-  //metad = JSON.parse(req.headers.metadata);
+  
   var walletData = require('./src/get-balance')
   var ADAPI2 = walletData("ADAPI2")
   var wallet = JSON.parse(ADAPI2)
+
   console.log(wallet["balanceValue"]["lovelace"]);
 
 
   res.json({balance: wallet["balanceValue"]["lovelace"]})
 })
+
+app.get('/mintAsset', (req, res) => {
+  console.log("entered MINT ASSET CNODE");
+  //I have to get the USER ADRESS and METADATA and send it to mintData;
+  const metad = JSON.parse(req.headers.metadata);
+  //const adress = JSON.parse(req.headers.adress);
+  const adress = metad.adress;
+  delete metad.adress;
+  var mintData = require('./src/mint-asset');
+  
+  
+  var mintConfirmation = mintData(metad ,adress);
+  console.log(mintConfirmation);
+
+  res.json({message: "Entered the MINT ASSET CNODEJS", metadata: metad, adress: adress, mintConfirmation: mintConfirmation})
+})
+
 
 
 
@@ -37,8 +55,6 @@ app.get('/', (req, res) => {
   var fee = require('./src/fee-cost.js');
   var walletData = require('./src/get-balance')
 
-  JSON.parse
-  
   console.log("FIRST CALL FOR FEE:"+fee(req.headers.metadata));
 
   //res.status(201).json({message: "Like retrieved successfully.",fee:fee(metad), metadata:req.headers['metadata']})
