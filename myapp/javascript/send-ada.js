@@ -16,7 +16,7 @@ console.log(sender.balance());
 
 //this is the testnet faucet
 const receiver =
-  "addr_test1qpfrpw69wrxcd0ducd024kl8kljk58m3jhpgc04klqtwv9awyfwyc9q4y022dyp9daah76zd7cpexwypxg9kh5u2x04qhcvxgs";
+  "addr_test1qp54wrul5q9whumqtfs4vkumuhynn7hah7phy07tf0gtmfae0vkdu39q0cryqp0jt5ncgt6jwqs729ezlc2rzalqp7csracyxs";
 //   'addr_test1qqr585tvlc7ylnqvz8pyqwauzrdu0mxag3m7q56grgmgu7sxu2hyfhlkwuxupa9d5085eunq2qywy7hvmvej456flknswgndm3';
 
 //this is Wallet1

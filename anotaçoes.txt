@@ -1,0 +1,45 @@
+Aqui tanto:
+ cardanocliJs.queryUtxo(wallet.paymentAddr), 
+Quanto:
+ wallet.balance().utxo;
+
+ dão o mesmo resultado. 
+ Pois não tem diferentes utxo ou tokens dentro da carteira local q eu usei ADAPI3.
+
+
+[
+  {
+    txHash: '844aa5b433085f1ee686cb5f81f545395e08a209f71db2b235528f006979bae2',
+    txId: 0,
+    value: { lovelace: 44800839 }
+  }
+]
+
+E aqui é como ficam quando eu uso uma q tem um token dentro - carteira ADAPI2:
+
+[
+  {
+    txHash: '9138ffbfeb2a7dc92f0409952fa58bcd47e9cadb7386e08db0e08f6cf3b1bcc4',
+    txId: 0,
+    value: {
+      lovelace: 609217172,
+      '91b60c1a536dc8f4c8dfb7c85b1bf066aa9e1b34f19188bbfb6a3a89.marceloBILU': 1
+    }
+  }
+]
+
+Command failed: transaction submit  Error: Error while submitting tx: ShelleyTxValidationError 
+ShelleyBasedEraAlonzo (ApplyTxError [UtxowFailure (WrappedShelleyEraFailure (UtxoFailure (ValueNotConservedUTxO 
+(Value 609217172 (fromList [(PolicyID {policyID = ScriptHash "91b60c1a536dc8f4c8dfb7c85b1bf066aa9e1b34f19188bbfb6a3a89"},
+fromList [("SURFCOIN",1),("marceloBILU",1)])])) (Value 609217172 (fromList [(PolicyID {
+  policyID = ScriptHash "91b60c1a536dc8f4c8dfb7c85b1bf066aa9e1b34f19188bbfb6a3a89"},fromList [("SURFCOIN",1)])])))))])
+
+Error: Command failed: cardano-cli transaction submit --testnet-magic 1097911063 
+--tx-file /home/cnode/minter2/minter/nftminter/tmp/tx_czgxf95hf.signed
+
+Command failed: transaction submit  Error: Error while submitting tx: ShelleyTxValidationError 
+ShelleyBasedEraAlonzo (ApplyTxError [UtxowFailure (WrappedShelleyEraFailure (UtxoFailure (ValueNotConservedUTxO 
+(Value 609217172 (fromList [(PolicyID {policyID = ScriptHash "91b60c1a536dc8f4c8dfb7c85b1bf066aa9e1b34f19188bbfb6a3a89"},
+fromList [("SURFCOIN",1),("marceloBILU",1)])])) (Value 609217172 (fromList [(PolicyID {policyID = ScriptHash 
+"91b60c1a536dc8f4c8dfb7c85b1bf066aa9e1b34f19188bbfb6a3a89"},fromList [("SURFCOIN",1)])])))))])
+

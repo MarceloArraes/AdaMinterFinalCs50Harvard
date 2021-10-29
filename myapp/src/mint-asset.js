@@ -1,4 +1,5 @@
 const CardanocliJs = require("cardanocli-js");
+const { log } = require("console");
 const os = require("os");
 const path = require("path");
 
@@ -6,31 +7,32 @@ const dir = path.join(os.homedir(), "minter2/minter/nftminter");
 
 console.log("Mint Asset js file");
 
-function exportMintConfirmation(meta, walletAdress){
+function exportMintConfirmation(meta, receiver){
 
   console.log("exportMintConfirmation function");
   console.log(meta);
-  console.log(walletAdress);
+  console.log(receiver);
 
 
-  //will substitute all TXout wallet.paymentAddr for the adress from the input.
-  //Maybe i will be able to mint using my local wallet and send to the client.
-  // It would be great to get the adress of the user only looking at the transaction history of the wallet adapi2;
+  //will substitute all TXout sender.paymentAddr for the adress from the input.
+  //Maybe i will be able to mint using my local sender wallet and send to the client.
+  // It would be great to get the adress of the user only looking at the transaction history of the sender wallet adapi2;
   // but that seems dificult for know, so i will ask the user for their adress instead.
 
-const shelleyPath = path.join(
+const alonzoPath = path.join(
   os.homedir(),
   "cardano-my-node",
-  "testnet-shelley-genesis.json"
+  "testnet-alonzo-genesis.json"
 );
 
 const cardanocliJs = new CardanocliJs({
   network: "testnet-magic 1097911063",
   dir: dir,
-  shelleyGenesisPath: shelleyPath,
+  alonzoGenesisPath: alonzoPath,
 });
-const wallet = cardanocliJs.wallet("ADAPI2");
-console.log(wallet.paymentAddr);
+
+const sender = cardanocliJs.wallet("ADAPI3");
+console.log(sender.paymentAddr);
 
 const createTransaction = (tx) => {
   let raw = cardanocliJs.transactionBuildRaw(tx);
@@ -42,15 +44,15 @@ const createTransaction = (tx) => {
   return cardanocliJs.transactionBuildRaw({ ...tx, fee });
 };
 
-const signTransaction = (wallet, tx, script) => {
+const signTransaction = (sender, tx, script) => {
   return cardanocliJs.transactionSign({
-    signingKeys: [wallet.payment.skey, wallet.payment.skey],
+    signingKeys: [sender.payment.skey, sender.payment.skey],
     txBody: tx,
   });
 };
 
 const mintScript = {
-  keyHash: cardanocliJs.addressKeyHash(wallet.name),
+  keyHash: cardanocliJs.addressKeyHash(sender.name),
   type: "sig",
 };
 
@@ -81,12 +83,25 @@ const metadata = {
   },
 };
 
+  //console.log(sender.balance().utxo);
+  console.log(cardanocliJs.queryUtxo(sender.paymentAddr));
+  //console.log(sender.balance().utxo);
+  console.log(sender.paymentAddr);
+  console.log(receiver);
+  console.log([COIN]);
+  
 const tx = {
-  txIn: wallet.balance().utxo,
+  txIn: cardanocliJs.queryUtxo(sender.paymentAddr), //sender.balance().utxo;
   txOut: [
     {
-      address: walletAdress,
-      value: { ...wallet.balance().value, [COIN]: 1 },
+      address: sender.paymentAddr,
+      value: { lovelace: sender.balance().value.lovelace - cardanocliJs.toLovelace(2)},
+    },
+    {
+      address: receiver,
+      value: { lovelace: cardanocliJs.toLovelace(2),
+        [COIN]:1 
+      }
     },
   ],
   mint: [
@@ -96,16 +111,19 @@ const tx = {
   witnessCount: 2,
 };
 
+
+ 
 const raw = createTransaction(tx);
 console.log(raw);
-const signed = signTransaction(wallet, raw);
+const signed = signTransaction(sender, raw);
 console.log(signed);
 console.log(cardanocliJs.transactionView({ txFile: signed }));
 const txHash = cardanocliJs.transactionSubmit(signed);
-console.log(txHash);
+console.log(txHash);  
 
 //just a confirmation for now.
-return JSON.stringify({txHash, signed})
+return JSON.stringify({txHash, signed}) 
+//return JSON.stringify("{teste, signed}")
 
 }
 
