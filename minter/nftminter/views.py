@@ -5,8 +5,10 @@ from django.shortcuts import render
 from django.urls import reverse
 import numpy as np
 from PIL import Image
+import sys
+sys.path.append('/home/cnode/minter2/minter/nftminter/ipfsPinata')
+import pin
 
-from minter.nftminter.ipfsPinata.pin import ipfsPush
 from .models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -50,12 +52,12 @@ def mintAsset(request):
 def ipfsRegister(request):
     registryData = json.loads(request.body)
     print("IPFS register entered")
-    print(registryData["title"])
+    #print(registryData["title"])
     imagePathh = registryData["imagePath"]
     del registryData["imagePath"]
     #del data[next]
-    print(registryData)
-    ipfsPush(imagePathh,registryData)
+    #print(registryData)
+    pin.ipfsPush(imagePathh,registryData)
     #now here we will call the pi.py to register;
     return JsonResponse({"message":registryData})
 
