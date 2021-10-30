@@ -23,7 +23,10 @@
   box-shadow: 2px 2px 4px #bbc8ec, -1px -1px 3px #fff;
   color: #080808;
 }
-button,#submit_unsig:active {
+#submit_unsig:active {
+  box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+}
+button:active {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
 .container {

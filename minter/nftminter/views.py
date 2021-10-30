@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse
 import numpy as np
 from PIL import Image
+
+from minter.nftminter.ipfsPinata.pin import ipfsPush
 from .models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -37,18 +39,26 @@ def mintAsset(request):
     mintData = json.loads(request.body)
     print("entering mintAsset on Views.")
     print(mintData)
-
-
     url = 'http://localhost:3000/mintAsset'
     headers = {'metadata': json.dumps(mintData)}
     response = requests.get(url, headers=headers)
     cnodeReturned = json.loads(response.content)
-    print(cnodeReturned["message"])
-    print(cnodeReturned["metadata"])
-    print(cnodeReturned["mintConfirmation"])
     return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "mintConfirmation":cnodeReturned["mintConfirmation"]})
     
-    
+
+@csrf_exempt
+def ipfsRegister(request):
+    registryData = json.loads(request.body)
+    print("IPFS register entered")
+    print(registryData["title"])
+    imagePathh = registryData["imagePath"]
+    del registryData["imagePath"]
+    #del data[next]
+    print(registryData)
+    ipfsPush(imagePathh,registryData)
+    #now here we will call the pi.py to register;
+    return JsonResponse({"message":registryData})
+
 
 
 @csrf_exempt

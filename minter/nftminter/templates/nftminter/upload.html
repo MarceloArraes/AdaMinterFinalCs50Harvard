@@ -86,21 +86,48 @@
       //Also i have to limit the size and type of the files.
       var file = document.getElementById("file").files[0];
       var reader = new FileReader();
-
-      reader.onload = function (e) {
+      
+      reader.onload = async function  (e) {
         var image = document.createElement("img");
         // the result image data
         image.src = e.target.result;
         document.body.appendChild(image);
+        //console.log(image.getAttribute('src', -1));
+        await ipfsRegister(image.getAttribute('src', -1),metadata);
+
         document.getElementById("submit_img").style.display = "none";
         document.getElementById("file").style.display = "none";
         document.querySelector(".metadata-container").style.display = "block";
       };
       // you have to declare the file loading
       reader.readAsDataURL(file);
+      //Register on IPFS to right calculate the fees;
+      
     }
 
+    async function ipfsRegister(image_path){
+      var registryInfo = {"imagePath": image_path};
+      
+      Object.assign(registryInfo, metadata)
+
+    let registered = await fetch('ipfsRegister',{
+            method: "post",
+             headers: {
+                 "Content-Type": "application/json"
+            },
+            body: JSON.stringify(registryInfo)
+    })
+    .then((response) => response.json())
+        .then((result) => {
+          console.log(result)
+          return result;
+        });
+        return registered
+  }
+
+
     async function displayMetadata() {
+
       document.querySelector(".payment-container").style.display = "block";
       if (metadata.nsfw) {
         document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
@@ -140,6 +167,7 @@
               document.getElementById("file").style.display = "none";
               document.querySelector(".metadata-container").style.display = "none";
               document.querySelector(".useradress-container").style.display = "block";
+              //Register image on IPFS;
               clearInterval(timer);
 
             }
@@ -209,7 +237,7 @@
         return balance;
     }
 
-    async function mintAsset() {
+    async function mintAsset() {  
       let adress = document.querySelector("#user_adress").value
       var mintInfo = {"adress": adress};
       
@@ -249,7 +277,7 @@
             <h1>Upload Image</h1>
           </p>
           <input type="file" name="filename" id="file" />
-          <input type="submit" id="submit_img" onClick={displayImg} />
+          <button type="submit" id="submit_img" onClick={displayImg} >Send Image</button>
         </div>
         <div className="metadata-container">
           <label>
@@ -316,11 +344,11 @@
               </p>
             </div>
             <div>
-              <input
+              <button
                 type="submit"
                 id="submit_metadata"
                 onClick={displayMetadata}
-              />
+              >Send Metadata</button>
             </div>
           </label>
         </div>
