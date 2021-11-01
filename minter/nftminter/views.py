@@ -50,7 +50,21 @@ def mintAsset(request):
 
 @csrf_exempt
 def ipfsRegister(request):
-    registryData = json.loads(request.body)
+    print("entered the IPFSREGISTER on VIEWS DJANGO")
+    #fazer fetch para node para registrar a img no ipfs
+    metadataOrigem = json.loads(request.body)
+    #del metadataOrigem["imagePath"]
+    print(metadataOrigem)
+    url = 'http://localhost:3000/ipfsRegister'
+    headers = {'metadata': json.dumps(metadataOrigem)}
+    #fee_value = {'fee':json.dumps(fee)}
+    response = requests.get(url, headers=headers)
+    cnodeReturned = json.loads(response.content)
+    return JsonResponse({"message": cnodeReturned["message"]}, status=201)
+
+
+
+"""     registryData = json.loads(request.body)
     print("IPFS register entered")
     #print(registryData["title"])
     imagePathh = registryData["imagePath"]
@@ -59,7 +73,7 @@ def ipfsRegister(request):
     #print(registryData)
     pin.ipfsPush(imagePathh,registryData)
     #now here we will call the pi.py to register;
-    return JsonResponse({"message":registryData})
+    return JsonResponse({"message":registryData}) """
 
 
 

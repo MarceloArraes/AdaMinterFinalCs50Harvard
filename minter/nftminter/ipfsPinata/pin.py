@@ -45,7 +45,7 @@ def ipfsPush(imagePath,metadata):
   img_ipfs_hash = pin_img_to_pinata(img_path)
 
   #for i in range(0, base_metadata['total_editions']):
-  metadata_hash = pin_metadata_to_pinata(img_ipfs_hash, 1)
+  metadata_hash = pin_metadata_to_pinata(img_ipfs_hash, 0)
   metadata_hashes[img_path].append(metadata_hash)
   print(f'Edition: {1}; Metadata Hash: {metadata_hash}')
 

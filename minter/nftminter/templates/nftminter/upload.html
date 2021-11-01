@@ -89,18 +89,26 @@
       
       reader.onload = async function  (e) {
         var image = document.createElement("img");
+        image.crossOrigin = 'Anonymous';
         // the result image data
         image.src = e.target.result;
-        document.body.appendChild(image);
-        //console.log(image.getAttribute('src', -1));
-        await ipfsRegister(image.getAttribute('src', -1),metadata);
+        //localStorage.setItem("imgpath", image.src);
 
+        document.body.appendChild(image);
+
+        pinImgToPinata(image.src);
+
+        //await ipfsRegister( image.src, metadata);
+        
+        
         document.getElementById("submit_img").style.display = "none";
         document.getElementById("file").style.display = "none";
         document.querySelector(".metadata-container").style.display = "block";
       };
       // you have to declare the file loading
       reader.readAsDataURL(file);
+      
+      
       //Register on IPFS to right calculate the fees;
       
     }
@@ -108,7 +116,7 @@
     async function ipfsRegister(image_path){
       var registryInfo = {"imagePath": image_path};
       
-      Object.assign(registryInfo, metadata)
+      Object.assign({registryInfo}, metadata)
 
     let registered = await fetch('ipfsRegister',{
             method: "post",

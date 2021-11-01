@@ -9,13 +9,7 @@ txIn2 = [
   }
 ]
 
-txIn = [
-  {
-    txHash: '60caefe125ffefdcb25e57a4063d9cacecbc5dfe08d97fa5255b94ed42bbc370',
-    txId: 0,
-    value: { lovelace: 18803934 }
-  }
-]
+
 
 
 console.log(txIn[0].hasOwnProperty('value'));

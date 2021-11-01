@@ -8,6 +8,17 @@ var cors = require('cors')
 
 app.use(cors())
 
+app.get('/ipfsRegister',(req,res)=>{
+    console.log("entered ipfsRegister on Cnodejs.js");
+
+    const metadata = JSON.parse(req.headers.metadata);
+    console.log(metadata);
+
+    res.json({message: `IpfsRegister on Cnodejs.js ${metadata["imagePath"]}`})
+
+})
+
+
 app.get('/balanceCheck', (req, res) => {
   console.log("entered balancheCheck on CNODEJS");
   
