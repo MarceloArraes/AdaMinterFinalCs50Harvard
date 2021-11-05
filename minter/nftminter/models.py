@@ -3,13 +3,17 @@ from django.db import models
 
 
 class User(AbstractUser):
-    pass
+    name12 = models.TextField(max_length=64)
+    
 
-""" class Project(models.Model):
-    name = models.CharField(max_length=64)
-    datacreation = models.DateTimeField(auto_now_add=True)
-    dataexpiration = models.DurationField(blank=False, null=False)
-    totalpleadge = models.IntegerField()
-    staked = models.DecimalField(default=0.0, max_digits=2, decimal_places=2)
+class Post(models.Model):
+    title = models.CharField(max_length=64)
+    author = models.CharField(max_length=32)
+    ipfsLink = models.TextField(max_length=64)
+    description = models.TextField(max_length=64)
+    arweaveId = models.TextField(max_length=64)
+    nsfw = models.TextField(max_length=25)
+    image = models.ImageField(upload_to='post_images')
 
-    pass """
+    def __str__(self):
+        return self.title

@@ -7,12 +7,17 @@ const PINATA_SECRET_API_KEY =
 const pinata = pinataSDK(PINATA_API_KEY, PINATA_SECRET_API_KEY);
 
 
-function pinImgToPinata(img_path){
 console.log("entered pinImgToPinata");
 
-var imgPath = img_path;
-const readableStreamForFile = fs.createReadStream(imgPath);
+var imgPath = JSON.parse(process.argv[2]);  
+
+return "Return From _pinImgToPinata"
+
+/* 
+const readableStreamForFile = fs.createReadStream(image.src );
 const options = {};
+
+
 
 pinata
   .pinFileToIPFS(readableStreamForFile, options)
@@ -22,5 +27,4 @@ pinata
   .catch((err) => {
     console.log(err);
   });
-}
-module.exports = pinImgToPinata;
+  */

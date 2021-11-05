@@ -1,3 +1,4 @@
+import subprocess
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
@@ -5,10 +6,6 @@ from django.shortcuts import render
 from django.urls import reverse
 import numpy as np
 from PIL import Image
-import sys
-sys.path.append('/home/cnode/minter2/minter/nftminter/ipfsPinata')
-import pin
-
 from .models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -18,7 +15,9 @@ import js2py
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import random
+from django import forms
 
+node_path = '/usr/bin/node'
 
 def index(request):
     return render(request, "nftminter/index.html")
@@ -45,42 +44,32 @@ def mintAsset(request):
     headers = {'metadata': json.dumps(mintData)}
     response = requests.get(url, headers=headers)
     cnodeReturned = json.loads(response.content)
-    return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "mintConfirmation":cnodeReturned["mintConfirmation"]})
-    
+    return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "txHash":cnodeReturned["txHash"]})
 
 @csrf_exempt
 def ipfsRegister(request):
+
     print("entered the IPFSREGISTER on VIEWS DJANGO")
-    #fazer fetch para node para registrar a img no ipfs
-    metadataOrigem = json.loads(request.body)
-    #del metadataOrigem["imagePath"]
-    print(metadataOrigem)
+    #metadataOrigem = json.loads(request.body)
+    #print(metadataOrigem)
     url = 'http://localhost:3000/ipfsRegister'
-    headers = {'metadata': json.dumps(metadataOrigem)}
-    #fee_value = {'fee':json.dumps(fee)}
+    headers = {'blobImage': request.body}
     response = requests.get(url, headers=headers)
-    cnodeReturned = json.loads(response.content)
-    return JsonResponse({"message": cnodeReturned["message"]}, status=201)
+    ipfsReturn = json.loads(response.content)
+    return JsonResponse({"ipfsHash":ipfsReturn})
+    #return JsonResponse({"message": "response from ipfs on VIEW", "ipfsReturn":ipfsReturn,"fileWebLink":"https://gateway.pinata.cloud/ipfs/"}, status=201)
 
 
-
-"""     registryData = json.loads(request.body)
-    print("IPFS register entered")
-    #print(registryData["title"])
-    imagePathh = registryData["imagePath"]
-    del registryData["imagePath"]
-    #del data[next]
-    #print(registryData)
-    pin.ipfsPush(imagePathh,registryData)
-    #now here we will call the pi.py to register;
-    return JsonResponse({"message":registryData}) """
-
-
+    #ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', './nftminter/static/img/download.jpg'])
+    #ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', imgPath])
+    #print(ipfs_hash)
+    #hashConfirmation = ipfs_hash.decode().strip()
+    #return JsonResponse({"message": "response from ipfs on VIEW"}, status=201)
 
 @csrf_exempt
 def node(request):
     #here i have to implement something to fix the random to the user/browser. LOCALSTORAGE maybe? 
-    profitfee = 3000000.0
+    profitfee = 4000000.0
     #profitfee = random.uniform(3.1,3.2)
     #profitfee = round(profitfee *1000000,4)
     #profitfee = 3000000

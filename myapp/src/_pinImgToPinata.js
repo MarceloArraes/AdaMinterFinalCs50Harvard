@@ -8,7 +8,7 @@ const pinata = pinataSDK(PINATA_API_KEY, PINATA_SECRET_API_KEY);
 
 
 function pinImgToPinata(img_path){
-
+console.log("pinImgToPinata");
 var imgPath = img_path;
 const readableStreamForFile = fs.createReadStream(imgPath);
 const options = {};
@@ -22,4 +22,4 @@ pinata
     console.log(err);
   });
 }
-module.exports = getWalletData;
+module.exports = pinImgToPinata;

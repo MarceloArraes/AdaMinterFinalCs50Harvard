@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 var cors = require('cors')
-
+// import from myapp/src/_pinImgToPinata.js
+const pinImgToPinata = require('./src/_pinImgToPinata.js')
 //files to call upon clicking and submitting. Call trought fetchs carryng the metadata and other factors.
 
 
@@ -10,11 +11,18 @@ app.use(cors())
 
 app.get('/ipfsRegister',(req,res)=>{
     console.log("entered ipfsRegister on Cnodejs.js");
+    console.log(req.headers.base64image);
+    //get url from blobimage
+    var imgData = req.headers.base64image;
+    console.log(imgData);
+    //save blobimage locally
+    const base64Data = imgdata.replace(/^data:([A-Za-z-+/]+);base64,/, '');
+        
+    fs.writeFileSync('minter/nftminter/static/img', base64Data,  {encoding: 'base64'});
 
-    const metadata = JSON.parse(req.headers.metadata);
-    console.log(metadata);
+    //pinImgToPinata(url)
 
-    res.json({message: `IpfsRegister on Cnodejs.js ${metadata["imagePath"]}`})
+    res.json({message: `IpfsRegister on Cnodejs.js `})
 
 })
 
@@ -41,11 +49,10 @@ app.get('/mintAsset', (req, res) => {
   delete metad.adress;
   var mintData = require('./src/mint-asset');
   
-  
   var mintConfirmation = mintData(metad ,adress);
   console.log(mintConfirmation);
 
-  res.json({message: "Entered the MINT ASSET CNODEJS", metadata: metad, adress: adress, mintConfirmation: mintConfirmation})
+  res.json({message: "Entered the MINT ASSET CNODEJS", metadata: metad, adress: adress, txHash: mintConfirmation["txHash"]})
 })
 
 

@@ -15,4 +15,5 @@ urlpatterns = [
     path("balanceCheck", views.balanceCheck, name="balanceCheck"),
     path("mintAsset", views.mintAsset, name="mintAsset"),
     path("ipfsRegister", views.ipfsRegister, name="ipfsRegister"),
+    #path('posts/', views.PostView.as_view(), name= 'posts_list'), 
 ]

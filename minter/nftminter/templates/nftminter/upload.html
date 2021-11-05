@@ -20,7 +20,7 @@
     });
     const [receiverBalance, setReceiverBalance] = useState(0);
     const [fees, setFees]=useState(0);
-    
+    //const [image, setImage] = useState('');
     let paytest = false;
 
     const fieldUpdater = (name) => {
@@ -80,62 +80,58 @@
 
       }
     };
+    
+  function displayImg(){
+    const file = document.getElementById('file');
+    const reader = new FileReader();
+    reader.readAsDataURL(file.files[0]);
+    
+      reader.onload = async function (e) {
+        e.preventDefault();
+        let img = document.getElementById('output');
+        console.log(e.target.result);
+        img.src = e.target.result;
+        //set image data to state
+        imgToCanvasToBlob(img);
 
-    function displayImg() {
-      //here i have to implement the registration on the FPS
-      //Also i have to limit the size and type of the files.
-      var file = document.getElementById("file").files[0];
-      var reader = new FileReader();
-      
-      reader.onload = async function  (e) {
-        var image = document.createElement("img");
-        image.crossOrigin = 'Anonymous';
-        // the result image data
-        image.src = e.target.result;
-        //localStorage.setItem("imgpath", image.src);
-
-        document.body.appendChild(image);
-
-        pinImgToPinata(image.src);
-
-        //await ipfsRegister( image.src, metadata);
-        
-        
-        document.getElementById("submit_img").style.display = "none";
-        document.getElementById("file").style.display = "none";
-        document.querySelector(".metadata-container").style.display = "block";
-      };
-      // you have to declare the file loading
-      reader.readAsDataURL(file);
-      
-      
-      //Register on IPFS to right calculate the fees;
-      
-    }
-
-    async function ipfsRegister(image_path){
-      var registryInfo = {"imagePath": image_path};
-      
-      Object.assign({registryInfo}, metadata)
-
-    let registered = await fetch('ipfsRegister',{
-            method: "post",
-             headers: {
-                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify(registryInfo)
-    })
-    .then((response) => response.json())
-        .then((result) => {
-          console.log(result)
-          return result;
-        });
-        return registered
+      }
+    
+    
+  }
+  function imgToCanvasToBlob(image) {
+    let img = image;
+    console.log(image);
+    console.log(img);
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+    const dataURL = canvas.toDataURL('image/png');
+    const blob = dataURItoBlob(dataURL);
+    ipfsRegister(blob);
   }
 
+  const ipfsRegister = (data) => {
+      fetch('ipfsRegister',{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          },
+          body: data
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            setMetadata({
+              ...metadata,
+              fileWebLink: data.url,
+      });
+          })
+          .catch(err => console.log(err));
+    }
 
     async function displayMetadata() {
-
       document.querySelector(".payment-container").style.display = "block";
       if (metadata.nsfw) {
         document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
@@ -177,7 +173,6 @@
               document.querySelector(".useradress-container").style.display = "block";
               //Register image on IPFS;
               clearInterval(timer);
-
             }
               else {console.log("Not Payed yet!");
             }
@@ -212,11 +207,6 @@
                  "Content-Type": "application/json"
             },
             //Another way to send the data.
-
-            /*body: JSON.stringify({
-              metadata:metadata,
-              adress: adress
-            }) */
             body: JSON.stringify(mintInfo)
 
  })
@@ -228,7 +218,6 @@
         });
         return minted;
     }
-
     
     async function balanceCheck() {
       let balance = await fetch('balanceCheck',{
@@ -284,8 +273,10 @@
           <p>
             <h1>Upload Image</h1>
           </p>
-          <input type="file" name="filename" id="file" />
-          <button type="submit" id="submit_img" onClick={displayImg} >Send Image</button>
+          <form   id="image_form" enctype="multipart/form-data">
+          <input onChange={displayImg} type="file" name="file" id="file" accept="image/*"/>
+          /* <button type="submit" id="submit_img" onClick={displayImg} >Send Image</button> */
+        </form>
         </div>
         <div className="metadata-container">
           <label>
@@ -362,6 +353,7 @@
         </div>
         <div className="payment-container">
           <div>
+            <p><img id="output" width="200" /></p>
             Title:
             <p>
               <a>{metadata.title}</a>
@@ -408,6 +400,7 @@
               onClick={mintAsset}
             >Submit Adress</button>
           </div>
+          
       </div>
     );
   }
