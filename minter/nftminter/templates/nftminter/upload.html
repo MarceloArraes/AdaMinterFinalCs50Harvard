@@ -82,43 +82,50 @@
     };
     
   function displayImg(){
-    const file = document.getElementById('file');
+    const file = document.getElementById('file').files[0];
+    
+    let link = document.querySelector('#link');
+
     const reader = new FileReader();
-    reader.readAsDataURL(file.files[0]);
+
+    reader.readAsDataURL(file);
     
       reader.onload = async function (e) {
         e.preventDefault();
-        let img = document.getElementById('output');
-        console.log(e.target.result);
+        
+        //this is the way i encode the file image into a blob
+        let blob = new Blob([file], {type: 'image/jpeg'});
+        link.href = URL.createObjectURL(blob);
+        //link.click();
+        //This way i send a html-img
+        var img = document.getElementById('output');
         img.src = e.target.result;
-        //set image data to state
-        imgToCanvasToBlob(img);
+        //send to server as a formData - not working
+        //var formData = new FormData();
+        //formData.append("blob", blob);
+        //try to send formData to server
+        //ipfsRegister(formData);
 
-      }
-    
-    
-  }
-  function imgToCanvasToBlob(image) {
-    let img = image;
-    console.log(image);
-    console.log(img);
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    ctx.drawImage(img, 0, 0);
-    const dataURL = canvas.toDataURL('image/png');
-    const blob = dataURItoBlob(dataURL);
-    ipfsRegister(blob);
+        //Try to send pure Blob to server
+        //ipfsRegister(blob);
+
+        //This way i send a dataURLS.
+        //ipfsRegister(reader.result);
+
+        const encodedUrl = encodeURI(reader.result);
+        ipfsRegister(encodedUrl);
+    }
   }
 
-  const ipfsRegister = (data) => {
+  const ipfsRegister = (blob) => {
+
+    console.log(blob);
       fetch('ipfsRegister',{
           method: 'POST',
           headers: {
-            'Content-Type': 'multipart/form-data'
+            'Content-Type': 'application/json',
           },
-          body: data
+          body: JSON.stringify(blob)
         })
           .then(res => res.json())
           .then(data => {
@@ -353,7 +360,7 @@
         </div>
         <div className="payment-container">
           <div>
-            <p><img id="output" width="200" /></p>
+            <p><img id="output" width="200" /><a download={metadata.title+".jpg"} href='#' id="link">{metadata.title}</a></p>
             Title:
             <p>
               <a>{metadata.title}</a>

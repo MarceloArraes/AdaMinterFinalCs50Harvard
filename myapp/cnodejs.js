@@ -1,25 +1,63 @@
 const express = require('express')
-const app = express()
-const port = 3000
-var cors = require('cors')
+const bodyParser = require('body-parser');
+const cors = require('cors')
+const fileUpload = require('express-fileupload');
+const morgan = require('morgan');
+const _ = require('lodash');
 // import from myapp/src/_pinImgToPinata.js
 const pinImgToPinata = require('./src/_pinImgToPinata.js')
 //files to call upon clicking and submitting. Call trought fetchs carryng the metadata and other factors.
-
+const app = express()
+const port = 3000
 
 app.use(cors())
 
-app.get('/ipfsRegister',(req,res)=>{
-    console.log("entered ipfsRegister on Cnodejs.js");
-    console.log(req.headers.base64image);
-    //get url from blobimage
-    var imgData = req.headers.base64image;
-    console.log(imgData);
-    //save blobimage locally
-    const base64Data = imgdata.replace(/^data:([A-Za-z-+/]+);base64,/, '');
-        
-    fs.writeFileSync('minter/nftminter/static/img', base64Data,  {encoding: 'base64'});
+app.use(fileUpload({
+  createParentPath: true
+}));
 
+//add other middleware
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('dev'));
+
+app.post('/ipfsRegister', async (req, res) => {
+  try {
+      if(!req.body) {
+          res.send({
+              status: false,
+              message: 'No file uploaded'
+          });
+      } else {
+          //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
+          let avatar = JSON.parse(req.headers.blob);
+          console.log(avatar);
+          //Use the mv() method to place the file in upload directory (i.e. "uploads")
+          avatar.mv('./uploads/' + avatar.name);
+
+          //send response
+          res.send({
+              status: true,
+              message: 'File is uploaded',
+              data: {
+                  name: avatar.name,
+                  mimetype: avatar.mimetype,
+                  size: avatar.size
+              }
+          });
+      }
+  } catch (err) {
+      res.status(500).send(err);
+  }
+});
+
+
+app.get('/ipfsRegister2',(req,res)=>{
+    console.log("entered ipfsRegister on Cnodejs.js");
+    //get url from blobimage
+    //save blobimage locally
+    //var url = req.query.blobimage;
     //pinImgToPinata(url)
 
     res.json({message: `IpfsRegister on Cnodejs.js `})

@@ -1,7 +1,8 @@
 
 from django.urls import path
-
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -15,5 +16,5 @@ urlpatterns = [
     path("balanceCheck", views.balanceCheck, name="balanceCheck"),
     path("mintAsset", views.mintAsset, name="mintAsset"),
     path("ipfsRegister", views.ipfsRegister, name="ipfsRegister"),
-    #path('posts/', views.PostView.as_view(), name= 'posts_list'), 
 ]
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

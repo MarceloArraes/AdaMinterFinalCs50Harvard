@@ -2,7 +2,7 @@ import subprocess
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.urls import reverse
 import numpy as np
 from PIL import Image
@@ -15,7 +15,8 @@ import js2py
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import random
-from django import forms
+from .models import Image
+from django.core.files.storage import FileSystemStorage
 
 node_path = '/usr/bin/node'
 
@@ -46,15 +47,33 @@ def mintAsset(request):
     cnodeReturned = json.loads(response.content)
     return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "txHash":cnodeReturned["txHash"]})
 
-@csrf_exempt
 def ipfsRegister(request):
+    if request.method == 'POST' and request.FILES['upload']:
+        upload = request.FILES['upload']
+        fss = FileSystemStorage()
+        file = fss.save(upload.name, upload)
+        file_url = fss.url(file)
+        print(file_url)
+        print('minter/nftminter/static/media/FCPlEiNVEAwyr3F.jpg')
+        ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', file_url])
+        return render(request, 'nftminter/test.html', {'file_url': file_url, 'ipfs_hash': ipfs_hash})
+    return render(request, 'nftminter/test.html')
+
+
+@csrf_exempt
+def ipfsRegister2(request):
 
     print("entered the IPFSREGISTER on VIEWS DJANGO")
+
+    #file1 = open("/home/cnode/minter2/minter/nftminter/static/files/myfile.txt", 'w') 
+    #file1.write(str(request.body))
+    #json.dump(json.loads(request.body), file1, indent = 6)
+    #file1.close()
     #metadataOrigem = json.loads(request.body)
     #print(metadataOrigem)
     url = 'http://localhost:3000/ipfsRegister'
-    headers = {'blobImage': request.body}
-    response = requests.get(url, headers=headers)
+    headers = {'blob': request.body}
+    response = requests.post(url, headers=headers)
     ipfsReturn = json.loads(response.content)
     return JsonResponse({"ipfsHash":ipfsReturn})
     #return JsonResponse({"message": "response from ipfs on VIEW", "ipfsReturn":ipfsReturn,"fileWebLink":"https://gateway.pinata.cloud/ipfs/"}, status=201)

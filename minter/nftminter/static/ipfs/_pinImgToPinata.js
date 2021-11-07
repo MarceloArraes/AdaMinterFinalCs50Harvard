@@ -9,22 +9,19 @@ const pinata = pinataSDK(PINATA_API_KEY, PINATA_SECRET_API_KEY);
 
 console.log("entered pinImgToPinata");
 
-var imgPath = JSON.parse(process.argv[2]);  
-
-return "Return From _pinImgToPinata"
-
-/* 
-const readableStreamForFile = fs.createReadStream(image.src );
+var imgPath = process.argv[2] 
+newPath = imgPath.replace('/', '');
+const readableStreamForFile = fs.createReadStream(newPath);
 const options = {};
-
 
 
 pinata
   .pinFileToIPFS(readableStreamForFile, options)
   .then((result) => {
-    console.log(result["IpfsHash"]);
+    //console.log(result["IpfsHash"]);
+    return result["IpfsHash"];
   })
   .catch((err) => {
     console.log(err);
   });
-  */
+  
