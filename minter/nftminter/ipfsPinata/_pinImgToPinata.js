@@ -13,7 +13,7 @@ const options = {};
 pinata
   .pinFileToIPFS(readableStreamForFile, options)
   .then((result) => {
-    console.log(result["IpfsHash"]);
+    console.log(result);
   })
   .catch((err) => {
     console.log(err);

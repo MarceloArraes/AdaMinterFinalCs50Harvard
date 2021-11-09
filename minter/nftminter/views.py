@@ -54,10 +54,14 @@ def ipfsRegister(request):
         file = fss.save(upload.name, upload)
         file_url = fss.url(file)
         print(file_url)
-        print('minter/nftminter/static/media/FCPlEiNVEAwyr3F.jpg')
         ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', file_url])
-        return render(request, 'nftminter/test.html', {'file_url': file_url, 'ipfs_hash': ipfs_hash})
-    return render(request, 'nftminter/test.html')
+        decoded = ipfs_hash.decode('utf-8')
+        decoded = decoded.strip('\n')
+        print(decoded)
+
+        print(len(ipfs_hash))
+        return render(request, 'nftminter/upload.html', {'file_url': file_url, 'ipfs_hash': decoded})
+    return render(request, 'nftminter/upload.html')
 
 
 @csrf_exempt
