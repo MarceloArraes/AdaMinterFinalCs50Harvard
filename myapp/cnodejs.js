@@ -32,7 +32,7 @@ app.post('/ipfsRegister', async (req, res) => {
       } else {
           //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
           let avatar = JSON.parse(req.headers.blob);
-          console.log(avatar);
+          //console.log(avatar);
           //Use the mv() method to place the file in upload directory (i.e. "uploads")
           avatar.mv('./uploads/' + avatar.name);
 
@@ -54,7 +54,7 @@ app.post('/ipfsRegister', async (req, res) => {
 
 
 app.get('/ipfsRegister2',(req,res)=>{
-    console.log("entered ipfsRegister on Cnodejs.js");
+    //console.log("entered ipfsRegister on Cnodejs.js");
     //get url from blobimage
     //save blobimage locally
     //var url = req.query.blobimage;
@@ -66,31 +66,36 @@ app.get('/ipfsRegister2',(req,res)=>{
 
 
 app.get('/balanceCheck', (req, res) => {
-  console.log("entered balancheCheck on CNODEJS");
+  //console.log("entered balancheCheck on CNODEJS");
   
   var walletData = require('./src/get-balance')
   var ADAPI2 = walletData("ADAPI2")
   var wallet = JSON.parse(ADAPI2)
 
-  console.log(wallet["balanceValue"]["lovelace"]);
+  //console.log(wallet["balanceValue"]["lovelace"]);
 
 
   res.json({balance: wallet["balanceValue"]["lovelace"]})
 })
 
-app.get('/mintAsset', (req, res) => {
-  console.log("entered MINT ASSET CNODE");
+app.get('/mintAsset', async (req, res) => {
+  //console.log("entered MINT ASSET CNODE");
   //I have to get the USER ADRESS and METADATA and send it to mintData;
   const metad = JSON.parse(req.headers.metadata);
   //const adress = JSON.parse(req.headers.adress);
   const adress = metad.adress;
+  //console.log(adress);
   delete metad.adress;
-  var mintData = require('./src/mint-asset');
-  
-  var mintConfirmation = mintData(metad ,adress);
-  console.log(mintConfirmation);
+  //console.log(metad);
 
-  res.json({message: "Entered the MINT ASSET CNODEJS", metadata: metad, adress: adress, txHash: mintConfirmation["txHash"]})
+  var mintData = require('./src/mint-asset');
+  //console.log(mintData);
+
+  var mintReturn = mintData(metad ,adress);
+  var mintParse = JSON.parse(mintReturn);
+  //console.log(mintParse["txHash"]);
+
+  res.json({message: "Entered the MINT ASSET CNODEJS", metadata: metad, adress: adress , txHash: mintParse["txHash"]})
 })
 
 
@@ -99,8 +104,8 @@ app.get('/mintAsset', (req, res) => {
 app.get('/', (req, res) => {
   metad = JSON.parse(req.headers.metadata);
   
-  console.log(typeof(metad.title));
-  console.log(metad.title);
+  //console.log(typeof(metad.title));
+  //console.log(metad.title);
   
   if(metad.title == "" || metad.title === undefined)
   {
@@ -111,7 +116,7 @@ app.get('/', (req, res) => {
   var fee = require('./src/fee-cost.js');
   var walletData = require('./src/get-balance')
 
-  console.log("FIRST CALL FOR FEE:"+fee(req.headers.metadata));
+  //console.log("FIRST CALL FOR FEE:"+fee(req.headers.metadata));
 
   //res.status(201).json({message: "Like retrieved successfully.",fee:fee(metad), metadata:req.headers['metadata']})
   res.json({metadata:metad, fee: fee(req.headers.metadata), wallet: JSON.parse(walletData("ADAPI2")) })

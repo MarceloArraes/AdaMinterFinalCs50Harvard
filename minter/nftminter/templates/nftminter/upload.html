@@ -13,7 +13,7 @@
   <div id="upload"></div>
 </div>
 
-{% if file_url %}
+{% if file_url != 'fileURL' %}
 <script>
   var file_url = '{{ file_url }}';
   var ipfs_hash = '{{ ipfs_hash }}';
@@ -101,86 +101,29 @@
 
       }
     };
-    
-  function displayImg(){
-    const file = document.getElementById('file').files[0];
-    
-    let link = document.querySelector('#link');
-
-    const reader = new FileReader();
-
-    reader.readAsDataURL(file);
-    
-      reader.onload = async function (e) {
-        e.preventDefault();
-        
-        //this is the way i encode the file image into a blob
-        let blob = new Blob([file], {type: 'image/jpeg'});
-        link.href = URL.createObjectURL(blob);
-        //link.click();
-        //This way i send a html-img
-        var img = document.getElementById('output');
-        img.src = e.target.result;
-        //send to server as a formData - not working
-        //var formData = new FormData();
-        //formData.append("blob", blob);
-        //try to send formData to server
-        //ipfsRegister(formData);
-
-        //Try to send pure Blob to server
-        //ipfsRegister(blob);
-
-        //This way i send a dataURLS.
-        //ipfsRegister(reader.result);
-
-        const encodedUrl = encodeURI(reader.result);
-        ipfsRegister(encodedUrl);
-    }
-  }
-
-  const ipfsRegister = (blob) => {
-
-    console.log(blob);
-      fetch('ipfsRegister',{
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(blob)
-        })
-          .then(res => res.json())
-          .then(data => {
-            console.log(data);
-            setMetadata({
-              ...metadata,
-              fileWebLink: data.url,
-      });
-          })
-          .catch(err => console.log(err));
-    }
-
+   
     async function displayMetadata() {
-      document.querySelector(".payment-container").style.display = "block";
-      if (metadata.nsfw) {
-        document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
-      } else {
-        document.querySelector("#NSFW-checkbox").innerHTML = "";
-      }
-      var balance = await balanceCheck()
-      let metaAndFee= await fetchFees()
-
-      console.log("DISPLAY METADATA BALANCE LOG");
-      console.log(balance.balance);
-
-      setReceiverBalance(balance.balance)
-      setFees(metaAndFee.fee)
-
-      console.log("FEE: ");
-      console.log(metaAndFee.fee);
-
-      document.querySelector('.fee').innerHTML = metaAndFee.fee;
-      document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
+    document.querySelector(".payment-container").style.display = "block";
+    if (metadata.nsfw) {
+      document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
+    } else {
+      document.querySelector("#NSFW-checkbox").innerHTML = "";
     }
+    var balance = await balanceCheck()
+    let metaAndFee= await fetchFees()
+
+    console.log("DISPLAY METADATA BALANCE LOG");
+    console.log(balance.balance);
+
+    setReceiverBalance(balance.balance)
+    setFees(metaAndFee.fee)
+
+    console.log("FEE: ");
+    console.log(metaAndFee.fee);
+
+    document.querySelector('.fee').innerHTML = metaAndFee.fee;
+    document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
+  }
 
          useEffect(() => {
            if(fees>0){
@@ -212,7 +155,7 @@
         else console.log("Waiting metadata");
   },[fees]);
     
-    useEffect(() => {
+          useEffect(() => {
       console.log("useEffect");
       if(file_url == "fileURL"){
         console.log("file_url");
@@ -246,6 +189,7 @@
     }
 
     async function fetchMinter(mintInfo){
+      console.log("entered fetchMinter");
       let minted = await fetch('mintAsset',{
             method: "post",
              headers: {
@@ -253,7 +197,6 @@
             },
             //Another way to send the data.
             body: JSON.stringify(mintInfo)
-
  })
         .then((response) => response.json())
         .then((result) => {
@@ -281,6 +224,7 @@
 
     async function mintAsset() {  
       let adress = document.querySelector("#user_adress").value
+      console.log(adress);
       var mintInfo = {"adress": adress};
       
       Object.assign(mintInfo, metadata)
@@ -288,7 +232,10 @@
       let cnodeReturn = await fetchMinter(mintInfo);
 
       console.log("Return from fetchMinter() on mintAsset(): ");
-      console.log(cnodeReturn);
+      //var transactionHash = JSON.parse(cnodeReturn)
+      //console.log(transactionHash);
+      let transactionLink = "https://explorer.cardano-testnet.iohkdev.io/en/transaction?id=" + cnodeReturn["txHash"];
+      document.querySelector("#transaction_link").href = transactionLink ;
     }
 
     async function copyAdress() {
@@ -435,7 +382,10 @@
               onClick={mintAsset}
             >Submit Adress</button>
           </div>
-          
+          <div>
+            <h1>
+            <a id="transaction_link" href="#">Transaction Link</a></h1>
+            </div>
       </div>
     );
   }

@@ -45,7 +45,7 @@ const feeCalcule = (tx) => {
   return fee;
 };
 
-const wallet = cardanocliJs.wallet("ADAPI2");
+const wallet = cardanocliJs.wallet("ADAPI3");
 
 const mintScript = {
   keyHash: cardanocliJs.addressKeyHash(wallet.name),

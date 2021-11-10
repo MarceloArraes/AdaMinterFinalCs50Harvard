@@ -5,14 +5,13 @@ const path = require("path");
 
 const dir = path.join(os.homedir(), "minter2/minter/nftminter");
 
-console.log("Mint Asset js file");
+//console.log("Mint Asset js file");
 
 function exportMintConfirmation(meta, receiver){
 
-  console.log("exportMintConfirmation function");
-  console.log(meta);
-  console.log(receiver);
-
+  //console.log("exportMintConfirmation function");
+  //console.log(meta);
+  //console.log(receiver);
 
   //will substitute all TXout sender.paymentAddr for the adress from the input.
   //Maybe i will be able to mint using my local sender wallet and send to the client.
@@ -32,7 +31,7 @@ const cardanocliJs = new CardanocliJs({
 });
 
 const sender = cardanocliJs.wallet("ADAPI3");
-console.log(sender.paymentAddr);
+//console.log(sender.paymentAddr);
 
 const createTransaction = (tx) => {
   let raw = cardanocliJs.transactionBuildRaw(tx);
@@ -58,25 +57,24 @@ const mintScript = {
 
 const policy = cardanocliJs.transactionPolicyid(mintScript);
 
-console.log(policy);
+//console.log(policy);
 
 ASSET_NAME = meta["title"];
 
 const COIN = policy + "." + ASSET_NAME;
 
-console.log(COIN);
+//console.log(COIN);
 
 const metadata = {
   721: {
     [policy]: {
       [ASSET_NAME]: {
         name: ASSET_NAME,
-        image: "ipfs://QmQqzMTavQgT4f4T5v6PWBp7XNKtoPmC9jvn12WPT3gkSE",
+        author: meta["author"],
+        image: meta["fileWebLink"],
         description: meta["description"],
-        type: "image/png",
-        src: meta["fileWebLink"],
+        type: "image/*",
         // other properties of your choice
-        authors: meta["author"],
         nsfw: meta["nsfw"],
       },
     },
@@ -84,11 +82,11 @@ const metadata = {
 };
 
   //console.log(sender.balance().utxo);
-  console.log(cardanocliJs.queryUtxo(sender.paymentAddr));
+  //console.log(cardanocliJs.queryUtxo(sender.paymentAddr));
   //console.log(sender.balance().utxo);
-  console.log(sender.paymentAddr);
-  console.log(receiver);
-  console.log([COIN]);
+  //console.log(sender.paymentAddr);
+  //console.log(receiver);
+  //console.log([COIN]);
   
 const tx = {
   txIn: cardanocliJs.queryUtxo(sender.paymentAddr), //sender.balance().utxo;
@@ -114,12 +112,12 @@ const tx = {
 
  
 const raw = createTransaction(tx);
-console.log(raw);
+//console.log(raw);
 const signed = signTransaction(sender, raw);
-console.log(signed);
-console.log(cardanocliJs.transactionView({ txFile: signed }));
+//console.log(signed);
+//console.log(cardanocliJs.transactionView({ txFile: signed }));
 const txHash = cardanocliJs.transactionSubmit(signed);
-console.log(txHash);  
+//console.log(txHash);  
 
 //just a confirmation for now.
 return JSON.stringify({txHash, signed}) 

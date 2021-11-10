@@ -9,7 +9,7 @@ const cardano = require("./cardano");
 //open burner wallet
 //const sender = openWallet('Wallet2');
 
-const sender = cardano.wallet("ADAPI2");
+const sender = cardano.wallet("ADAPI3");
 
 //check wallet balance
 console.log(sender.balance());

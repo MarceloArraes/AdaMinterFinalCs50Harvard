@@ -38,6 +38,7 @@ def balanceCheck(request):
     
 @csrf_exempt
 def mintAsset(request):
+
     mintData = json.loads(request.body)
     print("entering mintAsset on Views.")
     print(mintData)
@@ -45,7 +46,8 @@ def mintAsset(request):
     headers = {'metadata': json.dumps(mintData)}
     response = requests.get(url, headers=headers)
     cnodeReturned = json.loads(response.content)
-    return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "txHash":cnodeReturned["txHash"]})
+    print(cnodeReturned)
+    return JsonResponse({"message": cnodeReturned["message"], "metadata":cnodeReturned["metadata"], "adress": cnodeReturned["adress"], "txHash": cnodeReturned["txHash"] })
 
 def ipfsRegister(request):
     if request.method == 'POST' and request.FILES['upload']:
@@ -55,13 +57,12 @@ def ipfsRegister(request):
         file_url = fss.url(file)
         print(file_url)
         ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', file_url])
-        decoded = ipfs_hash.decode('utf-8')
-        decoded = decoded.strip('\n')
-        print(decoded)
+        hashConfirmation = ipfs_hash.decode().strip()
+        print(hashConfirmation)
 
         print(len(ipfs_hash))
-        return render(request, 'nftminter/upload.html', {'file_url': file_url, 'ipfs_hash': decoded})
-    return render(request, 'nftminter/upload.html')
+        return render(request, 'nftminter/upload.html', {'file_url': file_url, 'ipfs_hash': hashConfirmation})
+    return render(request, 'nftminter/upload.html', {'file_url': "", 'ipfs_hash': ""})
 
 
 @csrf_exempt
@@ -81,11 +82,7 @@ def ipfsRegister2(request):
     ipfsReturn = json.loads(response.content)
     return JsonResponse({"ipfsHash":ipfsReturn})
     #return JsonResponse({"message": "response from ipfs on VIEW", "ipfsReturn":ipfsReturn,"fileWebLink":"https://gateway.pinata.cloud/ipfs/"}, status=201)
-
-
     #ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', './nftminter/static/img/download.jpg'])
-    #ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', imgPath])
-    #print(ipfs_hash)
     #hashConfirmation = ipfs_hash.decode().strip()
     #return JsonResponse({"message": "response from ipfs on VIEW"}, status=201)
 

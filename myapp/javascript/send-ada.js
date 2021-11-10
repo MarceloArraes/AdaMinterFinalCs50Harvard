@@ -9,7 +9,7 @@ const cardano = require("./cardano");
 //open burner wallet
 //const sender = openWallet('Wallet2');
 
-const sender = cardano.wallet("ADAPI2");
+const sender = cardano.wallet("ADAPI3");
 
 //check wallet balance
 console.log(sender.balance());
@@ -24,7 +24,7 @@ const receiver =
 //  'addr_test1qpz97cy600kq7mty8nhu0lfdcpskf4l8t0gpsstfe25v0ws3gkakzlwfzt6x28qgugapqqc4h5wnpwpclg2zw0g95djqjmae48';
 
 //set amount to send
-const amount = 50;
+const amount = cardano.toLovelace(80);
 
 //define build transaction
 const createTransaction = (tx) => {
