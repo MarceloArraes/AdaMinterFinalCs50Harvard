@@ -41,7 +41,7 @@ button:active {
   grid-template-areas:
     "div1 div4 div3"
     "div5 div5 div6"
-    "div5 div5 div6";
+    ". . .";
 }
 
 .div1 {
@@ -138,11 +138,64 @@ button:active {
     linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
   background-blend-mode: normal, normal, screen, overlay, normal;
 }
-
-/* .metadata-container,
-.payment-container {
-  display: none;
+* {
+  box-sizing: border-box;
 }
- */
+body {
+  margin: 0;
+  padding: 0;
+}
+.image-container {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    ellipse farthest-side at 76% 77%,
+    rgba(245, 228, 212, 0.25) 4%,
+    rgba(255, 255, 255, 0) calc(4% + 1px)
+  ),
+  radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%),
+  linear-gradient(135deg, #ff0000 0%, #000036 100%),
+  radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%),
+  linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
+background-blend-mode: normal, normal, screen, overlay, normal;
 
- 
+}
+
+.image_form{
+  padding-top: 20%;
+  outline: 10% solid var(--color-primary-dark);
+  box-shadow: 200px;
+  border-radius: 10px;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload{
+  padding-top: 10%;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}  
+/*  .projectCreate{
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}  */
+
+.useradress-container, .payment-container, .metadata-container, .transaction_link, .small_output{
+  display: none;
+  padding: 2%;
+}
+.output{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-flex;
+  width: 40%;
+  height: auto;
+}
+.content{
+  word-break: break-all;
+}

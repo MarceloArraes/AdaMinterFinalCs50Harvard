@@ -103,8 +103,6 @@ def node(request):
     cnodeReturned = json.loads(response.content)
     return JsonResponse({"metadata": cnodeReturned["metadata"], 'fee':float(cnodeReturned["fee"])+profitfee, 'wallet':cnodeReturned["wallet"]}, status=201)
 
-def upload(request):
-    return render(request, "nftminter/upload.html")
 
 def fees(request):
     js_1 = 'console.log("Running JavaScript in Python")'
@@ -113,7 +111,6 @@ def fees(request):
     res1
 
     return JsonResponse({"message": "Like retrieved successfully."}, status=201)
-    #return render(request, "nftminter/upload.html")
 
 def login_view(request):
     if request.method == "POST":

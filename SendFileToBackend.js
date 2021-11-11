@@ -73,28 +73,7 @@ const ipfsRegister = (blob) => {
         .catch(err => console.log(err));
   }
 
-  async function displayMetadata() {
-    document.querySelector(".payment-container").style.display = "block";
-    if (metadata.nsfw) {
-      document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
-    } else {
-      document.querySelector("#NSFW-checkbox").innerHTML = "";
-    }
-    var balance = await balanceCheck()
-    let metaAndFee= await fetchFees()
-
-    console.log("DISPLAY METADATA BALANCE LOG");
-    console.log(balance.balance);
-
-    setReceiverBalance(balance.balance)
-    setFees(metaAndFee.fee)
-
-    console.log("FEE: ");
-    console.log(metaAndFee.fee);
-
-    document.querySelector('.fee').innerHTML = metaAndFee.fee;
-    document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
-  }
+  
 
   function displayImg(){
     const file = document.getElementById('file').files[0];
@@ -131,3 +110,10 @@ const ipfsRegister = (blob) => {
         ipfsRegister(encodedUrl);
     }
   }
+
+
+//{'adress': 'addr_test1qrhjehlx4dcynd78cf7mlp7cjvvwawty653twdm2m0kw40xnputj70vg2cecpjqj203tw6rtjcng7akmehz393esz0rqp3lhl0', 'title': 'TheLobFather', 'author': 'Marcelismo7', 'description': 'TheLobster King', 'fileWebLink': 'ipfs://QmSvg6Ueut5gfS4hLTYujmhAk9fpz4HVTWVUysybEKsuiM', 'arweaveId': '', 'nsfw': ''}
+//{'message': 'Entered the MINT ASSET CNODEJS', 'metadata': {'title': 'TheLobFather', 'author': 'Marcelismo7', 'description': 'TheLobster King', 'fileWebLink': 'ipfs://QmSvg6Ueut5gfS4hLTYujmhAk9fpz4HVTWVUysybEKsuiM', 'arweaveId': '', 'nsfw': ''}, 'adress': 'addr_test1qrhjehlx4dcynd78cf7mlp7cjvvwawty653twdm2m0kw40xnputj70vg2cecpjqj203tw6rtjcng7akmehz393esz0rqp3lhl0'}
+
+//way to user download the file;
+<a download={metadata.title+".jpg"}  id="link" href={file_url}>{metadata.title}</a>

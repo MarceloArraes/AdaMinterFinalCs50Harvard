@@ -6,7 +6,6 @@ from django.conf import settings
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("upload", views.upload, name="upload"),
     path("fees", views.fees, name="fees"),
     path("unsig", views.createUnsig, name="createUnsig"),
     path("login", views.login_view, name="login"),
@@ -15,6 +14,6 @@ urlpatterns = [
     path("node", views.node, name="node"),
     path("balanceCheck", views.balanceCheck, name="balanceCheck"),
     path("mintAsset", views.mintAsset, name="mintAsset"),
-    path("ipfsRegister", views.ipfsRegister, name="ipfsRegister"),
+    path("upload", views.ipfsRegister, name="upload"),
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

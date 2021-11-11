@@ -3,14 +3,14 @@
 {% block body %}
 
 <div class="image-container" >
-  <h2>Add a pic that you want to register</h2>
-  <form id="image_form" method="post" enctype="multipart/form-data">
+  <form  class="image_form" id="image_form" method="post" enctype="multipart/form-data">
+    <h2>Add a pic that you want to register</h2>
     {% csrf_token %}
         <input id="file" type="file" name="upload" accept="image/*">
         <br>
         <button type="submit">Submit</button>
   </form>
-  <div id="upload"></div>
+  <div id="upload" class="upload"></div>
 </div>
 
 {% if file_url != 'fileURL' %}
@@ -103,7 +103,6 @@
     };
    
     async function displayMetadata() {
-    document.querySelector(".payment-container").style.display = "block";
     if (metadata.nsfw) {
       document.querySelector("#NSFW-checkbox").innerHTML = "NSFW IMAGE";
     } else {
@@ -122,7 +121,15 @@
     console.log(metaAndFee.fee);
 
     document.querySelector('.fee').innerHTML = metaAndFee.fee;
+
     document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
+    document.querySelector(".metadata-container").style.display = "none";
+    document.querySelector(".output").style.width = "20%";
+    //document.querySelector(".output").style.textAlign = "left";
+
+    document.querySelector(".payment-container").style.display = "inline-flex";
+
+    
   }
 
          useEffect(() => {
@@ -139,9 +146,9 @@
               //CANCELED i will call it on the submit of the user adress//now i can call for the mint-asset 
               //Here i will code the revealing of the className="useradress-container"
               //document.getElementById("submit_img").style.display = "none";
-              document.getElementById("file").style.display = "none";
-              document.querySelector(".metadata-container").style.display = "none";
+              document.querySelector(".payment-adress").style.display = "none";
               document.querySelector(".useradress-container").style.display = "block";
+              
               //Register image on IPFS;
               clearInterval(timer);
             }
@@ -168,7 +175,14 @@
       });
       var img = document.getElementById('output');
       var newPath = file_url.replace('/', '');
-      img.src = newPath;
+      if(newPath.length>1){
+        img.src = newPath;
+        document.querySelector(".metadata-container").style.display = "inline-flex";
+        document.querySelector(".metadata-container").style.verticalAlign  = "top";
+        document.querySelector(".image_form").style.display = "none";
+      }
+      
+
       }
     }, [file_url]);
 
@@ -259,9 +273,8 @@
     }
 
     return (
-      <div id="projectCreate">
-
-        <div className="metadata-container">
+      <div id="projectCreate" className="projectCreate">
+        <div className="metadata-container">          
           <label>
             Metadata:
             <div>
@@ -333,9 +346,13 @@
             </div>
           </label>
         </div>
+        
+      <img className="output" id="output" alt="" />
+        
+      <div>
+        
         <div className="payment-container">
           <div>
-            <p><img id="output" width="200" alt="" /><a download={metadata.title+".jpg"}  id="link">{metadata.title}</a></p>
             Title:
             <p>
               <a>{metadata.title}</a>
@@ -360,19 +377,7 @@
               <a id="NSFW-checkbox">{metadata.nsfw}</a>
             </p>
           </div>
-          <div className="payment-fee"></div>
-          <div className="payment-adress">
-            <p className="fee"></p>
-            <p className="content"></p>
-            <input
-              type="submit"
-              value="Copy Adress"
-              id="copy_adress"
-              onClick={copyAdress}
-            />
-          </div>
-        </div>
-        <div className="useradress-container">
+          <div className="useradress-container">
             <p>Payment confirmed.</p>
             <p>Paste the adress that you want to receive the NFT:</p>
             <input id="user_adress" type="text" />
@@ -383,9 +388,27 @@
             >Submit Adress</button>
           </div>
           <div>
-            <h1>
+            <h1 className="transaction_link">
             <a id="transaction_link" href="#">Transaction Link</a></h1>
-            </div>
+          </div>
+          <div className="payment-fee"></div>
+          <div className="payment-adress">
+            <p>Fee Cost:</p>
+            <p className="fee"></p>
+            <p>Send the fee value to this address: </p>
+            <p className="content"></p>
+            <input
+              type="submit"
+              value="Copy Adress"
+              id="copy_adress"
+              onClick={copyAdress}
+            />
+          </div>
+        </div>
+        
+      </div>
+
+
       </div>
     );
   }
