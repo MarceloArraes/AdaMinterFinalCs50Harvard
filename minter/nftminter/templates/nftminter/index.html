@@ -37,7 +37,7 @@
 
     const submitButtonPress = (event) => {
       console.log("button Clicked");
-      console.log(`Unsig: ${unsig.multipliers}`);
+      console.log(`Unsig: ${unsig.multipliers}  \n ${unsig.colors} \n ${unsig.distributions} \n ${unsig.rotations}`);
 
       console.log("entenred the saving post");
 
@@ -60,7 +60,7 @@
             art.style.display = "block";
             console.log(result.img_index);
             setUnsig({ ...unsig, index: result.img_index });
-            console.log(index);
+            console.log(result.img_index);
           }
         });
     };
@@ -252,6 +252,18 @@
         <div className="div5">
           <img id="img_art" src="" alt="" />
         </div>
+
+        <div className="div6">
+        <div className="submit_to_nftRegister">
+          <button
+            name="Save"
+            id="submit_to_nftRegister"
+            onClick={submitButtonPress}
+            value="Submit"
+            type="button"
+          >Submit to NFT</button>
+        </div>
+      </div>
       </div>
     );
   }

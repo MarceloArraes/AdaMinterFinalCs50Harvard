@@ -5,7 +5,7 @@
   display: none;
 }
 
-#submit_unsig,button {
+#submit_unsig, button {
   margin: 5px;
   min-width: 130px;
   height: 40px;
@@ -23,9 +23,11 @@
   box-shadow: 2px 2px 4px #bbc8ec, -1px -1px 3px #fff;
   color: #080808;
 }
+
 #submit_unsig:active {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
+
 button:active {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
@@ -111,6 +113,21 @@ button:active {
   grid-area: div4;
 }
 
+.div6 {
+  border-radius: 10px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". submit_to_nftRegister ."
+    ". . ."
+    ". . .";
+  grid-area: div6;
+}
+
 .unsig_data {
   padding-left: 20%;
   align-items: center;
@@ -119,11 +136,18 @@ button:active {
   grid-area: unsig_data;
 }
 
-.submit_unsig {
+.submit_unsig{
   display: flex;
   align-items: center;
   justify-content: center;
   grid-area: submit_unsig;
+}
+
+.submit_to_nftRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: submit_to_nftRegister;
 }
 
 #initial {

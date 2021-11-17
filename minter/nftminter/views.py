@@ -15,7 +15,6 @@ import js2py
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import random
-from .models import Image
 from django.core.files.storage import FileSystemStorage
 
 node_path = '/usr/bin/node'
@@ -247,7 +246,7 @@ def createUnsig(request):
         
         img = Image.fromarray(nft)
         img_index = f'{i:05d}.png'
-        img.save(fr"C:\Users\MarceloSSD\Documents\Harvard COURSE\minter\project4\nftminter\static\img\{img_index}")
+        img.save(fr"/home/cnode/minter2/minter/nftminter/static/img/{img_index}")
 
         return JsonResponse({"message": "Unsig created successfully","img_index":img_index, "unsig_data":unsig}, status=201)
     return JsonResponse({"message": "Dont know if it worked or not."}, status=400)
