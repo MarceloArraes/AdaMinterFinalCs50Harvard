@@ -5,8 +5,8 @@ const path = require("path");
 /* import CardanocliJs from "cardanocli-js";
 import { homedir } from "os";
 import { join } from "path"; */
-
-const dir = path.join(os.homedir(), "minter2/minter/nftminter");
+//home/cnode/git/minter/minter/nftminter/priv/wallet/ADAPI2
+const dir = path.join(os.homedir(), "git/minter/minter/nftminter");
 
 const alonzoPath = path.join(
   os.homedir(),

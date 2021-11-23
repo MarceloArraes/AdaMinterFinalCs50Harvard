@@ -246,7 +246,7 @@ def createUnsig(request):
         
         img = Image.fromarray(nft)
         img_index = f'{i:05d}.png'
-        img.save(fr"/home/cnode/minter2/minter/nftminter/static/img/{img_index}")
+        img.save(fr"/home/cnode/git/minter/minter/nftminter/static/img/{img_index}")
 
         return JsonResponse({"message": "Unsig created successfully","img_index":img_index, "unsig_data":unsig}, status=201)
     return JsonResponse({"message": "Dont know if it worked or not."}, status=400)

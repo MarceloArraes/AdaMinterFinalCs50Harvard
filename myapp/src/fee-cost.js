@@ -14,7 +14,7 @@ const { json } = require("express");
 const os = require("os");
 const path = require("path");
 
-const dir = path.join(os.homedir(), "minter2/minter/nftminter");
+const dir = path.join(os.homedir(), "git/minter/minter/nftminter");
 
 console.log("ENTERED FEE");
 
@@ -76,12 +76,13 @@ const metadata = {
 };
 
 const tx = {
-  txIn: wallet.balance().utxo,
+  txIn: cardanocliJs.queryUtxo(wallet.paymentAddr),
   txOut: [
     {
       address: wallet.paymentAddr,
-      value: { ...wallet.balance().value, [COIN]: 1 },
+      value: { lovelace: wallet.balance().value.lovelace/* - cardanocliJs.toLovelace(5) */, [COIN]: 1 },
     },
+    //{ address: walletreceiver.paymentAddr, value: { lovelace: cardanocliJs.toLovelace(5) } },
   ],
   mint: [
     { action: "mint", quantity: 1, asset: COIN, script: mintScript },

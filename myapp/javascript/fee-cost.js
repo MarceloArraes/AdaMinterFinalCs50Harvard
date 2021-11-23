@@ -13,7 +13,7 @@ const CardanocliJs = require("cardanocli-js");
 const os = require("os");
 const path = require("path");
 
-const dir = path.join(os.homedir(), "minter2/minter/nftminter");
+const dir = path.join(os.homedir(), "git/minter/minter/nftminter");
 
 const shelleyPath = path.join(
   os.homedir(),
@@ -48,7 +48,7 @@ const policy = cardanocliJs.transactionPolicyid(mintScript);
 
 ASSET_NAME = "MarceloNFT";
 
-const MARCELOCOIN = policy + ".MarceloNFT";
+const COIN = policy + ".MarceloNFT";
 
 const metadata = {
   721: {
@@ -67,15 +67,16 @@ const metadata = {
 };
 
 const tx = {
-  txIn: wallet.balance().utxo,
+  txIn: cardanocliJs.queryUtxo(wallet.paymentAddr),
   txOut: [
     {
       address: wallet.paymentAddr,
-      value: { ...wallet.balance().value, [MARCELOCOIN]: 1 },
+      value: { lovelace: wallet.balance().value.lovelace/* - cardanocliJs.toLovelace(5) */, [COIN]: 1 },
     },
+    //{ address: walletreceiver.paymentAddr, value: { lovelace: cardanocliJs.toLovelace(5) } },
   ],
   mint: [
-    { action: "mint", quantity: 1, asset: MARCELOCOIN, script: mintScript },
+    { action: "mint", quantity: 1, asset: COIN, script: mintScript },
   ],
   metadata,
   witnessCount: 2,
