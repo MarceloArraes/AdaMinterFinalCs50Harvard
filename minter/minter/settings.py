@@ -20,12 +20,24 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '13kl@xtukpwe&xj2xoysxe9_6=tf@f8ewxer5n&ifnd46+6$%8'
+#SECRET_KEY = '13kl@xtukpwe&xj2xoysxe9_6=tf@f8ewxer5n&ifnd46+6$%8'
+#with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
+with open('/home/cnode/git/minter/minter/minter/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True 
+SECURE_HSTS_SECONDS = 31536000 # 1 year
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+
+ALLOWED_HOSTS = ['adaminter.org','www.adaminter.org','adaminter.xyz','www.adaminter.xyz']
 
 
 # Application definition
@@ -121,8 +133,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = os.path.join(BASE_DIR, './nftminter/static/media')
 MEDIA_URL = '/nftminter/static/media/' #or /media/
+
 #static/media
 #DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
