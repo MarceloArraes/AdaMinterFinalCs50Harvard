@@ -8,7 +8,7 @@
     {% csrf_token %}
         <input id="file" type="file" name="upload" accept="image/*">
         <br>
-        <button type="submit">Submit</button>
+        <button id="img_uploaded" type="submit">Submit</button>
   </form>
   <div id="upload" class="upload"></div>
 </div>
@@ -29,6 +29,25 @@
 
 <script type="text/babel">
 
+  /* //button click event
+  document.getElementById("img_uploaded").addEventListener("click", function(event) {
+    console.log("button clicked");
+    event.preventDefault();
+    var file = document.getElementById("file").files[0];
+    var formData = new FormData();
+    formData.append("upload", file);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/upload", true);
+    xhr.onload = function(e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var file_url = xhr.responseText;
+          var ipfs_hash = xhr.responseText.split("/")[1];
+          console.log(file_url);
+        };
+  };};
+}); */
+  
   function CreateProject() {
     let caracteres = "aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbb";
     const tamain = caracteres.length;
@@ -174,9 +193,12 @@
           fileWebLink: `ipfs://${ipfs_hash}`,
       });
       var img = document.getElementById('output');
-      var newPath = file_url.replace('/', '');
+      var newPath = file_url;
+
       if(newPath.length>1){
-        img.src = newPath;
+        //img.src = newPath;
+        img.src = "../static/media/" + file_url;
+        //don't work, take too much time.//img.src = `ipfs://${ipfs_hash}`;
         document.querySelector(".metadata-container").style.display = "inline-flex";
         document.querySelector(".metadata-container").style.verticalAlign  = "top";
         document.querySelector(".image_form").style.display = "none";
@@ -204,6 +226,7 @@
 
     async function fetchMinter(mintInfo){
       console.log("entered fetchMinter");
+      try{
       let minted = await fetch('mintAsset',{
             method: "post",
              headers: {
@@ -218,7 +241,12 @@
           console.log(result);
           return result;
         });
-        return minted;
+        
+        return minted;}
+        catch(error){
+          console.log("error in fetchMinter");
+          console.log(error);
+        }
     }
     
     async function balanceCheck() {

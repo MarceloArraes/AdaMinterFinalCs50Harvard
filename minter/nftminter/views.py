@@ -52,17 +52,25 @@ def ipfsRegister(request):
     if request.method == 'POST' and request.FILES['upload']:
         upload = request.FILES['upload']
         fss = FileSystemStorage()
-        file = fss.save(upload.name, upload)
+        filename = ''.join(filter(str.isalnum, upload.name))
+        file = fss.save(filename, upload)
         file_url = fss.url(file)
         print(file_url)
         ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', file_url])
-        hashConfirmation = ipfs_hash.decode().strip()
-        print(hashConfirmation)
-
+        hashConfirmation1 = ipfs_hash.decode().strip()
+        print(hashConfirmation1)
         print(len(ipfs_hash))
-        return render(request, 'nftminter/upload.html', {'file_url': file_url, 'ipfs_hash': hashConfirmation})
+        return render(request, 'nftminter/upload.html', {'file_url': filename, 'ipfs_hash': hashConfirmation1})
     return render(request, 'nftminter/upload.html', {'file_url': "", 'ipfs_hash': ""})
 
+""" 
+        imageModel = Image(
+        caption=upload.name,
+        image=upload,
+        hashConfirmation=hashConfirmation1,
+        )
+        imageModel.save()
+"""
 
 @csrf_exempt
 def ipfsRegister2(request):
