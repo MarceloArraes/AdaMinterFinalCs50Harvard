@@ -2,7 +2,6 @@ import subprocess
 import json
 from copy import deepcopy  
 
-#'/home/cnode/minter2/minter'
 
 def ipfsPush(imagePath,metadata):
   print("entered ipfsPush!!!!!!!")
@@ -16,7 +15,6 @@ def ipfsPush(imagePath,metadata):
   #node_path = 'C:\\Program Files\\nodejs\\node.exe'
   #Linux NODE_PATH:
   node_path = '/usr/bin/node'
-#/home/cnode/minter2/minter/nftminter/ipfsPinata
 
   #print(f'{node_path}')
 

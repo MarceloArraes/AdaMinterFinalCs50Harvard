@@ -3091,3 +3091,185 @@ announcing my loyalty to the Emperor...
 [pid: 1215|app: 0|req: 17/270] 157.230.252.198 () {40 vars in 688 bytes} [Mon Dec  6 22:58:59 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
 [pid: 1218|app: 0|req: 38/271] 157.230.252.198 () {40 vars in 686 bytes} [Mon Dec  6 22:58:59 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
 [pid: 1218|app: 0|req: 39/272] 157.230.252.198 () {40 vars in 688 bytes} [Mon Dec  6 22:59:00 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Tue Dec  7 20:00:42 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56258f923500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 50 seconds on interpreter 0x56258f923500 pid: 913 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 913)
+spawned uWSGI worker 1 (pid: 1234, cores: 1)
+spawned uWSGI worker 2 (pid: 1235, cores: 1)
+spawned uWSGI worker 3 (pid: 1236, cores: 1)
+spawned uWSGI worker 4 (pid: 1237, cores: 1)
+spawned uWSGI worker 5 (pid: 1238, cores: 1)
+spawned uWSGI worker 6 (pid: 1239, cores: 1)
+spawned uWSGI worker 7 (pid: 1242, cores: 1)
+spawned uWSGI worker 8 (pid: 1244, cores: 1)
+spawned uWSGI worker 9 (pid: 1245, cores: 1)
+spawned uWSGI worker 10 (pid: 1246, cores: 1)
+[pid: 1246|app: 0|req: 1/1] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 20:26:35 2021] GET / => generated 9173 bytes in 4304 msecs (HTTP/1.1 200) 7 headers in 254 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1242|app: 0|req: 1/2] 157.230.252.198 () {40 vars in 678 bytes} [Tue Dec  7 20:26:40 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 1508 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1242|app: 0|req: 2/3] 157.230.252.198 () {40 vars in 651 bytes} [Tue Dec  7 20:26:42 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 3/4] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 20:26:42 2021] GET / => generated 9173 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 4/5] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:43 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 5/6] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 20:26:43 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 6/7] 157.230.252.198 () {40 vars in 698 bytes} [Tue Dec  7 20:26:43 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 7/8] 157.230.252.198 () {40 vars in 694 bytes} [Tue Dec  7 20:26:44 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 8/9] 157.230.252.198 () {40 vars in 684 bytes} [Tue Dec  7 20:26:44 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 9/10] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:44 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 10/11] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:45 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 11/12] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:45 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 12/13] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:45 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 13/14] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 20:26:46 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 14/15] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:46 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 15/16] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 20:26:46 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 8 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 16/17] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:47 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 6 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 17/18] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 20:26:47 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 18/19] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 20:26:47 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 19/20] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 21:06:59 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 1/21] 157.230.252.198 () {40 vars in 678 bytes} [Tue Dec  7 21:06:59 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 667 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1234|app: 0|req: 1/22] 157.230.252.198 () {40 vars in 651 bytes} [Tue Dec  7 21:07:00 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 697 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1238|app: 0|req: 2/23] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 21:07:02 2021] GET / => generated 9173 bytes in 18 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 3/24] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:02 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 4/25] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:07:02 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 5/26] 157.230.252.198 () {40 vars in 698 bytes} [Tue Dec  7 21:07:03 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 6/27] 157.230.252.198 () {40 vars in 694 bytes} [Tue Dec  7 21:07:03 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 7/28] 157.230.252.198 () {40 vars in 684 bytes} [Tue Dec  7 21:07:03 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1235|app: 0|req: 1/29] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:04 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 690 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1244|app: 0|req: 1/30] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:05 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 690 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1244|app: 0|req: 2/31] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:06 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1237|app: 0|req: 1/32] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:06 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 694 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1244|app: 0|req: 3/33] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:07:07 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 4/34] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:07 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 5/35] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:07:08 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 6/36] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:08 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 7/37] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:07:08 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 8/38] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:07:09 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 9/39] 193.118.53.210 () {36 vars in 502 bytes} [Tue Dec  7 21:34:18 2021] GET / => generated 143 bytes in 209 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1237|app: 0|req: 2/40] 205.169.39.216 () {50 vars in 847 bytes} [Tue Dec  7 21:37:09 2021] GET / => generated 9173 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1245|app: 0|req: 1/41] 205.169.39.216 () {50 vars in 852 bytes} [Tue Dec  7 21:37:12 2021] GET / => generated 9173 bytes in 667 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1245|app: 0|req: 2/42] 205.169.39.165 () {50 vars in 847 bytes} [Tue Dec  7 21:38:21 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1239|app: 0|req: 1/43] 205.169.39.165 () {50 vars in 852 bytes} [Tue Dec  7 21:38:24 2021] GET / => generated 9173 bytes in 768 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1234|app: 0|req: 2/44] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 21:41:33 2021] GET / => generated 9173 bytes in 21 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 2/45] 157.230.252.198 () {40 vars in 678 bytes} [Tue Dec  7 21:41:34 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 3/46] 157.230.252.198 () {40 vars in 651 bytes} [Tue Dec  7 21:41:34 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 4/47] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 21:41:34 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 5/48] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:35 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 6/49] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:41:35 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1236|app: 0|req: 1/50] 157.230.252.198 () {40 vars in 698 bytes} [Tue Dec  7 21:41:35 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 832 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1245|app: 0|req: 3/51] 157.230.252.198 () {40 vars in 694 bytes} [Tue Dec  7 21:41:36 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1236|app: 0|req: 2/52] 157.230.252.198 () {40 vars in 684 bytes} [Tue Dec  7 21:41:37 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 8/53] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:37 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1237|app: 0|req: 3/54] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:37 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1235|app: 0|req: 2/55] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:38 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1237|app: 0|req: 4/56] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:38 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 9/57] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:41:38 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 10/58] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:39 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 20/59] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:41:39 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 11/60] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:39 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+[pid: 1245|app: 0|req: 4/61] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 21:41:40 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1235|app: 0|req: 3/62] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 21:41:40 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 12/63] 46.4.112.20 () {50 vars in 869 bytes} [Tue Dec  7 22:00:03 2021] GET /upload => generated 14449 bytes in 44 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 13/64] 148.251.10.133 () {50 vars in 860 bytes} [Tue Dec  7 22:00:20 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 7/65] 191.201.6.237 () {42 vars in 686 bytes} [Tue Dec  7 22:01:29 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 14/66] 191.201.6.237 () {42 vars in 655 bytes} [Tue Dec  7 22:01:31 2021] GET /favicon.ico => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 15/67] 191.201.6.237 () {42 vars in 690 bytes} [Tue Dec  7 22:02:32 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1239|app: 0|req: 2/68] 191.201.6.237 () {48 vars in 778 bytes} [Tue Dec  7 22:02:47 2021] POST /unsig => generated 145 bytes in 47 msecs (HTTP/1.1 500) 7 headers in 257 bytes (1 switches on core 0)
+[pid: 1234|app: 0|req: 3/69] 191.201.6.237 () {48 vars in 778 bytes} [Tue Dec  7 22:02:51 2021] POST /unsig => generated 145 bytes in 26 msecs (HTTP/1.1 500) 7 headers in 257 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 10/70] 46.4.112.20 () {50 vars in 787 bytes} [Tue Dec  7 22:11:29 2021] GET /upload => generated 14449 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+52,65,47,85,96 ['Green', 'Blue', 'Red', 'Blue', 'Green'] ['Normal', 'CDF', 'Normal', 'CDF', 'Normal'] 180,270,270,180,180
+[pid: 1246|app: 0|req: 8/71] 148.251.10.133 () {56 vars in 869 bytes} [Tue Dec  7 22:12:11 2021] POST /unsig => generated 336 bytes in 5841 msecs (HTTP/1.1 201) 6 headers in 236 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 9/72] 45.90.62.89 () {36 vars in 506 bytes} [Tue Dec  7 22:13:06 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 10/73] 45.90.62.89 () {36 vars in 528 bytes} [Tue Dec  7 22:13:07 2021] GET /favicon.ico => generated 179 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 11/74] 148.251.10.133 () {48 vars in 689 bytes} [Tue Dec  7 22:14:17 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 12/75] 34.101.177.146 () {40 vars in 622 bytes} [Tue Dec  7 22:16:32 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 13/76] 34.101.177.146 () {40 vars in 677 bytes} [Tue Dec  7 22:16:33 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 14/77] 34.101.177.146 () {40 vars in 650 bytes} [Tue Dec  7 22:16:33 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 15/78] 34.101.177.146 () {40 vars in 622 bytes} [Tue Dec  7 22:16:33 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 16/79] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:34 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 17/80] 34.101.177.146 () {40 vars in 685 bytes} [Tue Dec  7 22:16:34 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 18/81] 34.101.177.146 () {40 vars in 697 bytes} [Tue Dec  7 22:16:35 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 19/82] 34.101.177.146 () {40 vars in 693 bytes} [Tue Dec  7 22:16:35 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 20/83] 34.101.177.146 () {40 vars in 683 bytes} [Tue Dec  7 22:16:35 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 21/84] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:36 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 22/85] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:36 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 23/86] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:36 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 24/87] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:37 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 25/88] 34.101.177.146 () {40 vars in 685 bytes} [Tue Dec  7 22:16:37 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 26/89] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:38 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 27/90] 34.101.177.146 () {40 vars in 685 bytes} [Tue Dec  7 22:16:38 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 28/91] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:38 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1245|app: 0|req: 5/92] 34.101.177.146 () {40 vars in 685 bytes} [Tue Dec  7 22:16:39 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 29/93] 34.101.177.146 () {40 vars in 687 bytes} [Tue Dec  7 22:16:39 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 21/94] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 22:19:35 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1234|app: 0|req: 4/95] 157.230.252.198 () {40 vars in 678 bytes} [Tue Dec  7 22:19:36 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 22/96] 157.230.252.198 () {40 vars in 651 bytes} [Tue Dec  7 22:19:36 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 16/97] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 22:19:36 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 11/98] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:37 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1235|app: 0|req: 4/99] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:19:37 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 17/100] 157.230.252.198 () {40 vars in 698 bytes} [Tue Dec  7 22:19:37 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+[pid: 1242|app: 0|req: 23/101] 157.230.252.198 () {40 vars in 694 bytes} [Tue Dec  7 22:19:38 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 12/102] 157.230.252.198 () {40 vars in 684 bytes} [Tue Dec  7 22:19:38 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 13/103] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:38 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1238|app: 0|req: 14/104] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:39 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1244|app: 0|req: 18/105] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:39 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+[pid: 1239|app: 0|req: 3/106] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:39 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1242|app: 0|req: 24/107] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:19:39 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 30/108] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:40 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 31/109] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:19:40 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 32/110] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:40 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 33/111] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:19:41 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 34/112] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:19:41 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 35/113] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 22:46:31 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 36/114] 157.230.252.198 () {40 vars in 678 bytes} [Tue Dec  7 22:46:31 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 37/115] 157.230.252.198 () {40 vars in 651 bytes} [Tue Dec  7 22:46:32 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 38/116] 157.230.252.198 () {40 vars in 623 bytes} [Tue Dec  7 22:46:32 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 39/117] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:32 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 40/118] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:46:33 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 41/119] 157.230.252.198 () {40 vars in 698 bytes} [Tue Dec  7 22:46:33 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 42/120] 157.230.252.198 () {40 vars in 694 bytes} [Tue Dec  7 22:46:33 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 43/121] 157.230.252.198 () {40 vars in 684 bytes} [Tue Dec  7 22:46:34 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 44/122] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:34 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 45/123] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:34 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 46/124] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:35 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 16 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 47/125] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:35 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 48/126] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:46:35 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 49/127] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:36 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 50/128] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:46:36 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 51/129] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:36 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1236|app: 0|req: 3/130] 157.230.252.198 () {40 vars in 686 bytes} [Tue Dec  7 22:46:36 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1246|app: 0|req: 52/131] 157.230.252.198 () {40 vars in 688 bytes} [Tue Dec  7 22:46:37 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1234|app: 0|req: 5/132] 148.251.10.133 () {50 vars in 872 bytes} [Tue Dec  7 22:58:33 2021] GET /upload => generated 14449 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)

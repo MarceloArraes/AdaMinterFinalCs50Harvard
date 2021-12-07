@@ -74,15 +74,7 @@ def ipfsRegister(request):
 
 @csrf_exempt
 def ipfsRegister2(request):
-
     print("entered the IPFSREGISTER on VIEWS DJANGO")
-
-    #file1 = open("/home/cnode/minter2/minter/nftminter/static/files/myfile.txt", 'w') 
-    #file1.write(str(request.body))
-    #json.dump(json.loads(request.body), file1, indent = 6)
-    #file1.close()
-    #metadataOrigem = json.loads(request.body)
-    #print(metadataOrigem)
     url = 'http://localhost:3000/ipfsRegister'
     headers = {'blob': request.body}
     response = requests.post(url, headers=headers)

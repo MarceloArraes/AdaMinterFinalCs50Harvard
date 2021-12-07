@@ -3,7 +3,7 @@ const { log } = require("console");
 const os = require("os");
 const path = require("path");
 
-const dir = path.join(os.homedir(), "minter2/minter/nftminter");
+const dir = path.join(os.homedir(), "git/minter/minter/nftminter");
 
 //console.log("Mint Asset js file");
 

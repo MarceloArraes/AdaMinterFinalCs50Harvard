@@ -52,25 +52,12 @@ app.post('/ipfsRegister', async (req, res) => {
   }
 });
 
-
-app.get('/ipfsRegister2',(req,res)=>{
-    //console.log("entered ipfsRegister on Cnodejs.js");
-    //get url from blobimage
-    //save blobimage locally
-    //var url = req.query.blobimage;
-    //pinImgToPinata(url)
-
-    res.json({message: `IpfsRegister on Cnodejs.js `})
-
-})
-
-
 app.get('/balanceCheck', (req, res) => {
   //console.log("entered balancheCheck on CNODEJS");
   
   var walletData = require('./src/get-balance')
-  var ADAPI2 = walletData("ADAPI2")
-  var wallet = JSON.parse(ADAPI2)
+  var ADAPI3 = walletData("ADAPI3")
+  var wallet = JSON.parse(ADAPI3)
 
   //console.log(wallet["balanceValue"]["lovelace"]);
 
@@ -79,6 +66,7 @@ app.get('/balanceCheck', (req, res) => {
 })
 
 app.get('/mintAsset', async (req, res) => {
+  try{
   //console.log("entered MINT ASSET CNODE");
   //I have to get the USER ADRESS and METADATA and send it to mintData;
   const metad = JSON.parse(req.headers.metadata);
@@ -96,9 +84,11 @@ app.get('/mintAsset', async (req, res) => {
   //console.log(mintParse["txHash"]);
 
   res.json({message: "Entered the MINT ASSET CNODEJS", metadata: metad, adress: adress , txHash: mintParse["txHash"]})
+  }
+  catch(err){
+    console.log(err);
+  }
 })
-
-
 
 
 app.get('/', (req, res) => {
@@ -119,7 +109,7 @@ app.get('/', (req, res) => {
   //console.log("FIRST CALL FOR FEE:"+fee(req.headers.metadata));
 
   //res.status(201).json({message: "Like retrieved successfully.",fee:fee(metad), metadata:req.headers['metadata']})
-  res.json({metadata:metad, fee: fee(req.headers.metadata), wallet: JSON.parse(walletData("ADAPI2")) })
+  res.json({metadata:metad, fee: fee(req.headers.metadata), wallet: JSON.parse(walletData("ADAPI3")) })
   //res.send({metadata:req.headers.metadata, fee: fee(metad)})
   
 })
