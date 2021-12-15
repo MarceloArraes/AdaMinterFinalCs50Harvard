@@ -1,53 +1,14 @@
 {% extends "nftminter/layout.html" %}
 
 {% block body %}
+<p id="upload" class="upload"></p>
 
-<div class="image-container" >
-  <form  class="image_form" id="image_form" method="post" enctype="multipart/form-data">
-    <h2>Add a pic that you want to register</h2>
-    {% csrf_token %}
-        <input id="file" type="file" name="upload" accept="image/*">
-        <br>
-        <button id="img_uploaded" type="submit">Submit</button>
-  </form>
-  <div id="upload" class="upload"></div>
-</div>
-
-{% if file_url != 'fileURL' %}
-<script>
-  var file_url = '{{ file_url }}';
-  var ipfs_hash = '{{ ipfs_hash }}';
+<script> 
+  var csrf_token = '{% csrf_token %}';
 </script>
-{% else %}
-<script>
-  var file_url = 'fileURL';
-  var ipfs_hash = 'ipfsHASH';
-</script>
-{% endif %}
-
-
 
 <script type="text/babel">
-
-  /* //button click event
-  document.getElementById("img_uploaded").addEventListener("click", function(event) {
-    console.log("button clicked");
-    event.preventDefault();
-    var file = document.getElementById("file").files[0];
-    var formData = new FormData();
-    formData.append("upload", file);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/upload", true);
-    xhr.onload = function(e) {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          var file_url = xhr.responseText;
-          var ipfs_hash = xhr.responseText.split("/")[1];
-          console.log(file_url);
-        };
-  };};
-}); */
-  
+    
   function CreateProject() {
     let caracteres = "aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbb";
     const tamain = caracteres.length;
@@ -61,6 +22,9 @@
     });
     const [receiverBalance, setReceiverBalance] = useState(0);
     const [fees, setFees]=useState(0);
+    const [filename, setFileUrl] = useState("");
+    const [ipfs_hash , setIpfs_hash] = useState("");
+    const [csrf_token , setCsrfToken] = useState("");
     let paytest = false;
 
     const fieldUpdater = (name) => {
@@ -181,32 +145,44 @@
         else console.log("Waiting metadata");
   },[fees]);
     
-          useEffect(() => {
-      console.log("useEffect");
-      if(file_url == "fileURL"){
-        console.log("file_url");
-      }
-      else{
-        console.log(`${ipfs_hash}`);
-        setMetadata({
-          ...metadata,
-          fileWebLink: `ipfs://${ipfs_hash}`,
-      });
-      var img = document.getElementById('output');
-      var newPath = file_url;
-
-      if(newPath.length>1){
-        //img.src = newPath;
-        img.src = "../static/media/" + file_url;
-        //don't work, take too much time.//img.src = `ipfs://${ipfs_hash}`;
-        document.querySelector(".metadata-container").style.display = "inline-flex";
-        document.querySelector(".metadata-container").style.verticalAlign  = "top";
-        document.querySelector(".image_form").style.display = "none";
-      }
+    async function imageRegister(){
+      //button click event
+    const csrftoken = getCookie('csrftoken');
+    setCsrfToken(csrftoken);
+    console.log("button clicked");
+    console.log(csrftoken);
+    var file = document.getElementById("file").files[0];
+    var formData = new FormData();
+    formData.append("upload", file);
+    var response = await fetch("/upload", {
+    method: 'POST',
+    headers: {
+      'X-CSRFToken': csrftoken
+    },
+      body: formData,
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      setIpfs_hash(data.ipfs_hash);
+      setFileUrl(data.filename);
       
+      setMetadata({
+      ...metadata,
+      fileWebLink: `ipfs://${data.ipfs_hash}`,
+    });
+    var img = document.getElementById('output');
+    img.src = "../static/media/" + data.filename;
+    document.querySelector(".metadata-container").style.display = "inline-flex";
+    document.querySelector(".metadata-container").style.verticalAlign  = "top";
+    document.querySelector(".image_form").style.display = "none";
 
-      }
-    }, [file_url]);
+
+      console.log(data.ipfs_hash);
+      console.log(data.filename);
+    })
+    .catch(err => console.log(err));      
+    }
 
     async function fetchFees() {
       let fees = await fetch('node',{
@@ -226,8 +202,7 @@
 
     async function fetchMinter(mintInfo){
       console.log("entered fetchMinter");
-      try{
-      let minted = await fetch('mintAsset',{
+        let minted = await fetch('mintAsset',{
             method: "post",
              headers: {
                  "Content-Type": "application/json"
@@ -241,12 +216,8 @@
           console.log(result);
           return result;
         });
-        
-        return minted;}
-        catch(error){
-          console.log("error in fetchMinter");
-          console.log(error);
-        }
+        return minted;
+
     }
     
     async function balanceCheck() {
@@ -300,8 +271,34 @@
       
     }
 
+    function getCookie(name) {
+    let cookieValue = null;
+
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+
+                break;
+            }
+        }
+    }
+
+    return cookieValue;
+}
+
     return (
-      <div id="projectCreate" className="projectCreate">
+      <div id="projectCreate" className="image-container">
+        <div class="image_form" id="image_form">
+        <h2>Add a pic that you want to register</h2>
+        <input id="file" type="file" name="upload" accept="image/*" />
+        <button id="img_uploaded" type="submit" onClick={imageRegister}>Submit</button>
+        </div>
+      <div >
         <div className="metadata-container">          
           <label>
             Metadata:
@@ -438,19 +435,20 @@
 
 
       </div>
+    </div>
     );
   }
 
   class Initial extends React.Component {
     render() {
       return (
-        <div>
+        <div className="initial">
           <CreateProject />
         </div>
       );
     }
   }
 
-  ReactDOM.render(<Initial />, document.querySelector("#upload"));
+  ReactDOM.render(<Initial />, document.querySelector(".body"));
 </script>
 {% endblock %}

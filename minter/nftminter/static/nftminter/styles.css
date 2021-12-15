@@ -150,7 +150,7 @@ button:active {
   grid-area: submit_to_nftRegister;
 }
 
-#initial {
+.initial {
   background: radial-gradient(
       ellipse farthest-side at 76% 77%,
       rgba(245, 228, 212, 0.25) 4%,
@@ -170,6 +170,7 @@ body {
   padding: 0;
 }
 .image-container {
+  place-items: center;
   height: 100vh;
   width: 100vw;
   background: radial-gradient(
@@ -196,22 +197,12 @@ background-blend-mode: normal, normal, screen, overlay, normal;
   justify-content: center;
 }
 
-.upload{
-  padding-top: 10%;
-  text-align: center;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-}  
-/*  .projectCreate{
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-}  */
 
 .useradress-container, .payment-container, .metadata-container, .transaction_link, .small_output{
   display: none;
+  place-items: center;
   padding: 2%;
+  
 }
 .output{
   background-color: white;

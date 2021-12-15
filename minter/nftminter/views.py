@@ -8,19 +8,49 @@ import numpy as np
 from PIL import Image
 from .models import User
 from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 import json
 import random
 import js2py
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import random
-from django.core.files.storage import FileSystemStorage
+from django.core.files.storage import FileSystemStorage, default_storage
+import boto3
+from botocore.exceptions import ClientError
+import logging
 
 node_path = '/usr/bin/node'
 
 def index(request):
     return render(request, "nftminter/index.html")
+
+def create_presigned_url(bucket_name, object_name, expiration=3600):
+    """Generate a presigned URL to share an S3 object
+
+    :param bucket_name: string
+    :param object_name: string
+    :param expiration: Time in seconds for the presigned URL to remain valid
+    :return: Presigned URL as string. If error, returns None.
+    """
+    s3_client = boto3.client('s3',
+                        aws_access_key_id = 'AKIAY663ZAXW4TVGZG4V',
+                        aws_secret_access_key = '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')
+
+    # Generate a presigned URL for the S3 object
+    #s3_client = boto3.client('s3')
+    
+    try:
+        response = s3_client.generate_presigned_url('get_object',
+                                                    Params={'Bucket': bucket_name,
+                                                            'Key': object_name},
+                                                    ExpiresIn=expiration)
+    except ClientError as e:
+        logging.error(e)
+        return None
+
+    # The response contains the presigned URL
+    return response
+
 
 @csrf_exempt
 def balanceCheck(request):
@@ -50,40 +80,30 @@ def mintAsset(request):
 
 def ipfsRegister(request):
     if request.method == 'POST' and request.FILES['upload']:
+        print(request.FILES)
         upload = request.FILES['upload']
-        fss = FileSystemStorage()
+        print(upload)
         filename = ''.join(filter(str.isalnum, upload.name))
-        file = fss.save(filename, upload)
-        file_url = fss.url(file)
+        filename = filename[:-3]+"."+filename[-3:]
+        #i have to save the file on aws before send the url to the _pinImgToIPFS
+        s3 = boto3.resource('s3', aws_access_key_id='AKIAY663ZAXW4TVGZG4V', aws_secret_access_key='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')
+        bucket = s3.Bucket('minterstaticbucket')
+        bucket.put_object(Key=filename, Body=upload)
+        file_url = create_presigned_url('minterstaticbucket', '%s' % filename)
         print(file_url)
-        ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', file_url])
+        file = s3.Bucket('minterstaticbucket').download_file(filename, './nftminter/static/media/%s' % filename)
+        if file_url is not None:
+            #response = requests.get(file_url)
+            print("file_url is not None")
+            #localfile_url = default_storage.url(file)
+            localfile_url = '/home/cnode/git/minter/minter/nftminter/static/media/'+filename
+            ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', localfile_url,])
+        #here i put a else with the error message as JsonResponse.
         hashConfirmation1 = ipfs_hash.decode().strip()
-        print(hashConfirmation1)
-        print(len(ipfs_hash))
-        return render(request, 'nftminter/upload.html', {'file_url': filename, 'ipfs_hash': hashConfirmation1})
-    return render(request, 'nftminter/upload.html', {'file_url': "", 'ipfs_hash': ""})
-
-""" 
-        imageModel = Image(
-        caption=upload.name,
-        image=upload,
-        hashConfirmation=hashConfirmation1,
-        )
-        imageModel.save()
-"""
-
-@csrf_exempt
-def ipfsRegister2(request):
-    print("entered the IPFSREGISTER on VIEWS DJANGO")
-    url = 'http://localhost:3000/ipfsRegister'
-    headers = {'blob': request.body}
-    response = requests.post(url, headers=headers)
-    ipfsReturn = json.loads(response.content)
-    return JsonResponse({"ipfsHash":ipfsReturn})
-    #return JsonResponse({"message": "response from ipfs on VIEW", "ipfsReturn":ipfsReturn,"fileWebLink":"https://gateway.pinata.cloud/ipfs/"}, status=201)
-    #ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', './nftminter/static/img/download.jpg'])
-    #hashConfirmation = ipfs_hash.decode().strip()
-    #return JsonResponse({"message": "response from ipfs on VIEW"}, status=201)
+        #print(hashConfirmation1)
+        #I can responde as a JSON, maybe that way would be better. 
+        return JsonResponse({'file_url': file_url, 'ipfs_hash': hashConfirmation1})
+    return render(request, 'nftminter/upload.html')
 
 @csrf_exempt
 def node(request):
