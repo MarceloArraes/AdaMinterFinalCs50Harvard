@@ -5880,3 +5880,2731 @@ announcing my loyalty to the Emperor...
 [pid: 1345|app: 0|req: 1/6] 80.82.77.192 () {36 vars in 500 bytes} [Wed Dec 15 18:51:22 2021] GET / => generated 143 bytes in 769 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
 announcing my loyalty to the Emperor...
 [pid: 1352|app: 0|req: 3/7] 193.31.24.154 () {38 vars in 524 bytes} [Wed Dec 15 18:51:56 2021] GET / => generated 143 bytes in 30 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1345|app: 0|req: 2/8] 179.240.26.131 () {56 vars in 1031 bytes} [Wed Dec 15 19:10:58 2021] GET /upload => generated 14708 bytes in 19 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Dec 15 20:51:06 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d5d540e500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 34 seconds on interpreter 0x55d5d540e500 pid: 948 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 948)
+spawned uWSGI worker 1 (pid: 1309, cores: 1)
+spawned uWSGI worker 2 (pid: 1310, cores: 1)
+spawned uWSGI worker 3 (pid: 1311, cores: 1)
+spawned uWSGI worker 4 (pid: 1312, cores: 1)
+spawned uWSGI worker 5 (pid: 1313, cores: 1)
+spawned uWSGI worker 6 (pid: 1314, cores: 1)
+spawned uWSGI worker 7 (pid: 1315, cores: 1)
+spawned uWSGI worker 8 (pid: 1316, cores: 1)
+spawned uWSGI worker 9 (pid: 1317, cores: 1)
+spawned uWSGI worker 10 (pid: 1318, cores: 1)
+[pid: 1310|app: 0|req: 1/1] 179.240.26.131 () {54 vars in 1000 bytes} [Wed Dec 15 21:13:49 2021] GET /upload => generated 14708 bytes in 921 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1310|app: 0|req: 2/2] 179.240.26.131 () {52 vars in 926 bytes} [Wed Dec 15 21:13:58 2021] GET /favicon.ico => generated 179 bytes in 37 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1309|app: 0|req: 1/3] 185.180.143.79 () {36 vars in 502 bytes} [Wed Dec 15 23:53:09 2021] GET / => generated 143 bytes in 1063 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1310|app: 0|req: 3/4] 179.240.26.131 () {56 vars in 1031 bytes} [Thu Dec 16 01:21:53 2021] GET /upload => generated 14708 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Dec 16 17:04:45 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55926dda7500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 35 seconds on interpreter 0x55926dda7500 pid: 955 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 955)
+spawned uWSGI worker 1 (pid: 1266, cores: 1)
+spawned uWSGI worker 2 (pid: 1267, cores: 1)
+spawned uWSGI worker 3 (pid: 1269, cores: 1)
+spawned uWSGI worker 4 (pid: 1270, cores: 1)
+spawned uWSGI worker 5 (pid: 1271, cores: 1)
+spawned uWSGI worker 6 (pid: 1272, cores: 1)
+spawned uWSGI worker 7 (pid: 1273, cores: 1)
+spawned uWSGI worker 8 (pid: 1275, cores: 1)
+spawned uWSGI worker 9 (pid: 1276, cores: 1)
+spawned uWSGI worker 10 (pid: 1277, cores: 1)
+Thu Dec 16 17:45:25 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 121.140.88.4) !!!
+Thu Dec 16 17:45:25 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (121.140.88.4)
+OSError: write error
+[pid: 1267|app: 0|req: 1/1] 121.140.88.4 () {36 vars in 450 bytes} [Thu Dec 16 17:45:22 2021] GET / => generated 0 bytes in 2889 msecs (HTTP/1.1 200) 7 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1273|app: 0|req: 1/2] 121.140.88.4 () {34 vars in 405 bytes} [Thu Dec 16 17:45:39 2021] GET / => generated 9173 bytes in 908 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1277|app: 0|req: 1/3] 54.196.103.227 () {36 vars in 524 bytes} [Thu Dec 16 17:45:52 2021] GET / => generated 9173 bytes in 946 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1277|app: 0|req: 2/4] 54.196.103.227 () {36 vars in 546 bytes} [Thu Dec 16 17:45:58 2021] GET /favicon.ico => generated 179 bytes in 25 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1277|app: 0|req: 3/5] 54.196.103.227 () {36 vars in 546 bytes} [Thu Dec 16 17:46:04 2021] GET /favicon.png => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1277|app: 0|req: 4/6] 100.26.52.66 () {36 vars in 478 bytes} [Thu Dec 16 17:46:04 2021] GET / => generated 9173 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1277|app: 0|req: 5/7] 128.14.133.58 () {36 vars in 501 bytes} [Thu Dec 16 17:46:24 2021] GET / => generated 143 bytes in 213 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1273|app: 0|req: 2/8] 80.78.241.138 () {32 vars in 338 bytes} [Thu Dec 16 17:56:45 2021] GET / => generated 9173 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 00:31:08 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5619c595d500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 32 seconds on interpreter 0x5619c595d500 pid: 878 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 878)
+spawned uWSGI worker 1 (pid: 1173, cores: 1)
+spawned uWSGI worker 2 (pid: 1174, cores: 1)
+spawned uWSGI worker 3 (pid: 1175, cores: 1)
+spawned uWSGI worker 4 (pid: 1176, cores: 1)
+spawned uWSGI worker 5 (pid: 1177, cores: 1)
+spawned uWSGI worker 6 (pid: 1178, cores: 1)
+spawned uWSGI worker 7 (pid: 1179, cores: 1)
+spawned uWSGI worker 8 (pid: 1180, cores: 1)
+spawned uWSGI worker 9 (pid: 1181, cores: 1)
+spawned uWSGI worker 10 (pid: 1182, cores: 1)
+[pid: 1180|app: 0|req: 1/1] 34.101.147.178 () {40 vars in 622 bytes} [Fri Dec 17 00:59:01 2021] GET / => generated 9173 bytes in 3123 msecs (HTTP/1.1 200) 7 headers in 254 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1182|app: 0|req: 1/2] 34.101.147.178 () {40 vars in 677 bytes} [Fri Dec 17 00:59:04 2021] GET //wp-includes/wlwmanifest.xml => generated 179 bytes in 1211 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1173|app: 0|req: 1/3] 34.101.147.178 () {40 vars in 650 bytes} [Fri Dec 17 00:59:06 2021] GET //xmlrpc.php?rsd => generated 179 bytes in 922 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1181|app: 0|req: 1/4] 34.101.147.178 () {40 vars in 622 bytes} [Fri Dec 17 00:59:07 2021] GET / => generated 9173 bytes in 1263 msecs (HTTP/1.1 200) 7 headers in 254 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1173|app: 0|req: 2/5] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:09 2021] GET //blog/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1177|app: 0|req: 1/6] 34.101.147.178 () {40 vars in 685 bytes} [Fri Dec 17 00:59:09 2021] GET //web/wp-includes/wlwmanifest.xml => generated 179 bytes in 1032 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1180|app: 0|req: 2/7] 34.101.147.178 () {40 vars in 697 bytes} [Fri Dec 17 00:59:11 2021] GET //wordpress/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1173|app: 0|req: 3/8] 34.101.147.178 () {40 vars in 693 bytes} [Fri Dec 17 00:59:11 2021] GET //website/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1174|app: 0|req: 1/9] 34.101.147.178 () {40 vars in 683 bytes} [Fri Dec 17 00:59:11 2021] GET //wp/wp-includes/wlwmanifest.xml => generated 179 bytes in 836 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1175|app: 0|req: 1/10] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:13 2021] GET //news/wp-includes/wlwmanifest.xml => generated 179 bytes in 845 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1176|app: 0|req: 1/11] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:14 2021] GET //2020/wp-includes/wlwmanifest.xml => generated 179 bytes in 844 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1173|app: 0|req: 4/12] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:15 2021] GET //2019/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+[pid: 1181|app: 0|req: 2/13] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:15 2021] GET //shop/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+[pid: 1182|app: 0|req: 2/14] 34.101.147.178 () {40 vars in 685 bytes} [Fri Dec 17 00:59:16 2021] GET //wp1/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1173|app: 0|req: 5/15] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:16 2021] GET //test/wp-includes/wlwmanifest.xml => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1173|app: 0|req: 6/16] 34.101.147.178 () {40 vars in 685 bytes} [Fri Dec 17 00:59:17 2021] GET //wp2/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1180|app: 0|req: 3/17] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:17 2021] GET //site/wp-includes/wlwmanifest.xml => generated 179 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1179|app: 0|req: 1/18] 34.101.147.178 () {40 vars in 685 bytes} [Fri Dec 17 00:59:17 2021] GET //cms/wp-includes/wlwmanifest.xml => generated 179 bytes in 996 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1181|app: 0|req: 3/19] 34.101.147.178 () {40 vars in 687 bytes} [Fri Dec 17 00:59:19 2021] GET //sito/wp-includes/wlwmanifest.xml => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1179|app: 0|req: 2/20] 185.180.143.8 () {36 vars in 501 bytes} [Fri Dec 17 01:34:03 2021] GET / => generated 143 bytes in 165 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 12:35:46 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a9d4732500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 28 seconds on interpreter 0x55a9d4732500 pid: 851 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 851)
+spawned uWSGI worker 1 (pid: 1227, cores: 1)
+spawned uWSGI worker 2 (pid: 1228, cores: 1)
+spawned uWSGI worker 3 (pid: 1229, cores: 1)
+spawned uWSGI worker 4 (pid: 1230, cores: 1)
+spawned uWSGI worker 5 (pid: 1231, cores: 1)
+spawned uWSGI worker 6 (pid: 1232, cores: 1)
+spawned uWSGI worker 7 (pid: 1234, cores: 1)
+spawned uWSGI worker 8 (pid: 1235, cores: 1)
+spawned uWSGI worker 9 (pid: 1236, cores: 1)
+spawned uWSGI worker 10 (pid: 1238, cores: 1)
+[pid: 1234|app: 0|req: 1/1] 192.241.208.58 () {36 vars in 408 bytes} [Fri Dec 17 12:49:12 2021] GET / => generated 143 bytes in 2848 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1227|app: 0|req: 1/2] 195.54.160.149 () {40 vars in 727 bytes} [Fri Dec 17 12:54:49 2021] POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 143 bytes in 848 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1230|app: 0|req: 1/3] 178.73.215.171 () {30 vars in 313 bytes} [Fri Dec 17 12:57:21 2021] GET / => generated 143 bytes in 1086 msecs (HTTP/1.0 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1228|app: 0|req: 1/4] 179.240.14.83 () {52 vars in 925 bytes} [Fri Dec 17 13:16:46 2021] GET /favicon.ico => generated 179 bytes in 832 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1227|app: 0|req: 2/5] 179.240.14.83 () {54 vars in 987 bytes} [Fri Dec 17 13:16:47 2021] GET / => generated 9173 bytes in 58 msecs (HTTP/1.1 200) 7 headers in 254 bytes (1 switches on core 0)
+[pid: 1234|app: 0|req: 2/6] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 13:16:53 2021] GET / => generated 9173 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 254 bytes (2 switches on core 0)
+...brutally killing workers...
+Fri Dec 17 13:17:46 2021 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:17:47 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f0f45cc4f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f0f45cc4f0 pid: 851 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 851)
+spawned uWSGI worker 1 (pid: 4145, cores: 1)
+spawned uWSGI worker 2 (pid: 4146, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:47 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:47 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4145)...
+spawned uWSGI worker 3 (pid: 4147, cores: 1)
+spawned uWSGI worker 4 (pid: 4148, cores: 1)
+spawned uWSGI worker 5 (pid: 4149, cores: 1)
+spawned uWSGI worker 6 (pid: 4150, cores: 1)
+spawned uWSGI worker 7 (pid: 4151, cores: 1)
+spawned uWSGI worker 8 (pid: 4152, cores: 1)
+spawned uWSGI worker 9 (pid: 4153, cores: 1)
+spawned uWSGI worker 10 (pid: 4154, cores: 1)
+worker 1 killed successfully (pid: 4145)
+Respawned uWSGI worker 1 (new pid: 4155)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:48 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:48 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4155)...
+worker 1 killed successfully (pid: 4155)
+Respawned uWSGI worker 1 (new pid: 4156)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:49 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:49 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4156)...
+worker 1 killed successfully (pid: 4156)
+Respawned uWSGI worker 1 (new pid: 4157)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:50 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:50 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4157)...
+worker 1 killed successfully (pid: 4157)
+Respawned uWSGI worker 1 (new pid: 4158)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:51 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:51 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4158)...
+worker 1 killed successfully (pid: 4158)
+Respawned uWSGI worker 1 (new pid: 4159)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:52 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:52 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4159)...
+worker 1 killed successfully (pid: 4159)
+Respawned uWSGI worker 1 (new pid: 4160)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:53 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:53 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4160)...
+worker 1 killed successfully (pid: 4160)
+Respawned uWSGI worker 1 (new pid: 4161)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:54 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:54 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4161)...
+worker 1 killed successfully (pid: 4161)
+Respawned uWSGI worker 1 (new pid: 4162)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:55 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:55 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4162)...
+worker 1 killed successfully (pid: 4162)
+Respawned uWSGI worker 1 (new pid: 4163)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:56 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:56 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4163)...
+worker 1 killed successfully (pid: 4163)
+Respawned uWSGI worker 1 (new pid: 4164)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:17:57 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:17:57 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4164)...
+worker 1 killed successfully (pid: 4164)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 4165)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:00 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:00 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4165)...
+worker 1 killed successfully (pid: 4165)
+Respawned uWSGI worker 1 (new pid: 4166)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:01 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:01 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4166)...
+worker 1 killed successfully (pid: 4166)
+Respawned uWSGI worker 1 (new pid: 4167)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:02 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:02 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4167)...
+worker 1 killed successfully (pid: 4167)
+Respawned uWSGI worker 1 (new pid: 4169)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:03 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:03 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4169)...
+worker 1 killed successfully (pid: 4169)
+Respawned uWSGI worker 1 (new pid: 4170)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:04 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:04 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4170)...
+worker 1 killed successfully (pid: 4170)
+Respawned uWSGI worker 1 (new pid: 4171)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:05 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:05 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4171)...
+worker 1 killed successfully (pid: 4171)
+Respawned uWSGI worker 1 (new pid: 4172)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:06 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:06 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4172)...
+worker 1 killed successfully (pid: 4172)
+Respawned uWSGI worker 1 (new pid: 4173)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:07 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:07 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4173)...
+worker 1 killed successfully (pid: 4173)
+Respawned uWSGI worker 1 (new pid: 4175)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:08 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:08 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4175)...
+worker 1 killed successfully (pid: 4175)
+Respawned uWSGI worker 1 (new pid: 4176)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:09 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:09 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4176)...
+worker 1 killed successfully (pid: 4176)
+Respawned uWSGI worker 1 (new pid: 4178)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:10 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:10 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4178)...
+worker 1 killed successfully (pid: 4178)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 4179)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:13 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:13 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4179)...
+worker 1 killed successfully (pid: 4179)
+Respawned uWSGI worker 1 (new pid: 4180)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:14 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:14 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4180)...
+worker 1 killed successfully (pid: 4180)
+Respawned uWSGI worker 1 (new pid: 4181)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:18:15 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:18:15 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4181)...
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:18:16 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563ced51b500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x563ced51b500 pid: 4191 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4191)
+spawned uWSGI worker 1 (pid: 4202, cores: 1)
+spawned uWSGI worker 2 (pid: 4203, cores: 1)
+spawned uWSGI worker 3 (pid: 4204, cores: 1)
+spawned uWSGI worker 4 (pid: 4205, cores: 1)
+spawned uWSGI worker 5 (pid: 4206, cores: 1)
+spawned uWSGI worker 6 (pid: 4207, cores: 1)
+spawned uWSGI worker 7 (pid: 4208, cores: 1)
+spawned uWSGI worker 8 (pid: 4209, cores: 1)
+spawned uWSGI worker 9 (pid: 4210, cores: 1)
+spawned uWSGI worker 10 (pid: 4211, cores: 1)
+[pid: 4211|app: 0|req: 1/1] 179.240.14.83 () {52 vars in 877 bytes} [Fri Dec 17 13:18:33 2021] GET / => generated 14770 bytes in 782 msecs (HTTP/1.1 200) 8 headers in 431 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: IMG_20211216_172047.jpg (image/jpeg)>]}>
+IMG_20211216_172047.jpg
+https://minterstaticbucket.s3.amazonaws.com/IMG20211216172047.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=wuBi1qrbYbfMzVM3a4TvI%2FNmME0%3D&Expires=1639750746
+file_url is not None
+Fri Dec 17 13:20:07 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /upload (ip 179.240.14.83) !!!
+Fri Dec 17 13:20:07 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during POST /upload (179.240.14.83)
+OSError: write error
+[pid: 4203|app: 0|req: 1/2] 179.240.14.83 () {60 vars in 1135 bytes} [Fri Dec 17 13:19:04 2021] POST /upload => generated 0 bytes in 63943 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+...brutally killing workers...
+Fri Dec 17 13:20:15 2021 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:20:16 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558cadb784f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558cadb784f0 pid: 4191 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4191)
+spawned uWSGI worker 1 (pid: 4300, cores: 1)
+spawned uWSGI worker 2 (pid: 4301, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:16 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:16 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4300)...
+spawned uWSGI worker 3 (pid: 4302, cores: 1)
+spawned uWSGI worker 4 (pid: 4303, cores: 1)
+spawned uWSGI worker 5 (pid: 4304, cores: 1)
+spawned uWSGI worker 6 (pid: 4305, cores: 1)
+spawned uWSGI worker 7 (pid: 4306, cores: 1)
+spawned uWSGI worker 8 (pid: 4307, cores: 1)
+spawned uWSGI worker 9 (pid: 4308, cores: 1)
+spawned uWSGI worker 10 (pid: 4309, cores: 1)
+worker 1 killed successfully (pid: 4300)
+Respawned uWSGI worker 1 (new pid: 4310)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:17 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:17 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4310)...
+worker 1 killed successfully (pid: 4310)
+Respawned uWSGI worker 1 (new pid: 4311)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:18 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:18 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4311)...
+worker 1 killed successfully (pid: 4311)
+Respawned uWSGI worker 1 (new pid: 4312)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:19 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:19 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4312)...
+worker 1 killed successfully (pid: 4312)
+Respawned uWSGI worker 1 (new pid: 4313)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:20 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:20 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4313)...
+worker 1 killed successfully (pid: 4313)
+Respawned uWSGI worker 1 (new pid: 4314)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:21 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:21 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4314)...
+worker 1 killed successfully (pid: 4314)
+Respawned uWSGI worker 1 (new pid: 4315)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:22 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:22 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4315)...
+worker 1 killed successfully (pid: 4315)
+Respawned uWSGI worker 1 (new pid: 4316)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:23 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:23 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4316)...
+worker 1 killed successfully (pid: 4316)
+Respawned uWSGI worker 1 (new pid: 4317)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:24 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:24 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4317)...
+worker 1 killed successfully (pid: 4317)
+Respawned uWSGI worker 1 (new pid: 4318)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:25 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:25 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4318)...
+worker 1 killed successfully (pid: 4318)
+Respawned uWSGI worker 1 (new pid: 4319)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:26 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:26 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4319)...
+worker 1 killed successfully (pid: 4319)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 4323)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:29 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:29 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4323)...
+[pid: 4305|app: 0|req: 1/1] 179.240.14.83 () {56 vars in 997 bytes} [Fri Dec 17 13:20:29 2021] GET / => generated 14707 bytes in 787 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+write(): Bad file descriptor [core/utils.c line 1222]
+worker 1 killed successfully (pid: 4323)
+Respawned uWSGI worker 1 (new pid: 4324)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:30 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:30 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4324)...
+worker 1 killed successfully (pid: 4324)
+Respawned uWSGI worker 1 (new pid: 4325)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:31 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:31 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4325)...
+worker 1 killed successfully (pid: 4325)
+Respawned uWSGI worker 1 (new pid: 4326)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:32 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:32 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4326)...
+worker 1 killed successfully (pid: 4326)
+Respawned uWSGI worker 1 (new pid: 4327)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:33 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:33 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4327)...
+worker 1 killed successfully (pid: 4327)
+Respawned uWSGI worker 1 (new pid: 4328)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:34 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:34 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4328)...
+worker 1 killed successfully (pid: 4328)
+Respawned uWSGI worker 1 (new pid: 4329)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:35 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:35 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4329)...
+worker 1 killed successfully (pid: 4329)
+Respawned uWSGI worker 1 (new pid: 4330)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:36 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:36 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4330)...
+worker 1 killed successfully (pid: 4330)
+Respawned uWSGI worker 1 (new pid: 4331)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:37 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:37 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4331)...
+worker 1 killed successfully (pid: 4331)
+Respawned uWSGI worker 1 (new pid: 4332)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:38 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:38 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4332)...
+worker 1 killed successfully (pid: 4332)
+Respawned uWSGI worker 1 (new pid: 4335)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:39 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:39 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4335)...
+worker 1 killed successfully (pid: 4335)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 4336)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:42 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:42 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4336)...
+worker 1 killed successfully (pid: 4336)
+Respawned uWSGI worker 1 (new pid: 4337)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:20:43 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:20:43 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4337)...
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:20:44 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555bbe1de500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555bbe1de500 pid: 4344 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4344)
+spawned uWSGI worker 1 (pid: 4351, cores: 1)
+spawned uWSGI worker 2 (pid: 4352, cores: 1)
+spawned uWSGI worker 3 (pid: 4353, cores: 1)
+spawned uWSGI worker 4 (pid: 4354, cores: 1)
+spawned uWSGI worker 5 (pid: 4355, cores: 1)
+spawned uWSGI worker 6 (pid: 4356, cores: 1)
+spawned uWSGI worker 7 (pid: 4357, cores: 1)
+spawned uWSGI worker 8 (pid: 4358, cores: 1)
+spawned uWSGI worker 9 (pid: 4359, cores: 1)
+spawned uWSGI worker 10 (pid: 4360, cores: 1)
+[pid: 4352|app: 0|req: 1/1] 179.240.14.83 () {56 vars in 997 bytes} [Fri Dec 17 13:21:55 2021] GET / => generated 14707 bytes in 771 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: IMG_20211216_172055.jpg (image/jpeg)>]}>
+IMG_20211216_172055.jpg
+https://minterstaticbucket.s3.amazonaws.com/IMG20211216172055.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=6xxxCCxLqIYYazH8IBV9mbKmUzA%3D&Expires=1639750927
+file_url is not None
+Fri Dec 17 13:23:08 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /upload (ip 179.240.14.83) !!!
+Fri Dec 17 13:23:08 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during POST /upload (179.240.14.83)
+OSError: write error
+[pid: 4353|app: 0|req: 1/2] 179.240.14.83 () {60 vars in 1137 bytes} [Fri Dec 17 13:22:05 2021] POST /upload => generated 0 bytes in 62833 msecs (HTTP/1.1 200) 6 headers in 0 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 4355|app: 0|req: 1/3] 179.240.14.83 () {54 vars in 987 bytes} [Fri Dec 17 13:24:26 2021] GET / => generated 14707 bytes in 773 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 4355|app: 0|req: 2/4] 179.240.14.83 () {52 vars in 919 bytes} [Fri Dec 17 13:24:35 2021] GET /favicon.ico => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: download.jpg (image/jpeg)>]}>
+download.jpg
+https://minterstaticbucket.s3.amazonaws.com/download.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=AzZb2zdnIdcqG4DldMQV389%2B7z0%3D&Expires=1639751084
+file_url is not None
+Fri Dec 17 13:25:45 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /upload (ip 179.240.14.83) !!!
+Fri Dec 17 13:25:45 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during POST /upload (179.240.14.83)
+OSError: write error
+[pid: 4353|app: 0|req: 2/5] 179.240.14.83 () {60 vars in 1156 bytes} [Fri Dec 17 13:24:43 2021] POST /upload => generated 0 bytes in 61825 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+...brutally killing workers...
+Fri Dec 17 13:26:08 2021 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:26:09 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557427e804f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557427e804f0 pid: 4344 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4344)
+spawned uWSGI worker 1 (pid: 4974, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:10 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:10 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4974)...
+spawned uWSGI worker 2 (pid: 4975, cores: 1)
+spawned uWSGI worker 3 (pid: 4976, cores: 1)
+spawned uWSGI worker 4 (pid: 4977, cores: 1)
+spawned uWSGI worker 5 (pid: 4978, cores: 1)
+spawned uWSGI worker 6 (pid: 4979, cores: 1)
+spawned uWSGI worker 7 (pid: 4980, cores: 1)
+spawned uWSGI worker 8 (pid: 4981, cores: 1)
+spawned uWSGI worker 9 (pid: 4982, cores: 1)
+spawned uWSGI worker 10 (pid: 4983, cores: 1)
+worker 1 killed successfully (pid: 4974)
+Respawned uWSGI worker 1 (new pid: 5045)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:11 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:11 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5045)...
+worker 1 killed successfully (pid: 5045)
+Respawned uWSGI worker 1 (new pid: 5046)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:12 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:12 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5046)...
+worker 1 killed successfully (pid: 5046)
+Respawned uWSGI worker 1 (new pid: 5047)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:13 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:13 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5047)...
+worker 1 killed successfully (pid: 5047)
+Respawned uWSGI worker 1 (new pid: 5048)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:14 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:14 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5048)...
+worker 1 killed successfully (pid: 5048)
+Respawned uWSGI worker 1 (new pid: 5049)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:15 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:15 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5049)...
+worker 1 killed successfully (pid: 5049)
+Respawned uWSGI worker 1 (new pid: 5050)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:16 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:16 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5050)...
+worker 1 killed successfully (pid: 5050)
+Respawned uWSGI worker 1 (new pid: 5051)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:17 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:17 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5051)...
+worker 1 killed successfully (pid: 5051)
+Respawned uWSGI worker 1 (new pid: 5052)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:18 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:18 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5052)...
+worker 1 killed successfully (pid: 5052)
+Respawned uWSGI worker 1 (new pid: 5053)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:19 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:19 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5053)...
+worker 1 killed successfully (pid: 5053)
+Respawned uWSGI worker 1 (new pid: 5054)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:20 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:20 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5054)...
+worker 1 killed successfully (pid: 5054)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 5055)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:23 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:23 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5055)...
+worker 1 killed successfully (pid: 5055)
+Respawned uWSGI worker 1 (new pid: 5056)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:24 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:24 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5056)...
+worker 1 killed successfully (pid: 5056)
+Respawned uWSGI worker 1 (new pid: 5057)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:25 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:25 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5057)...
+worker 1 killed successfully (pid: 5057)
+Respawned uWSGI worker 1 (new pid: 5058)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:26 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:26 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5058)...
+worker 1 killed successfully (pid: 5058)
+Respawned uWSGI worker 1 (new pid: 5059)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:27 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:27 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5059)...
+worker 1 killed successfully (pid: 5059)
+Respawned uWSGI worker 1 (new pid: 5060)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:28 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:28 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5060)...
+worker 1 killed successfully (pid: 5060)
+Respawned uWSGI worker 1 (new pid: 5061)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:29 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:29 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5061)...
+worker 1 killed successfully (pid: 5061)
+Respawned uWSGI worker 1 (new pid: 5062)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:30 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:30 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5062)...
+worker 1 killed successfully (pid: 5062)
+Respawned uWSGI worker 1 (new pid: 5063)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:31 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:31 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5063)...
+worker 1 killed successfully (pid: 5063)
+Respawned uWSGI worker 1 (new pid: 5064)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:32 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:32 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5064)...
+worker 1 killed successfully (pid: 5064)
+Respawned uWSGI worker 1 (new pid: 5065)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:33 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:33 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5065)...
+worker 1 killed successfully (pid: 5065)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 5066)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:36 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:36 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5066)...
+worker 1 killed successfully (pid: 5066)
+Respawned uWSGI worker 1 (new pid: 5067)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:37 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:37 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5067)...
+worker 1 killed successfully (pid: 5067)
+Respawned uWSGI worker 1 (new pid: 5068)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:26:38 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:26:38 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 5068)...
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:27:20 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5563219c0500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 27 seconds on interpreter 0x5563219c0500 pid: 922 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 922)
+spawned uWSGI worker 1 (pid: 1354, cores: 1)
+spawned uWSGI worker 2 (pid: 1355, cores: 1)
+spawned uWSGI worker 3 (pid: 1356, cores: 1)
+spawned uWSGI worker 4 (pid: 1357, cores: 1)
+spawned uWSGI worker 5 (pid: 1358, cores: 1)
+spawned uWSGI worker 6 (pid: 1359, cores: 1)
+spawned uWSGI worker 7 (pid: 1360, cores: 1)
+spawned uWSGI worker 8 (pid: 1361, cores: 1)
+spawned uWSGI worker 9 (pid: 1362, cores: 1)
+spawned uWSGI worker 10 (pid: 1363, cores: 1)
+[pid: 1356|app: 0|req: 1/1] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 13:32:54 2021] GET / => generated 14707 bytes in 2755 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1363|app: 0|req: 1/2] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 13:32:57 2021] GET / => generated 14707 bytes in 829 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: download.jpg (image/jpeg)>]}>
+download.jpg
+https://minterstaticbucket.s3.amazonaws.com/download.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=5Q7vvCdyO3%2FelIb7MmLQQ6qd%2BJ4%3D&Expires=1639751589
+file_url is not None
+Fri Dec 17 13:34:10 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /upload (ip 179.240.14.83) !!!
+Fri Dec 17 13:34:10 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during POST /upload (179.240.14.83)
+OSError: write error
+[pid: 1363|app: 0|req: 2/3] 179.240.14.83 () {60 vars in 1156 bytes} [Fri Dec 17 13:33:07 2021] POST /upload => generated 0 bytes in 63276 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 1356|app: 0|req: 2/4] 167.94.138.116 () {30 vars in 326 bytes} [Fri Dec 17 13:35:52 2021] GET / => generated 143 bytes in 207 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1360|app: 0|req: 1/5] 167.94.138.116 () {36 vars in 457 bytes} [Fri Dec 17 13:35:53 2021] GET / => generated 143 bytes in 804 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1360|app: 0|req: 2/6] 179.240.14.83 () {60 vars in 1152 bytes} [Fri Dec 17 13:40:41 2021] POST /upload => generated 145 bytes in 49 msecs (HTTP/1.1 500) 7 headers in 257 bytes (2 switches on core 0)
+...brutally killing workers...
+Fri Dec 17 13:45:44 2021 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:45:45 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d0b289c4f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d0b289c4f0 pid: 922 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 922)
+spawned uWSGI worker 1 (pid: 3613, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:45 2021 - lost communication with the Emperor, goodbye...
+spawned uWSGI worker 2 (pid: 3614, cores: 1)
+Fri Dec 17 13:45:45 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3613)...
+spawned uWSGI worker 3 (pid: 3615, cores: 1)
+spawned uWSGI worker 4 (pid: 3616, cores: 1)
+spawned uWSGI worker 5 (pid: 3617, cores: 1)
+spawned uWSGI worker 6 (pid: 3618, cores: 1)
+spawned uWSGI worker 7 (pid: 3619, cores: 1)
+spawned uWSGI worker 8 (pid: 3620, cores: 1)
+spawned uWSGI worker 9 (pid: 3621, cores: 1)
+spawned uWSGI worker 10 (pid: 3622, cores: 1)
+worker 1 killed successfully (pid: 3613)
+Respawned uWSGI worker 1 (new pid: 3623)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:47 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:47 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3623)...
+worker 1 killed successfully (pid: 3623)
+Respawned uWSGI worker 1 (new pid: 3624)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:48 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:48 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3624)...
+worker 1 killed successfully (pid: 3624)
+Respawned uWSGI worker 1 (new pid: 3625)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:49 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:49 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3625)...
+worker 1 killed successfully (pid: 3625)
+Respawned uWSGI worker 1 (new pid: 3626)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:50 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:50 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3626)...
+worker 1 killed successfully (pid: 3626)
+Respawned uWSGI worker 1 (new pid: 3627)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:51 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:51 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3627)...
+worker 1 killed successfully (pid: 3627)
+Respawned uWSGI worker 1 (new pid: 3628)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:52 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:52 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3628)...
+worker 1 killed successfully (pid: 3628)
+Respawned uWSGI worker 1 (new pid: 3629)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:53 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:53 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3629)...
+worker 1 killed successfully (pid: 3629)
+Respawned uWSGI worker 1 (new pid: 3630)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:54 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:54 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3630)...
+worker 1 killed successfully (pid: 3630)
+Respawned uWSGI worker 1 (new pid: 3631)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:55 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:55 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3631)...
+worker 1 killed successfully (pid: 3631)
+Respawned uWSGI worker 1 (new pid: 3632)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:56 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:56 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3632)...
+worker 1 killed successfully (pid: 3632)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 3633)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:45:59 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:45:59 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3633)...
+worker 1 killed successfully (pid: 3633)
+Respawned uWSGI worker 1 (new pid: 3634)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:00 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:00 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3634)...
+worker 1 killed successfully (pid: 3634)
+Respawned uWSGI worker 1 (new pid: 3635)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:01 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:01 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3635)...
+worker 1 killed successfully (pid: 3635)
+Respawned uWSGI worker 1 (new pid: 3636)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:02 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:02 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3636)...
+worker 1 killed successfully (pid: 3636)
+Respawned uWSGI worker 1 (new pid: 3637)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:03 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:03 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3637)...
+worker 1 killed successfully (pid: 3637)
+Respawned uWSGI worker 1 (new pid: 3638)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:04 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:04 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3638)...
+worker 1 killed successfully (pid: 3638)
+Respawned uWSGI worker 1 (new pid: 3639)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:05 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:05 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3639)...
+worker 1 killed successfully (pid: 3639)
+Respawned uWSGI worker 1 (new pid: 3640)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:06 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:06 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3640)...
+worker 1 killed successfully (pid: 3640)
+Respawned uWSGI worker 1 (new pid: 3641)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:07 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:07 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3641)...
+worker 1 killed successfully (pid: 3641)
+Respawned uWSGI worker 1 (new pid: 3642)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:08 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:08 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3642)...
+worker 1 killed successfully (pid: 3642)
+Respawned uWSGI worker 1 (new pid: 3643)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:09 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:09 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3643)...
+worker 1 killed successfully (pid: 3643)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 3644)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:12 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:12 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3644)...
+worker 1 killed successfully (pid: 3644)
+Respawned uWSGI worker 1 (new pid: 3645)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:13 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:13 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3645)...
+worker 1 killed successfully (pid: 3645)
+Respawned uWSGI worker 1 (new pid: 3646)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 13:46:14 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 13:46:14 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 3646)...
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 13:46:15 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55ce1a6ce500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ce1a6ce500 pid: 3658 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3658)
+spawned uWSGI worker 1 (pid: 3664, cores: 1)
+spawned uWSGI worker 2 (pid: 3665, cores: 1)
+spawned uWSGI worker 3 (pid: 3666, cores: 1)
+spawned uWSGI worker 4 (pid: 3667, cores: 1)
+spawned uWSGI worker 5 (pid: 3668, cores: 1)
+spawned uWSGI worker 6 (pid: 3669, cores: 1)
+spawned uWSGI worker 7 (pid: 3670, cores: 1)
+spawned uWSGI worker 8 (pid: 3671, cores: 1)
+spawned uWSGI worker 9 (pid: 3672, cores: 1)
+spawned uWSGI worker 10 (pid: 3673, cores: 1)
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 3666|app: 0|req: 1/1] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 13:48:14 2021] GET / => generated 0 bytes in 368 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 3667|app: 0|req: 1/2] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 13:48:17 2021] GET / => generated 0 bytes in 240 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 3667|app: 0|req: 2/3] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 13:53:03 2021] GET / => generated 0 bytes in 41 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+...brutally killing workers...
+Fri Dec 17 14:34:18 2021 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 14:34:19 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x564a54b364f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564a54b364f0 pid: 3658 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3658)
+spawned uWSGI worker 1 (pid: 6692, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:20 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:20 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6692)...
+spawned uWSGI worker 2 (pid: 6693, cores: 1)
+spawned uWSGI worker 3 (pid: 6694, cores: 1)
+spawned uWSGI worker 4 (pid: 6695, cores: 1)
+spawned uWSGI worker 5 (pid: 6696, cores: 1)
+spawned uWSGI worker 6 (pid: 6697, cores: 1)
+spawned uWSGI worker 7 (pid: 6698, cores: 1)
+spawned uWSGI worker 8 (pid: 6699, cores: 1)
+spawned uWSGI worker 9 (pid: 6700, cores: 1)
+spawned uWSGI worker 10 (pid: 6701, cores: 1)
+worker 1 killed successfully (pid: 6692)
+Respawned uWSGI worker 1 (new pid: 6702)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:21 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:21 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6702)...
+worker 1 killed successfully (pid: 6702)
+Respawned uWSGI worker 1 (new pid: 6703)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:22 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:22 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6703)...
+worker 1 killed successfully (pid: 6703)
+Respawned uWSGI worker 1 (new pid: 6704)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:23 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:23 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6704)...
+worker 1 killed successfully (pid: 6704)
+Respawned uWSGI worker 1 (new pid: 6705)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:24 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:24 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6705)...
+worker 1 killed successfully (pid: 6705)
+Respawned uWSGI worker 1 (new pid: 6706)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:25 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:25 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6706)...
+worker 1 killed successfully (pid: 6706)
+Respawned uWSGI worker 1 (new pid: 6707)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:26 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:26 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6707)...
+worker 1 killed successfully (pid: 6707)
+Respawned uWSGI worker 1 (new pid: 6708)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:27 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:27 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6708)...
+worker 1 killed successfully (pid: 6708)
+Respawned uWSGI worker 1 (new pid: 6709)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:28 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:28 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6709)...
+worker 1 killed successfully (pid: 6709)
+Respawned uWSGI worker 1 (new pid: 6710)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:29 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:29 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6710)...
+worker 1 killed successfully (pid: 6710)
+Respawned uWSGI worker 1 (new pid: 6711)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:30 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:30 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6711)...
+worker 1 killed successfully (pid: 6711)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 6712)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:33 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:33 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6712)...
+worker 1 killed successfully (pid: 6712)
+Respawned uWSGI worker 1 (new pid: 6713)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:34 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:34 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6713)...
+worker 1 killed successfully (pid: 6713)
+Respawned uWSGI worker 1 (new pid: 6714)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:35 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:35 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6714)...
+worker 1 killed successfully (pid: 6714)
+Respawned uWSGI worker 1 (new pid: 6715)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:36 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:36 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6715)...
+worker 1 killed successfully (pid: 6715)
+Respawned uWSGI worker 1 (new pid: 6716)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:37 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:37 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6716)...
+worker 1 killed successfully (pid: 6716)
+Respawned uWSGI worker 1 (new pid: 6717)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:38 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:38 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6717)...
+worker 1 killed successfully (pid: 6717)
+Respawned uWSGI worker 1 (new pid: 6719)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:39 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:39 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6719)...
+worker 1 killed successfully (pid: 6719)
+Respawned uWSGI worker 1 (new pid: 6720)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:40 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:40 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6720)...
+worker 1 killed successfully (pid: 6720)
+Respawned uWSGI worker 1 (new pid: 6722)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:41 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:41 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6722)...
+worker 1 killed successfully (pid: 6722)
+Respawned uWSGI worker 1 (new pid: 6724)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:42 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:42 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6724)...
+worker 1 killed successfully (pid: 6724)
+Respawned uWSGI worker 1 (new pid: 6725)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:43 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:43 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6725)...
+worker 1 killed successfully (pid: 6725)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 6726)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:46 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:46 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6726)...
+worker 1 killed successfully (pid: 6726)
+Respawned uWSGI worker 1 (new pid: 6727)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Fri Dec 17 14:34:47 2021 - lost communication with the Emperor, goodbye...
+Fri Dec 17 14:34:47 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 6727)...
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 17 14:34:48 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563368276500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x563368276500 pid: 6743 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6743)
+spawned uWSGI worker 1 (pid: 6753, cores: 1)
+spawned uWSGI worker 2 (pid: 6754, cores: 1)
+spawned uWSGI worker 3 (pid: 6755, cores: 1)
+spawned uWSGI worker 4 (pid: 6756, cores: 1)
+spawned uWSGI worker 5 (pid: 6757, cores: 1)
+spawned uWSGI worker 6 (pid: 6758, cores: 1)
+spawned uWSGI worker 7 (pid: 6759, cores: 1)
+spawned uWSGI worker 8 (pid: 6760, cores: 1)
+spawned uWSGI worker 9 (pid: 6761, cores: 1)
+spawned uWSGI worker 10 (pid: 6762, cores: 1)
+[pid: 6753|app: 0|req: 1/1] 179.240.14.83 () {56 vars in 1018 bytes} [Fri Dec 17 14:35:16 2021] GET / => generated 14737 bytes in 833 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: download.jpg (image/jpeg)>]}>
+download.jpg
+https://minterstaticbucket.s3.amazonaws.com/download.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=C6%2BrL1A7HPpXLwaZpfOKiZ1R5n0%3D&Expires=1639755326
+file_url is not None
+[pid: 6754|app: 0|req: 1/2] 179.240.14.83 () {60 vars in 1156 bytes} [Fri Dec 17 14:35:24 2021] POST /upload => generated 233 bytes in 3468 msecs (HTTP/1.1 200) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+entering BalanceCheck on Views.
+451220342
+[pid: 6762|app: 0|req: 1/3] 179.240.14.83 () {58 vars in 976 bytes} [Fri Dec 17 14:35:44 2021] POST /balanceCheck => generated 22 bytes in 3060 msecs (HTTP/1.1 200) 6 headers in 230 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+this is the method: POST. 
+ and the body title:dfsdfsdf
+[pid: 6759|app: 0|req: 1/4] 179.240.14.83 () {58 vars in 960 bytes} [Fri Dec 17 14:35:47 2021] POST /node => generated 392 bytes in 2179 msecs (HTTP/1.1 201) 6 headers in 236 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+entering BalanceCheck on Views.
+451220342
+[pid: 6759|app: 0|req: 2/5] 179.240.14.83 () {58 vars in 976 bytes} [Fri Dec 17 14:35:56 2021] POST /balanceCheck => generated 22 bytes in 333 msecs (HTTP/1.1 200) 6 headers in 230 bytes (1 switches on core 0)
+entering BalanceCheck on Views.
+entering BalanceCheck on Views.
+451220342
+[pid: 6761|app: 0|req: 1/6] 179.240.14.83 () {58 vars in 976 bytes} [Fri Dec 17 14:35:56 2021] POST /balanceCheck => generated 22 bytes in 1155 msecs (HTTP/1.1 200) 6 headers in 230 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+451220342
+[pid: 6759|app: 0|req: 3/7] 179.240.14.83 () {58 vars in 976 bytes} [Fri Dec 17 14:35:58 2021] POST /balanceCheck => generated 22 bytes in 368 msecs (HTTP/1.1 200) 6 headers in 230 bytes (1 switches on core 0)

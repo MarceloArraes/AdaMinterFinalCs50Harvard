@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.ipfsRegister, name="index"),
     path("fees", views.fees, name="fees"),
     path("unsig", views.createUnsig, name="createUnsig"),
     path("login", views.login_view, name="login"),

@@ -150,8 +150,8 @@
     const csrftoken = getCookie('csrftoken');
     setCsrfToken(csrftoken);
     console.log("button clicked");
-    console.log(csrftoken);
     var file = document.getElementById("file").files[0];
+
     var formData = new FormData();
     formData.append("upload", file);
     var response = await fetch("/upload", {
@@ -165,23 +165,22 @@
     .then(data => {
       console.log(data);
       setIpfs_hash(data.ipfs_hash);
-      setFileUrl(data.filename);
+      setFileUrl(data.file_url);
       
       setMetadata({
       ...metadata,
       fileWebLink: `ipfs://${data.ipfs_hash}`,
     });
     var img = document.getElementById('output');
-    img.src = "../static/media/" + data.filename;
+    img.src = data.file_url;
     document.querySelector(".metadata-container").style.display = "inline-flex";
     document.querySelector(".metadata-container").style.verticalAlign  = "top";
     document.querySelector(".image_form").style.display = "none";
 
 
       console.log(data.ipfs_hash);
-      console.log(data.filename);
+      console.log(data.file_url);
     })
-    .catch(err => console.log(err));      
     }
 
     async function fetchFees() {
@@ -218,6 +217,8 @@
         });
         return minted;
 
+       
+        
     }
     
     async function balanceCheck() {
@@ -293,11 +294,11 @@
 
     return (
       <div id="projectCreate" className="image-container">
-        <div class="image_form" id="image_form">
+        <div className="image_form" id="image_form">
         <h2>Add a pic that you want to register</h2>
-        <input id="file" type="file" name="upload" accept="image/*" />
-        <button id="img_uploaded" type="submit" onClick={imageRegister}>Submit</button>
-        </div>
+        <label id="labelfile" for="file">Upload image</label>
+        <input id="file" type="file" name="file" accept="image/*" onChange={imageRegister}/>
+         </div>
       <div >
         <div className="metadata-container">          
           <label>
