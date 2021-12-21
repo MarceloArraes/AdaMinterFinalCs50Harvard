@@ -9007,3 +9007,90 @@ announcing my loyalty to the Emperor...
 [pid: 1301|app: 0|req: 3/48] 54.191.61.228 () {34 vars in 493 bytes} [Tue Dec 21 04:04:30 2021] GET /favicon.ico => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
 [pid: 1297|app: 0|req: 7/49] 54.191.61.228 () {34 vars in 471 bytes} [Tue Dec 21 04:04:32 2021] GET / => generated 14737 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
 [pid: 1301|app: 0|req: 4/50] 34.219.231.239 () {34 vars in 472 bytes} [Tue Dec 21 04:10:59 2021] GET / => generated 14751 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 8/51] 66.249.64.97 () {38 vars in 539 bytes} [Tue Dec 21 04:11:49 2021] GET /robots.txt => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 11/52] 66.249.64.97 () {44 vars in 854 bytes} [Tue Dec 21 04:11:49 2021] GET / => generated 14751 bytes in 3 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 12/53] 34.212.85.114 () {36 vars in 540 bytes} [Tue Dec 21 04:11:51 2021] GET /favicon.ico => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1292|app: 0|req: 11/54] 34.212.85.114 () {36 vars in 507 bytes} [Tue Dec 21 04:11:54 2021] GET / => generated 14737 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Tue Dec 21 12:57:22 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562807603500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 33 seconds on interpreter 0x562807603500 pid: 850 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 850)
+spawned uWSGI worker 1 (pid: 1195, cores: 1)
+spawned uWSGI worker 2 (pid: 1196, cores: 1)
+spawned uWSGI worker 3 (pid: 1197, cores: 1)
+spawned uWSGI worker 4 (pid: 1198, cores: 1)
+spawned uWSGI worker 5 (pid: 1200, cores: 1)
+spawned uWSGI worker 6 (pid: 1201, cores: 1)
+spawned uWSGI worker 7 (pid: 1202, cores: 1)
+spawned uWSGI worker 8 (pid: 1203, cores: 1)
+spawned uWSGI worker 9 (pid: 1205, cores: 1)
+spawned uWSGI worker 10 (pid: 1206, cores: 1)
+[pid: 1200|app: 0|req: 1/1] 5.188.62.76 () {38 vars in 530 bytes} [Tue Dec 21 13:02:15 2021] GET / => generated 14751 bytes in 4909 msecs (HTTP/1.1 200) 8 headers in 431 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1202|app: 0|req: 1/2] 5.188.62.76 () {38 vars in 626 bytes} [Tue Dec 21 13:02:29 2021] GET /robots.txt => generated 179 bytes in 872 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1200|app: 0|req: 2/3] 66.249.75.230 () {44 vars in 875 bytes} [Tue Dec 21 13:08:12 2021] GET /register => generated 2562 bytes in 20 msecs (HTTP/1.1 200) 8 headers in 430 bytes (2 switches on core 0)
+[pid: 1200|app: 0|req: 3/4] 179.240.27.253 () {54 vars in 989 bytes} [Tue Dec 21 13:17:06 2021] GET / => generated 14751 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1200|app: 0|req: 4/5] 179.240.27.253 () {52 vars in 921 bytes} [Tue Dec 21 13:17:12 2021] GET /favicon.ico => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: IMG_20211216_172106.jpg (image/jpeg)>]}>
+IMG_20211216_172106.jpg
+https://minterstaticbucket.s3.amazonaws.com/IMG20211216172106.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=35Tr36EQ8hdY7QF3f1A3oaF%2F1GA%3D&Expires=1640096245
+file_url is not None
+[pid: 1205|app: 0|req: 1/6] 179.240.27.253 () {60 vars in 1158 bytes} [Tue Dec 21 13:17:22 2021] POST /upload => generated 242 bytes in 4894 msecs (HTTP/1.1 200) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+entering BalanceCheck on Views.
+440226253
+[pid: 1200|app: 0|req: 5/7] 179.240.27.253 () {58 vars in 978 bytes} [Tue Dec 21 13:17:51 2021] POST /balanceCheck => generated 22 bytes in 1304 msecs (HTTP/1.1 200) 6 headers in 230 bytes (1 switches on core 0)
+this is the method: POST. 
+ and the body title:Fasxisto
+[pid: 1200|app: 0|req: 6/8] 179.240.27.253 () {58 vars in 962 bytes} [Tue Dec 21 13:17:53 2021] POST /node => generated 383 bytes in 2665 msecs (HTTP/1.1 201) 6 headers in 236 bytes (1 switches on core 0)
+entering BalanceCheck on Views.
+440226253
+[pid: 1198|app: 0|req: 1/9] 179.240.27.253 () {58 vars in 978 bytes} [Tue Dec 21 13:18:00 2021] POST /balanceCheck => generated 22 bytes in 1201 msecs (HTTP/1.1 200) 6 headers in 230 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+entering BalanceCheck on Views.
+440226253
+[pid: 1198|app: 0|req: 2/10] 179.240.27.253 () {58 vars in 978 bytes} [Tue Dec 21 13:18:01 2021] POST /balanceCheck => generated 22 bytes in 361 msecs (HTTP/1.1 200) 6 headers in 230 bytes (2 switches on core 0)
+entering BalanceCheck on Views.
+440226253
+[pid: 1197|app: 0|req: 1/11] 179.240.27.253 () {58 vars in 978 bytes} [Tue Dec 21 13:18:04 2021] POST /balanceCheck => generated 22 bytes in 1216 msecs (HTTP/1.1 200) 6 headers in 230 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1198|app: 0|req: 3/12] 192.241.206.162 () {36 vars in 409 bytes} [Tue Dec 21 13:37:05 2021] GET / => generated 143 bytes in 169 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+[pid: 1198|app: 0|req: 4/13] 66.249.75.90 () {38 vars in 539 bytes} [Tue Dec 21 13:53:08 2021] GET /robots.txt => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1206|app: 0|req: 1/14] 66.249.75.91 () {42 vars in 799 bytes} [Tue Dec 21 13:53:09 2021] GET / => generated 14751 bytes in 827 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1206|app: 0|req: 2/15] 66.249.75.91 () {40 vars in 630 bytes} [Tue Dec 21 14:38:08 2021] GET / => generated 14751 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1206|app: 0|req: 3/16] 66.249.75.90 () {44 vars in 866 bytes} [Tue Dec 21 15:23:08 2021] GET /upload => generated 14751 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1206|app: 0|req: 4/17] 66.249.75.230 () {38 vars in 544 bytes} [Tue Dec 21 16:01:12 2021] GET /robots.txt => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (2 switches on core 0)
+[pid: 1206|app: 0|req: 5/18] 66.249.75.230 () {40 vars in 656 bytes} [Tue Dec 21 16:01:12 2021] GET /.well-known/assetlinks.json => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1206|app: 0|req: 6/19] 187.18.207.220 () {50 vars in 964 bytes} [Tue Dec 21 16:35:51 2021] GET / => generated 14751 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 1206|app: 0|req: 7/20] 187.18.207.220 () {50 vars in 939 bytes} [Tue Dec 21 16:35:53 2021] GET /favicon.ico => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 1200|app: 0|req: 7/21] 167.94.138.42 () {30 vars in 325 bytes} [Tue Dec 21 16:36:45 2021] GET / => generated 143 bytes in 23 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+[pid: 1203|app: 0|req: 1/22] 167.94.138.42 () {36 vars in 456 bytes} [Tue Dec 21 16:36:46 2021] GET / => generated 143 bytes in 754 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1203|app: 0|req: 2/23] 162.221.192.26 () {36 vars in 502 bytes} [Tue Dec 21 17:33:43 2021] GET / => generated 143 bytes in 18 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
