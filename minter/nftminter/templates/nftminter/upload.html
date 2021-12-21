@@ -17,7 +17,6 @@
       author: "",
       description: "",
       fileWebLink: "ipfs://",
-      arweaveId: "",
       nsfw: "",
     });
     const [receiverBalance, setReceiverBalance] = useState(0);
@@ -60,8 +59,7 @@
       if (
         event.target.name == "description" ||
         event.target.name == "author" ||
-        event.target.name == "fileWebLink" ||
-        event.target.name == "arweaveId"
+        event.target.name == "fileWebLink"
       ) {
         setMetadata({
           ...metadata,
@@ -106,11 +104,11 @@
     document.querySelector('.fee').innerHTML = metaAndFee.fee;
 
     document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
-    document.querySelector(".metadata-container").style.display = "none";
-    document.querySelector(".output").style.width = "20%";
-    //document.querySelector(".output").style.textAlign = "left";
+    document.querySelector(".metadata-input").style.display = "none";
+    document.querySelector(".output").style.width = "40%";
 
-    document.querySelector(".payment-container").style.display = "inline-flex";
+    document.querySelector(".payment-container").style.display = "flex";
+    document.querySelector(".payment-container").style.flexDirection = "column";
 
     
   }
@@ -128,7 +126,6 @@
               console.log("ABSOLUTE SUCESS!!!!!!!!");
               //CANCELED i will call it on the submit of the user adress//now i can call for the mint-asset 
               //Here i will code the revealing of the className="useradress-container"
-              //document.getElementById("submit_img").style.display = "none";
               document.querySelector(".payment-adress").style.display = "none";
               document.querySelector(".useradress-container").style.display = "block";
               
@@ -173,8 +170,11 @@
     });
     var img = document.getElementById('output');
     img.src = data.file_url;
-    document.querySelector(".metadata-container").style.display = "inline-flex";
-    document.querySelector(".metadata-container").style.verticalAlign  = "top";
+    document.querySelector(".metadata-container").style.display = "flex";
+    document.querySelector(".metadata-container").style.justifyContent = "center";
+    document.querySelector(".metadata-container").style.textAlign = "center";
+    document.querySelector(".metadata-container").style.flexDirection = "column";
+    
     document.querySelector(".image_form").style.display = "none";
 
 
@@ -242,13 +242,16 @@
       var mintInfo = {"adress": adress};
       
       Object.assign(mintInfo, metadata)
-        
+      console.log("Return from fetchMinter() on mintAsset(): ");
       let cnodeReturn = await fetchMinter(mintInfo);
 
-      console.log("Return from fetchMinter() on mintAsset(): ");
-      //var transactionHash = JSON.parse(cnodeReturn)
-      //console.log(transactionHash);
+      //let transactionLink = "https://testnet.cardanoscan.io/transaction/" + cnodeReturn["txHash"];
       let transactionLink = "https://explorer.cardano-testnet.iohkdev.io/en/transaction?id=" + cnodeReturn["txHash"];
+      document.querySelector(".useradress-container").style.display = "none";
+
+      document.querySelector(".transaction_link").style.display = "flex";
+      document.querySelector(".transaction_link").style.textAlign = "center";
+      document.querySelector(".transaction_link").style.justifyContent = "center";
       document.querySelector("#transaction_link").href = transactionLink ;
     }
 
@@ -299,8 +302,8 @@
         <label id="labelfile" for="file">Upload image</label>
         <input id="file" type="file" name="file" accept="image/*" onChange={imageRegister}/>
          </div>
-      <div >
-        <div className="metadata-container">          
+      <div className="metadata-container">
+        <div className="metadata-input">          
           <label>
             Metadata:
             <div>
@@ -347,21 +350,8 @@
               </p>
             </div>
             <div>
-              Arweave ID:
-              <p>
-                <input
-                  type="text"
-                  onChange={fieldUpdater}
-                  name="arweaveId"
-                  value={metadata.arweaveId}
-                />
-              </p>
-            </div>
-            <div>
               NSFW:
-              <p>
-                <input type="checkbox" onChange={fieldUpdater} name="nsfw" />
-              </p>
+              <input type="checkbox" onChange={fieldUpdater} name="nsfw" />
             </div>
             <div>
               <button
@@ -372,11 +362,8 @@
             </div>
           </label>
         </div>
-        
       <img className="output" id="output" alt="" />
-        
       <div>
-        
         <div className="payment-container">
           <div>
             Title:
@@ -393,32 +380,12 @@
             </p>
             Web Link:
             <p>
-              <a>{metadata.fileWebLink}</a>
-            </p>
-            Arwave Id:
-            <p>
-              <a>{metadata.arweaveId}</a>
+              <a href={metadata.fileWebLink} target="_blank" rel="noopener noreferrer">{metadata.fileWebLink}</a>
             </p>
             <p>
               <a id="NSFW-checkbox">{metadata.nsfw}</a>
             </p>
-          </div>
-          <div className="useradress-container">
-            <p>Payment confirmed.</p>
-            <p>Paste the adress that you want to receive the NFT:</p>
-            <input id="user_adress" type="text" />
-            <button
-              type="button"
-              value="Submit Adress"
-              onClick={mintAsset}
-            >Submit Adress</button>
-          </div>
-          <div>
-            <h1 className="transaction_link">
-            <a id="transaction_link" href="#">Transaction Link</a></h1>
-          </div>
-          <div className="payment-fee"></div>
-          <div className="payment-adress">
+            <div className="payment-adress">
             <p>Fee Cost:</p>
             <p className="fee"></p>
             <p>Send the fee value to this address: </p>
@@ -430,6 +397,22 @@
               onClick={copyAdress}
             />
           </div>
+          </div>
+          <div className="useradress-container">
+            <p>Payment confirmed.</p>
+            <p>Paste your wallet address to receive the NFT:</p>
+            <input id="user_adress" type="text" />
+            <button
+              type="button"
+              value="Submit Adress"
+              onClick={mintAsset}
+            >Submit Adress</button>
+          </div>
+          <div>
+            <h1 className="transaction_link">
+            <a id="transaction_link" href="#" target="_blank" rel="noopener noreferrer">Confirmation Link</a></h1>
+          </div>
+          <div className="payment-fee"></div>
         </div>
         
       </div>
