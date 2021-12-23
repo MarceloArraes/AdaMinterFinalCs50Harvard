@@ -20,6 +20,7 @@
       nsfw: "",
     });
     const [receiverBalance, setReceiverBalance] = useState(0);
+    const [receiverAdress, setReceiverAdress] = useState("");
     const [fees, setFees]=useState(0);
     const [filename, setFileUrl] = useState("");
     const [ipfs_hash , setIpfs_hash] = useState("");
@@ -96,12 +97,14 @@
     console.log(balance.balance);
 
     setReceiverBalance(balance.balance)
+    setReceiverAdress(metaAndFee.wallet.senderadress)
     setFees(metaAndFee.fee)
 
     console.log("FEE: ");
     console.log(metaAndFee.fee);
+    let lovelace = metaAndFee.fee/1000000;
 
-    document.querySelector('.fee').innerHTML = metaAndFee.fee;
+    document.querySelector('.fee').innerHTML = lovelace;
 
     document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
     document.querySelector(".metadata-input").style.display = "none";
@@ -114,7 +117,7 @@
   }
 
          useEffect(() => {
-           if(fees>0){
+          if(fees>0){
           const timer = setInterval(async() => {
             var newBalance = await balanceCheck()
             console.log("setInterval: ");
@@ -125,14 +128,14 @@
             if(newBalance['balance']==fees+receiverBalance && fees>0 && receiverBalance!=newBalance['balance'] || paytest){
               console.log("ABSOLUTE SUCESS!!!!!!!!");
               //CANCELED i will call it on the submit of the user adress//now i can call for the mint-asset 
-              //Here i will code the revealing of the className="useradress-container"
               document.querySelector(".payment-adress").style.display = "none";
               document.querySelector(".useradress-container").style.display = "block";
               
-              //Register image on IPFS;
               clearInterval(timer);
             }
               else {console.log("Not Payed yet!");
+              var balance = await balanceCheck()
+              setReceiverBalance(balance.balance)
             }
           
           }, 4000);
@@ -238,6 +241,14 @@
 
     async function mintAsset() {  
       let adress = document.querySelector("#user_adress").value
+      if(adress==receiverAdress){
+        alert("You shouldn't  mint to our Wallet! Put your receiver adress in the input field!");
+        return;
+      }
+      if(adress.length!=108){
+        alert("Wrong adress length!");
+        return;
+      }
       console.log(adress);
       var mintInfo = {"adress": adress};
       
@@ -248,6 +259,7 @@
       //let transactionLink = "https://testnet.cardanoscan.io/transaction/" + cnodeReturn["txHash"];
       let transactionLink = "https://explorer.cardano-testnet.iohkdev.io/en/transaction?id=" + cnodeReturn["txHash"];
       document.querySelector(".useradress-container").style.display = "none";
+      document.querySelector(".useradress-container").remove();
 
       document.querySelector(".transaction_link").style.display = "flex";
       document.querySelector(".transaction_link").style.textAlign = "center";
@@ -257,13 +269,14 @@
 
     async function copyAdress() {
         /* Get the text field */
-        var copyText = document.querySelector(".content")
+      var copyText = document.querySelector(".content")
 
       /* Copy the text inside the text field */
       //navigator.clipboard.writeText(copyText.innerHTML);
 
       /* Alert the copied text */
-      alert("Copied: " + copyText.innerHTML);
+      //alert("Copied: " + copyText.innerHTML);
+      alert("Fake payed!");
 
       //fazer o get-balance antes pra ver se tem saldo.
       var newBalance = await balanceCheck()
@@ -392,7 +405,7 @@
             <p className="content" ></p>
             <input
               type="submit"
-              value="Copy Adress"
+              value="Fake payment button"
               id="copy_adress"
               onClick={copyAdress}
             />
@@ -403,6 +416,7 @@
             <p>Paste your wallet address to receive the NFT:</p>
             <input id="user_adress" type="text" />
             <button
+              id="useraddress-button"
               type="button"
               value="Submit Adress"
               onClick={mintAsset}

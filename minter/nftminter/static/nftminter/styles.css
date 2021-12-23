@@ -198,7 +198,6 @@ button, #labelfile,#submit_metadata {
 .image-container {
   display: block;
   overflow: auto;
-  vertical-align: baseline;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -244,6 +243,7 @@ background-blend-mode: normal, normal, screen, overlay, normal;
   text-align: center;
   justify-content: center;
   order: -1;
+  object-fit: cover;  
   background-color: white;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
   display: inline-flex;
@@ -277,7 +277,7 @@ background-blend-mode: normal, normal, screen, overlay, normal;
     font-size: 1rem;
   }
   .metadata-input{
-    font-size: 6rem;
+    font-size: 3rem;
   }
   .image_form{
     /* display: flex; */
