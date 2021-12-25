@@ -10050,3 +10050,46 @@ announcing my loyalty to the Emperor...
 announcing my loyalty to the Emperor...
 [pid: 1264|app: 0|req: 1/3] 2.57.121.44 () {36 vars in 415 bytes} [Thu Dec 23 20:00:44 2021] GET / => generated 143 bytes in 791 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
 announcing my loyalty to the Emperor...
+[pid: 1272|app: 0|req: 1/4] 192.53.170.163 () {36 vars in 502 bytes} [Thu Dec 23 21:53:29 2021] GET / => generated 143 bytes in 757 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1272|app: 0|req: 2/5] 167.94.138.113 () {30 vars in 326 bytes} [Thu Dec 23 22:55:16 2021] GET / => generated 143 bytes in 18 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1272|app: 0|req: 3/6] 167.94.138.113 () {36 vars in 457 bytes} [Thu Dec 23 22:55:16 2021] GET / => generated 143 bytes in 23 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Dec 24 23:33:09 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562fafa99500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 30 seconds on interpreter 0x562fafa99500 pid: 988 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 988)
+spawned uWSGI worker 1 (pid: 1316, cores: 1)
+spawned uWSGI worker 2 (pid: 1317, cores: 1)
+spawned uWSGI worker 3 (pid: 1318, cores: 1)
+spawned uWSGI worker 4 (pid: 1319, cores: 1)
+spawned uWSGI worker 5 (pid: 1320, cores: 1)
+spawned uWSGI worker 6 (pid: 1321, cores: 1)
+spawned uWSGI worker 7 (pid: 1322, cores: 1)
+spawned uWSGI worker 8 (pid: 1323, cores: 1)
+spawned uWSGI worker 9 (pid: 1324, cores: 1)
+spawned uWSGI worker 10 (pid: 1325, cores: 1)
