@@ -249,7 +249,6 @@ background-blend-mode: normal, normal, screen, overlay, normal;
   display: inline-flex;
   min-height: 30%;
   width: auto;
-  max-height: 330px;
   max-width: 800px;
   margin:2%;
 }
