@@ -10093,3 +10093,5 @@ spawned uWSGI worker 7 (pid: 1322, cores: 1)
 spawned uWSGI worker 8 (pid: 1323, cores: 1)
 spawned uWSGI worker 9 (pid: 1324, cores: 1)
 spawned uWSGI worker 10 (pid: 1325, cores: 1)
+[pid: 1323|app: 0|req: 1/1] 128.14.133.58 () {36 vars in 501 bytes} [Sat Dec 25 02:00:10 2021] GET / => generated 143 bytes in 1075 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
