@@ -1,3 +1,4 @@
+const { json } = require("body-parser");
 const cardano = require("./cardano");
 
 const createWallet = (account) => {
@@ -11,21 +12,6 @@ const createWallet = (account) => {
   return cardano.wallet(account);
 };
 
-//create a random name for the wallet
-const randomName = () => {
-  const chars = "abcdefghijklmnopqrstuvwxyz";
-  let name = "";
-  for (let i = 0; i < 10; i++) {
-    name += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return name;
+module.exports = function(walletName) {
+  return json({ message: "Wallet created inside nodejs", wallet: createWallet(walletName)});
 };
-
-const walletName = randomName();
-
-createWallet(walletName);
-
-//send the name of the wallet to the frontend
-module.exports = walletName;
-
-

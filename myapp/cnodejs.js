@@ -4,8 +4,7 @@ const cors = require('cors')
 const fileUpload = require('express-fileupload');
 const morgan = require('morgan');
 const _ = require('lodash');
-// import from myapp/src/_pinImgToPinata.js
-const pinImgToPinata = require('./src/_pinImgToPinata.js')
+const { application } = require('express');
 //files to call upon clicking and submitting. Call trought fetchs carryng the metadata and other factors.
 const app = express()
 const port = 3000
@@ -52,17 +51,35 @@ app.post('/ipfsRegister', async (req, res) => {
   }
 });
 
+app.get('/createWallet', (req,res) => {
+  console.log(req.body);
+  console.log("Entered createWallet");
+  const { walletName } = req.body;
+  console.log(walletName);
+  require('./src/create-wallet.js')(walletName);
+  res.json({message: "Wallet created"});
+});
+
 app.get('/balanceCheck', (req, res) => {
   //console.log("entered balancheCheck on CNODEJS");
-  
-  var walletData = require('./src/get-balance')
-  var ADAPI3 = walletData("ADAPI3")
-  var wallet = JSON.parse(ADAPI3)
+  //const { walletName } = req.body;
+  //console.log(req.body);
+  const metadataWallet = JSON.parse(req.headers.metadata);
+  console.log(metadataWallet);
+  console.log(metadataWallet.walletName);
+  var walletData = require('./src/get-balance');
+  var walletCreated = walletData(metadataWallet.walletName)
+  var wallet = JSON.parse(walletCreated);
+  console.log(wallet);
 
-  //console.log(wallet["balanceValue"]["lovelace"]);
+  if(wallet.balanceValue.hasOwnProperty("lovelace")){
+    console.log("Wallet has lovelace");
+    res.json({balance: wallet["balanceValue"]["lovelace"], senderadress: wallet["senderadress"]});
+  }else{
+    console.log("Wallet has no lovelace");
+    res.json({balance: 0, senderadress: wallet["senderadress"]})
+  }
 
-
-  res.json({balance: wallet["balanceValue"]["lovelace"]})
 })
 
 app.get('/mintAsset', async (req, res) => {
@@ -94,22 +111,18 @@ app.get('/mintAsset', async (req, res) => {
 app.get('/', (req, res) => {
   metad = JSON.parse(req.headers.metadata);
   
-  //console.log(typeof(metad.title));
-  //console.log(metad.title);
-  
   if(metad.title == "" || metad.title === undefined)
   {
     res.send({metadata: "ERROR: Title cannot be empty.",fee:"Can't calculate"})
     return;
   }
+  console.log(metad.walletName);
 
   var fee = require('./src/fee-cost.js');
   var walletData = require('./src/get-balance')
 
-  //console.log("FIRST CALL FOR FEE:"+fee(req.headers.metadata));
-
   //res.status(201).json({message: "Like retrieved successfully.",fee:fee(metad), metadata:req.headers['metadata']})
-  res.json({metadata:metad, fee: fee(req.headers.metadata), wallet: JSON.parse(walletData("ADAPI3")) })
+  res.json({metadata:metad, fee: fee(req.headers.metadata), wallet: JSON.parse(walletData(metad.walletName))})
   //res.send({metadata:req.headers.metadata, fee: fee(metad)})
   
 })

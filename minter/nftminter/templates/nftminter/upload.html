@@ -25,6 +25,7 @@
     const [filename, setFileUrl] = useState("");
     const [ipfs_hash , setIpfs_hash] = useState("");
     const [csrf_token , setCsrfToken] = useState("");
+    const [walletName, setWalletName] = useState("");
     let paytest = false;
 
     const fieldUpdater = (name) => {
@@ -90,14 +91,26 @@
     } else {
       document.querySelector("#NSFW-checkbox").innerHTML = "";
     }
-    var balance = await balanceCheck()
-    let metaAndFee= await fetchFees()
+
+    //create wallet for the user to send the funds
+    //create random wallet name with 10 characters
+    let walletName = "";
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    for (let i = 0; i < 10; i++) {
+      walletName += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    }
+    
+    let wallet = await createWallet(walletName);
+    setWalletName(walletName);
+    var balance = await balanceCheck(walletName);
+    let metaAndFee= await fetchFees(walletName);
 
     console.log("DISPLAY METADATA BALANCE LOG");
+    console.log(balance);
     console.log(balance.balance);
 
     setReceiverBalance(balance.balance)
-    setReceiverAdress(metaAndFee.wallet.senderadress)
+    setReceiverAdress(balance.senderadress)
     setFees(metaAndFee.fee)
 
     console.log("FEE: ");
@@ -106,7 +119,7 @@
 
     document.querySelector('.fee').innerHTML = lovelace;
 
-    document.querySelector('.content').innerHTML = metaAndFee.wallet.senderadress;
+    document.querySelector('.content').innerHTML = balance.senderadress;
     document.querySelector(".metadata-input").style.display = "none";
     document.querySelector(".output").style.width = "40%";
 
@@ -119,7 +132,7 @@
          useEffect(() => {
           if(fees>0){
           const timer = setInterval(async() => {
-            var newBalance = await balanceCheck()
+            var newBalance = await balanceCheck(walletName)
             console.log("setInterval: ");
             console.log(newBalance['balance']);
             console.log(fees);
@@ -134,8 +147,6 @@
               clearInterval(timer);
             }
               else {console.log("Not Payed yet!");
-              var balance = await balanceCheck()
-              setReceiverBalance(balance.balance)
             }
           
           }, 4000);
@@ -186,7 +197,12 @@
     })
     }
 
-    async function fetchFees() {
+    async function fetchFees(walletName) {
+      var nameWallet = {
+        walletName: walletName
+      }
+      console.log("Fetching fees");
+      Object.assign(metadata, nameWallet)
       let fees = await fetch('node',{
             method: "post",
              headers: {
@@ -224,7 +240,31 @@
         
     }
     
-    async function balanceCheck() {
+    async function createWallet(walletName) {
+      let wallet = await fetch('createWallet',{
+            method: "post",
+             headers: {
+                 "Content-Type": "application/json"
+            },
+            body: JSON.stringify(walletName)
+  })
+        .then((response) => response.json())
+        .then((result) => {
+          console.log("result from createWallet: ");
+          console.log(result);
+          return result;
+        });
+        return wallet;
+    }
+
+
+    async function balanceCheck(walletName) {
+      var nameWallet = {
+        walletName: walletName
+      }
+      console.log(nameWallet);
+      Object.assign(metadata, nameWallet)
+      console.log(metadata);
       let balance = await fetch('balanceCheck',{
             method: "post",
              headers: {
@@ -279,7 +319,7 @@
       alert("Fake payed!");
 
       //fazer o get-balance antes pra ver se tem saldo.
-      var newBalance = await balanceCheck()
+      var newBalance = await balanceCheck(walletName)
       console.log(newBalance['balance']);
       console.log(fees);
       console.log(receiverBalance);

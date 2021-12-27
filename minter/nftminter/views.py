@@ -6,7 +6,7 @@ from django.shortcuts import render,redirect
 from django.urls import reverse
 import numpy as np
 from PIL import Image
-from .models import User
+from .models import ImageForm, User
 from django.http import JsonResponse
 import json
 import random
@@ -51,6 +51,20 @@ def create_presigned_url(bucket_name, object_name, expiration=3600):
     # The response contains the presigned URL
     return response
 
+@csrf_exempt
+def createWallet(request):
+    print("entered in createWallet")
+    if request.method == "POST":
+        walletName = json.loads(request.body)
+        url ='http://localhost:3000/createWallet'
+        data = {'walletName': walletName}
+        response = requests.get(url, json=data)
+        print(response.text)
+        return JsonResponse({"message": "Wallet created successfully."}, status=201)
+    else:
+        return JsonResponse({"message": "Error creating wallet."}, status=400)
+
+
 
 @csrf_exempt
 def balanceCheck(request):
@@ -63,11 +77,10 @@ def balanceCheck(request):
     cnodeReturned = json.loads(response.content)
     print(cnodeReturned["balance"])
 
-    return JsonResponse({"balance": cnodeReturned["balance"]})
+    return JsonResponse({"message": "Balance retrieved successfully.", "balance": cnodeReturned["balance"], "senderadress":cnodeReturned["senderadress"] }, status=201)
     
 @csrf_exempt
 def mintAsset(request):
-
     mintData = json.loads(request.body)
     print("entering mintAsset on Views.")
     print(mintData)
