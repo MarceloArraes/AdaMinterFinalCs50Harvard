@@ -6,7 +6,7 @@ from django.shortcuts import render,redirect
 from django.urls import reverse
 import numpy as np
 from PIL import Image
-from .models import ImageForm, User
+from .models import  User
 from django.http import JsonResponse
 import json
 import random
@@ -75,7 +75,6 @@ def balanceCheck(request):
     #fee_value = {'fee':json.dumps(fee)}
     response = requests.get(url, headers=headers)
     cnodeReturned = json.loads(response.content)
-    print(cnodeReturned["balance"])
 
     return JsonResponse({"message": "Balance retrieved successfully.", "balance": cnodeReturned["balance"], "senderadress":cnodeReturned["senderadress"] }, status=201)
     

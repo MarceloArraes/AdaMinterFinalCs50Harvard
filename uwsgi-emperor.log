@@ -10100,3 +10100,2053 @@ announcing my loyalty to the Emperor...
 [pid: 1316|app: 0|req: 1/3] 162.142.125.42 () {36 vars in 457 bytes} [Sat Dec 25 02:48:07 2021] GET / => generated 143 bytes in 943 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
 announcing my loyalty to the Emperor...
 [pid: 1316|app: 0|req: 2/4] 34.140.248.32 () {44 vars in 578 bytes} [Sat Dec 25 03:06:44 2021] GET / => generated 143 bytes in 18 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Dec 29 13:08:14 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55641c0f4500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 33 seconds on interpreter 0x55641c0f4500 pid: 911 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 911)
+spawned uWSGI worker 1 (pid: 1161, cores: 1)
+spawned uWSGI worker 2 (pid: 1162, cores: 1)
+spawned uWSGI worker 3 (pid: 1163, cores: 1)
+spawned uWSGI worker 4 (pid: 1164, cores: 1)
+spawned uWSGI worker 5 (pid: 1165, cores: 1)
+spawned uWSGI worker 6 (pid: 1166, cores: 1)
+spawned uWSGI worker 7 (pid: 1167, cores: 1)
+spawned uWSGI worker 8 (pid: 1168, cores: 1)
+spawned uWSGI worker 9 (pid: 1169, cores: 1)
+spawned uWSGI worker 10 (pid: 1170, cores: 1)
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/http/request.py", line 149, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '179.182.133.68'. You may need to add '179.182.133.68' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 131, in get_exception_response
+    callback = resolver.resolve_error_handler(status_code)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 106, in response_for_exception
+    response = get_exception_response(request, get_resolver(get_urlconf()), 400, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 135, in get_exception_response
+    response = handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1161|app: 0|req: 1/1] 128.1.248.42 () {36 vars in 500 bytes} [Wed Dec 29 15:15:36 2021] GET / => generated 0 bytes in 1342 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/http/request.py", line 149, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '179.182.133.68:443'. You may need to add '179.182.133.68' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 131, in get_exception_response
+    callback = resolver.resolve_error_handler(status_code)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 106, in response_for_exception
+    response = get_exception_response(request, get_resolver(get_urlconf()), 400, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 135, in get_exception_response
+    response = handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1170|app: 0|req: 1/2] 2.57.121.44 () {36 vars in 415 bytes} [Wed Dec 29 16:01:42 2021] GET / => generated 0 bytes in 232 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/http/request.py", line 149, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '179.182.133.68'. You may need to add '179.182.133.68' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 131, in get_exception_response
+    callback = resolver.resolve_error_handler(status_code)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 106, in response_for_exception
+    response = get_exception_response(request, get_resolver(get_urlconf()), 400, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 135, in get_exception_response
+    response = handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1163|app: 0|req: 1/3] 138.246.253.24 () {32 vars in 476 bytes} [Wed Dec 29 17:02:46 2021] GET /robots.txt => generated 0 bytes in 238 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1170|app: 0|req: 2/4] 66.249.75.71 () {38 vars in 539 bytes} [Wed Dec 29 17:23:10 2021] GET /robots.txt => generated 0 bytes in 37 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1167|app: 0|req: 1/5] 66.249.75.71 () {40 vars in 642 bytes} [Wed Dec 29 17:23:10 2021] GET /upload => generated 0 bytes in 210 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+announcing my loyalty to the Emperor...
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/http/request.py", line 149, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '179.182.133.68'. You may need to add '179.182.133.68' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 131, in get_exception_response
+    callback = resolver.resolve_error_handler(status_code)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 106, in response_for_exception
+    response = get_exception_response(request, get_resolver(get_urlconf()), 400, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 135, in get_exception_response
+    response = handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1167|app: 0|req: 2/6] 192.241.199.239 () {36 vars in 409 bytes} [Wed Dec 29 17:37:18 2021] GET / => generated 0 bytes in 45 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1167|app: 0|req: 3/7] 179.240.3.198 () {56 vars in 1019 bytes} [Wed Dec 29 18:01:38 2021] GET / => generated 0 bytes in 67 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/deprecation.py", line 117, in __call__
+    response = response or self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/base.py", line 130, in get_response
+    response = self._middleware_chain(request)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 49, in inner
+    response = response_for_exception(request, exc)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 114, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/core/handlers/exception.py", line 152, in handle_uncaught_exception
+    callback = resolver.resolve_error_handler(500)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 611, in resolve_error_handler
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./minter/urls.py", line 24, in <module>
+    path("", include("nftminter.urls")),
+  File "/home/cnode/env/md/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/cnode/git/minter/minter/./nftminter/urls.py", line 3, in <module>
+    from . import views
+  File "/home/cnode/git/minter/minter/./nftminter/views.py", line 9, in <module>
+    from .models import ImageForm, User
+ImportError: cannot import name 'ImageForm' from 'nftminter.models' (/home/cnode/git/minter/minter/./nftminter/models.py)
+[pid: 1170|app: 0|req: 3/8] 179.240.3.198 () {52 vars in 920 bytes} [Wed Dec 29 18:01:39 2021] GET /favicon.ico => generated 0 bytes in 17 msecs (HTTP/1.1 500) 0 headers in 0 bytes (1 switches on core 0)
+...brutally killing workers...
+Wed Dec 29 18:11:37 2021 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Dec 29 18:11:39 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558a2cd244f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558a2cd244f0 pid: 911 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 911)
+spawned uWSGI worker 1 (pid: 4143, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:39 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:39 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4143)...
+spawned uWSGI worker 2 (pid: 4144, cores: 1)
+spawned uWSGI worker 3 (pid: 4145, cores: 1)
+spawned uWSGI worker 4 (pid: 4146, cores: 1)
+spawned uWSGI worker 5 (pid: 4147, cores: 1)
+spawned uWSGI worker 6 (pid: 4148, cores: 1)
+spawned uWSGI worker 7 (pid: 4149, cores: 1)
+spawned uWSGI worker 8 (pid: 4150, cores: 1)
+spawned uWSGI worker 9 (pid: 4151, cores: 1)
+spawned uWSGI worker 10 (pid: 4152, cores: 1)
+worker 1 killed successfully (pid: 4143)
+Respawned uWSGI worker 1 (new pid: 4153)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:40 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:40 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4153)...
+worker 1 killed successfully (pid: 4153)
+Respawned uWSGI worker 1 (new pid: 4154)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:41 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:41 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4154)...
+worker 1 killed successfully (pid: 4154)
+Respawned uWSGI worker 1 (new pid: 4155)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:42 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:42 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4155)...
+worker 1 killed successfully (pid: 4155)
+Respawned uWSGI worker 1 (new pid: 4156)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:43 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:43 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4156)...
+worker 1 killed successfully (pid: 4156)
+Respawned uWSGI worker 1 (new pid: 4157)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:44 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:44 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4157)...
+worker 1 killed successfully (pid: 4157)
+Respawned uWSGI worker 1 (new pid: 4158)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:45 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:45 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4158)...
+worker 1 killed successfully (pid: 4158)
+Respawned uWSGI worker 1 (new pid: 4159)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:46 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:46 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4159)...
+worker 1 killed successfully (pid: 4159)
+Respawned uWSGI worker 1 (new pid: 4160)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:47 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:47 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4160)...
+worker 1 killed successfully (pid: 4160)
+Respawned uWSGI worker 1 (new pid: 4161)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:48 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:48 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4161)...
+worker 1 killed successfully (pid: 4161)
+Respawned uWSGI worker 1 (new pid: 4162)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:49 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:49 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4162)...
+worker 1 killed successfully (pid: 4162)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 4163)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:52 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:52 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4163)...
+worker 1 killed successfully (pid: 4163)
+Respawned uWSGI worker 1 (new pid: 4164)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:53 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:53 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4164)...
+worker 1 killed successfully (pid: 4164)
+Respawned uWSGI worker 1 (new pid: 4165)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:54 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:54 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4165)...
+worker 1 killed successfully (pid: 4165)
+Respawned uWSGI worker 1 (new pid: 4167)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:55 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:55 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4167)...
+worker 1 killed successfully (pid: 4167)
+Respawned uWSGI worker 1 (new pid: 4169)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:56 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:56 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4169)...
+worker 1 killed successfully (pid: 4169)
+Respawned uWSGI worker 1 (new pid: 4170)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:57 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:57 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4170)...
+worker 1 killed successfully (pid: 4170)
+Respawned uWSGI worker 1 (new pid: 4171)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:58 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:58 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4171)...
+worker 1 killed successfully (pid: 4171)
+Respawned uWSGI worker 1 (new pid: 4172)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:11:59 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:11:59 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4172)...
+worker 1 killed successfully (pid: 4172)
+Respawned uWSGI worker 1 (new pid: 4173)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:12:00 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:12:00 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4173)...
+worker 1 killed successfully (pid: 4173)
+Respawned uWSGI worker 1 (new pid: 4174)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:12:01 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:12:01 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4174)...
+worker 1 killed successfully (pid: 4174)
+Respawned uWSGI worker 1 (new pid: 4175)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:12:02 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:12:02 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4175)...
+worker 1 killed successfully (pid: 4175)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 4177)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:12:05 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:12:05 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4177)...
+worker 1 killed successfully (pid: 4177)
+Respawned uWSGI worker 1 (new pid: 4178)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Dec 29 18:12:06 2021 - lost communication with the Emperor, goodbye...
+Wed Dec 29 18:12:06 2021 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 4178)...
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Dec 29 18:12:07 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e7bd2ca500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55e7bd2ca500 pid: 4191 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4191)
+spawned uWSGI worker 1 (pid: 4196, cores: 1)
+spawned uWSGI worker 2 (pid: 4197, cores: 1)
+spawned uWSGI worker 3 (pid: 4198, cores: 1)
+spawned uWSGI worker 4 (pid: 4199, cores: 1)
+spawned uWSGI worker 5 (pid: 4200, cores: 1)
+spawned uWSGI worker 6 (pid: 4201, cores: 1)
+spawned uWSGI worker 7 (pid: 4202, cores: 1)
+spawned uWSGI worker 8 (pid: 4203, cores: 1)
+spawned uWSGI worker 9 (pid: 4204, cores: 1)
+spawned uWSGI worker 10 (pid: 4205, cores: 1)
+[pid: 4205|app: 0|req: 1/1] 179.240.3.198 () {56 vars in 1019 bytes} [Wed Dec 29 18:39:19 2021] GET / => generated 16468 bytes in 1816 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 4205|app: 0|req: 2/2] 179.240.3.198 () {52 vars in 920 bytes} [Wed Dec 29 18:39:27 2021] GET /favicon.ico => generated 179 bytes in 21 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: IMG_20211222_162801.jpg (image/jpeg)>]}>
+IMG_20211222_162801.jpg
+https://minterstaticbucket.s3.amazonaws.com/IMG20211222162801.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=a9AaMqtZ5ITXOWB%2FrJRW02k7o2c%3D&Expires=1640806782
+file_url is not None
+[pid: 4204|app: 0|req: 1/3] 179.240.3.198 () {60 vars in 1159 bytes} [Wed Dec 29 18:39:39 2021] POST /upload => generated 242 bytes in 5484 msecs (HTTP/1.1 200) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 4205|app: 0|req: 3/4] 179.240.3.198 () {58 vars in 975 bytes} [Wed Dec 29 18:40:01 2021] POST /createWallet => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 4198|app: 0|req: 1/5] 179.240.3.198 () {58 vars in 975 bytes} [Wed Dec 29 18:40:06 2021] POST /createWallet => generated 179 bytes in 767 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 4198|app: 0|req: 2/6] 179.240.3.198 () {56 vars in 1009 bytes} [Wed Dec 29 18:40:33 2021] GET / => generated 16468 bytes in 18 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: IMG_20211223_122621.jpg (image/jpeg)>]}>
+IMG_20211223_122621.jpg
+https://minterstaticbucket.s3.amazonaws.com/IMG20211223122621.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=asMdNlLXAwkGfKpLLE77UV2emjI%3D&Expires=1640806848
+file_url is not None
+[pid: 4198|app: 0|req: 3/7] 179.240.3.198 () {60 vars in 1149 bytes} [Wed Dec 29 18:40:47 2021] POST /upload => generated 240 bytes in 3205 msecs (HTTP/1.1 200) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 4204|app: 0|req: 2/8] 179.240.3.198 () {58 vars in 965 bytes} [Wed Dec 29 18:41:02 2021] POST /createWallet => generated 179 bytes in 12 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 4196|app: 0|req: 1/9] 179.240.3.198 () {56 vars in 1019 bytes} [Wed Dec 29 18:41:55 2021] GET / => generated 16468 bytes in 774 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+<MultiValueDict: {'upload': [<InMemoryUploadedFile: IMG_20211222_162801.jpg (image/jpeg)>]}>
+IMG_20211222_162801.jpg
+https://minterstaticbucket.s3.amazonaws.com/IMG20211222162801.jpg?AWSAccessKeyId=AKIAY663ZAXW4TVGZG4V&Signature=IeNy8uGXN90uviabFq6K0E5aB%2BY%3D&Expires=1640806930
+file_url is not None
+[pid: 4198|app: 0|req: 4/10] 179.240.3.198 () {60 vars in 1159 bytes} [Wed Dec 29 18:42:09 2021] POST /upload => generated 242 bytes in 2885 msecs (HTTP/1.1 200) 6 headers in 231 bytes (1 switches on core 0)
+[pid: 4198|app: 0|req: 5/11] 179.240.3.198 () {58 vars in 975 bytes} [Wed Dec 29 18:42:20 2021] POST /createWallet => generated 179 bytes in 2 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Dec 30 22:10:26 2021] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55de516fd500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 32 seconds on interpreter 0x55de516fd500 pid: 887 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 887)
+spawned uWSGI worker 1 (pid: 1196, cores: 1)
+spawned uWSGI worker 2 (pid: 1197, cores: 1)
+spawned uWSGI worker 3 (pid: 1198, cores: 1)
+spawned uWSGI worker 4 (pid: 1199, cores: 1)
+spawned uWSGI worker 5 (pid: 1200, cores: 1)
+spawned uWSGI worker 6 (pid: 1201, cores: 1)
+spawned uWSGI worker 7 (pid: 1202, cores: 1)
+spawned uWSGI worker 8 (pid: 1203, cores: 1)
+spawned uWSGI worker 9 (pid: 1204, cores: 1)
+spawned uWSGI worker 10 (pid: 1205, cores: 1)
+[pid: 1205|app: 0|req: 1/1] 51.158.156.78 () {34 vars in 456 bytes} [Thu Dec 30 22:40:20 2021] GET /login.cs => generated 143 bytes in 3295 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1200|app: 0|req: 1/2] 66.249.75.253 () {38 vars in 544 bytes} [Thu Dec 30 22:41:19 2021] GET /robots.txt => generated 179 bytes in 844 msecs (HTTP/1.1 404) 6 headers in 231 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1205|app: 0|req: 2/3] 66.249.75.251 () {42 vars in 816 bytes} [Thu Dec 30 22:41:20 2021] GET /upload => generated 16468 bytes in 103 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
