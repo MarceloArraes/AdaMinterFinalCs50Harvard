@@ -12699,3 +12699,104 @@ entering BalanceCheck on Views.
 announcing my loyalty to the Emperor...
 entering BalanceCheck on Views.
 [pid: 7683|app: 0|req: 4/10] 179.240.31.243 () {58 vars in 978 bytes} [Thu Dec 30 23:12:43 2021] POST /balanceCheck => generated 188 bytes in 397 msecs (HTTP/1.1 201) 6 headers in 236 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Jan  1 17:25:01 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55863e11d500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 36 seconds on interpreter 0x55863e11d500 pid: 927 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 927)
+spawned uWSGI worker 1 (pid: 1259, cores: 1)
+spawned uWSGI worker 2 (pid: 1260, cores: 1)
+spawned uWSGI worker 3 (pid: 1261, cores: 1)
+spawned uWSGI worker 4 (pid: 1262, cores: 1)
+spawned uWSGI worker 5 (pid: 1263, cores: 1)
+spawned uWSGI worker 6 (pid: 1264, cores: 1)
+spawned uWSGI worker 7 (pid: 1265, cores: 1)
+spawned uWSGI worker 8 (pid: 1266, cores: 1)
+spawned uWSGI worker 9 (pid: 1267, cores: 1)
+spawned uWSGI worker 10 (pid: 1268, cores: 1)
+[pid: 1261|app: 0|req: 1/1] 192.241.214.31 () {36 vars in 408 bytes} [Sat Jan  1 17:42:35 2022] GET / => generated 143 bytes in 3003 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1259|app: 0|req: 1/2] 128.14.209.162 () {36 vars in 502 bytes} [Sat Jan  1 17:58:48 2022] GET / => generated 143 bytes in 770 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1261|app: 0|req: 2/3] 185.142.236.43 () {36 vars in 556 bytes} [Sat Jan  1 19:26:33 2022] GET / => generated 143 bytes in 19 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1264|app: 0|req: 1/4] 185.142.236.43 () {32 vars in 374 bytes} [Sat Jan  1 19:27:18 2022] GET /robots.txt => generated 143 bytes in 836 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1261|app: 0|req: 3/5] 185.142.236.43 () {32 vars in 376 bytes} [Sat Jan  1 19:27:20 2022] GET /sitemap.xml => generated 143 bytes in 16 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1260|app: 0|req: 1/6] 185.142.236.43 () {32 vars in 402 bytes} [Sat Jan  1 19:27:22 2022] GET /.well-known/security.txt => generated 143 bytes in 782 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1262|app: 0|req: 1/7] 185.142.236.43 () {38 vars in 529 bytes} [Sat Jan  1 19:27:28 2022] GET /favicon.ico => generated 143 bytes in 803 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Jan  1 22:00:17 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a75feee500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 28 seconds on interpreter 0x55a75feee500 pid: 931 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 931)
+spawned uWSGI worker 1 (pid: 1348, cores: 1)
+spawned uWSGI worker 2 (pid: 1349, cores: 1)
+spawned uWSGI worker 3 (pid: 1350, cores: 1)
+spawned uWSGI worker 4 (pid: 1351, cores: 1)
+spawned uWSGI worker 5 (pid: 1353, cores: 1)
+spawned uWSGI worker 6 (pid: 1354, cores: 1)
+spawned uWSGI worker 7 (pid: 1355, cores: 1)
+spawned uWSGI worker 8 (pid: 1356, cores: 1)
+spawned uWSGI worker 9 (pid: 1357, cores: 1)
+spawned uWSGI worker 10 (pid: 1358, cores: 1)
+[pid: 1354|app: 0|req: 1/1] 2.57.121.44 () {36 vars in 415 bytes} [Sat Jan  1 22:59:20 2022] GET / => generated 143 bytes in 2845 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1355|app: 0|req: 1/2] 2.57.121.44 () {36 vars in 415 bytes} [Sun Jan  2 01:27:21 2022] GET / => generated 143 bytes in 788 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1358|app: 0|req: 1/3] 162.221.192.26 () {36 vars in 526 bytes} [Sun Jan  2 01:54:28 2022] GET /remote/login => generated 143 bytes in 836 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1349|app: 0|req: 1/4] 27.124.5.17 () {32 vars in 346 bytes} [Sun Jan  2 02:04:37 2022] GET / => generated 143 bytes in 776 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1354|app: 0|req: 2/5] 27.124.5.17 () {34 vars in 406 bytes} [Sun Jan  2 02:05:32 2022] GET /favicon.ico => generated 143 bytes in 23 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1358|app: 0|req: 2/6] 27.124.5.17 () {34 vars in 404 bytes} [Sun Jan  2 02:05:38 2022] GET /robots.txt => generated 143 bytes in 19 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1358|app: 0|req: 3/7] 27.124.5.17 () {34 vars in 406 bytes} [Sun Jan  2 02:05:40 2022] GET /sitemap.xml => generated 143 bytes in 16 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)

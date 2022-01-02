@@ -108,7 +108,7 @@ app.get('/mintAsset', async (req, res) => {
 })
 
 
-app.get('/', (req, res) => {
+app.get('/fees', (req, res) => {
   metad = JSON.parse(req.headers.metadata);
   
   if(metad.title == "" || metad.title === undefined)
