@@ -12800,3 +12800,475 @@ announcing my loyalty to the Emperor...
 [pid: 1354|app: 0|req: 2/5] 27.124.5.17 () {34 vars in 406 bytes} [Sun Jan  2 02:05:32 2022] GET /favicon.ico => generated 143 bytes in 23 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
 [pid: 1358|app: 0|req: 2/6] 27.124.5.17 () {34 vars in 404 bytes} [Sun Jan  2 02:05:38 2022] GET /robots.txt => generated 143 bytes in 19 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
 [pid: 1358|app: 0|req: 3/7] 27.124.5.17 () {34 vars in 406 bytes} [Sun Jan  2 02:05:40 2022] GET /sitemap.xml => generated 143 bytes in 16 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Sun Jan  2 19:11:37 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559e0243d500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 37 seconds on interpreter 0x559e0243d500 pid: 971 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 971)
+spawned uWSGI worker 1 (pid: 2419, cores: 1)
+spawned uWSGI worker 2 (pid: 2420, cores: 1)
+spawned uWSGI worker 3 (pid: 2421, cores: 1)
+spawned uWSGI worker 4 (pid: 2422, cores: 1)
+spawned uWSGI worker 5 (pid: 2423, cores: 1)
+spawned uWSGI worker 6 (pid: 2424, cores: 1)
+spawned uWSGI worker 7 (pid: 2425, cores: 1)
+spawned uWSGI worker 8 (pid: 2426, cores: 1)
+spawned uWSGI worker 9 (pid: 2427, cores: 1)
+spawned uWSGI worker 10 (pid: 2428, cores: 1)
+[pid: 2427|app: 0|req: 1/1] 80.82.77.192 () {36 vars in 500 bytes} [Sun Jan  2 21:09:00 2022] GET / => generated 143 bytes in 2841 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 2423|app: 0|req: 1/2] 2.57.121.44 () {36 vars in 415 bytes} [Sun Jan  2 22:17:06 2022] GET / => generated 143 bytes in 884 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 2419|app: 0|req: 1/3] 109.237.103.9 () {38 vars in 537 bytes} [Sun Jan  2 23:57:02 2022] GET /.env => generated 143 bytes in 768 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 2428|app: 0|req: 1/4] 128.1.248.42 () {36 vars in 500 bytes} [Mon Jan  3 01:57:22 2022] GET / => generated 143 bytes in 840 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Jan  5 03:51:54 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x560eae33a500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 36 seconds on interpreter 0x560eae33a500 pid: 987 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 987)
+spawned uWSGI worker 1 (pid: 1274, cores: 1)
+spawned uWSGI worker 2 (pid: 1275, cores: 1)
+spawned uWSGI worker 3 (pid: 1276, cores: 1)
+spawned uWSGI worker 4 (pid: 1277, cores: 1)
+spawned uWSGI worker 5 (pid: 1278, cores: 1)
+spawned uWSGI worker 6 (pid: 1279, cores: 1)
+spawned uWSGI worker 7 (pid: 1280, cores: 1)
+spawned uWSGI worker 8 (pid: 1281, cores: 1)
+spawned uWSGI worker 9 (pid: 1282, cores: 1)
+spawned uWSGI worker 10 (pid: 1283, cores: 1)
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Jan  5 04:11:24 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558edb8aa500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 35 seconds on interpreter 0x558edb8aa500 pid: 821 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 821)
+spawned uWSGI worker 1 (pid: 1251, cores: 1)
+spawned uWSGI worker 2 (pid: 1252, cores: 1)
+spawned uWSGI worker 3 (pid: 1253, cores: 1)
+spawned uWSGI worker 4 (pid: 1254, cores: 1)
+spawned uWSGI worker 5 (pid: 1255, cores: 1)
+spawned uWSGI worker 6 (pid: 1256, cores: 1)
+spawned uWSGI worker 7 (pid: 1257, cores: 1)
+spawned uWSGI worker 8 (pid: 1258, cores: 1)
+spawned uWSGI worker 9 (pid: 1259, cores: 1)
+spawned uWSGI worker 10 (pid: 1260, cores: 1)
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Jan  5 14:47:54 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b15833e500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 31 seconds on interpreter 0x55b15833e500 pid: 924 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 924)
+spawned uWSGI worker 1 (pid: 1332, cores: 1)
+spawned uWSGI worker 2 (pid: 1333, cores: 1)
+spawned uWSGI worker 3 (pid: 1334, cores: 1)
+spawned uWSGI worker 4 (pid: 1335, cores: 1)
+spawned uWSGI worker 5 (pid: 1336, cores: 1)
+spawned uWSGI worker 6 (pid: 1337, cores: 1)
+spawned uWSGI worker 7 (pid: 1338, cores: 1)
+spawned uWSGI worker 8 (pid: 1339, cores: 1)
+spawned uWSGI worker 9 (pid: 1340, cores: 1)
+spawned uWSGI worker 10 (pid: 1341, cores: 1)
+[pid: 1332|app: 0|req: 1/1] 192.241.217.244 () {36 vars in 439 bytes} [Wed Jan  5 15:19:11 2022] GET /actuator/health => generated 143 bytes in 3302 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+...brutally killing workers...
+Wed Jan  5 15:40:46 2022 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cnode/env/md/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/cnode/git/minter/minter/minter.sock)
+running /home/cnode/env/md/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from minter_uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Jan  5 15:40:47 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557c632164f0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557c632164f0 pid: 924 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 924)
+spawned uWSGI worker 1 (pid: 34729, cores: 1)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:48 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:48 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34729)...
+spawned uWSGI worker 2 (pid: 34730, cores: 1)
+spawned uWSGI worker 3 (pid: 34731, cores: 1)
+spawned uWSGI worker 4 (pid: 34732, cores: 1)
+spawned uWSGI worker 5 (pid: 34733, cores: 1)
+spawned uWSGI worker 6 (pid: 34734, cores: 1)
+spawned uWSGI worker 7 (pid: 34735, cores: 1)
+spawned uWSGI worker 8 (pid: 34736, cores: 1)
+spawned uWSGI worker 9 (pid: 34737, cores: 1)
+spawned uWSGI worker 10 (pid: 34738, cores: 1)
+worker 1 killed successfully (pid: 34729)
+Respawned uWSGI worker 1 (new pid: 34739)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:49 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:49 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34739)...
+worker 1 killed successfully (pid: 34739)
+Respawned uWSGI worker 1 (new pid: 34740)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:50 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:50 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34740)...
+worker 1 killed successfully (pid: 34740)
+Respawned uWSGI worker 1 (new pid: 34741)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:51 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:51 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34741)...
+worker 1 killed successfully (pid: 34741)
+Respawned uWSGI worker 1 (new pid: 34742)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:52 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:52 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34742)...
+worker 1 killed successfully (pid: 34742)
+Respawned uWSGI worker 1 (new pid: 34743)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:53 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:53 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34743)...
+worker 1 killed successfully (pid: 34743)
+Respawned uWSGI worker 1 (new pid: 34744)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:54 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:54 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34744)...
+worker 1 killed successfully (pid: 34744)
+Respawned uWSGI worker 1 (new pid: 34745)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:55 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:55 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34745)...
+worker 1 killed successfully (pid: 34745)
+Respawned uWSGI worker 1 (new pid: 34746)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:56 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:56 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34746)...
+worker 1 killed successfully (pid: 34746)
+Respawned uWSGI worker 1 (new pid: 34747)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:57 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:57 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34747)...
+worker 1 killed successfully (pid: 34747)
+Respawned uWSGI worker 1 (new pid: 34748)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:40:58 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:40:58 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34748)...
+worker 1 killed successfully (pid: 34748)
+worker respawning too fast !!! i have to sleep a bit (2 seconds)...
+Respawned uWSGI worker 1 (new pid: 34749)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:01 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:01 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34749)...
+worker 1 killed successfully (pid: 34749)
+Respawned uWSGI worker 1 (new pid: 34750)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:02 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:02 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34750)...
+worker 1 killed successfully (pid: 34750)
+Respawned uWSGI worker 1 (new pid: 34751)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:03 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:03 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34751)...
+worker 1 killed successfully (pid: 34751)
+Respawned uWSGI worker 1 (new pid: 34752)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:04 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:04 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34752)...
+worker 1 killed successfully (pid: 34752)
+Respawned uWSGI worker 1 (new pid: 34753)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:06 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:06 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34753)...
+worker 1 killed successfully (pid: 34753)
+Respawned uWSGI worker 1 (new pid: 34754)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:07 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:07 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34754)...
+worker 1 killed successfully (pid: 34754)
+Respawned uWSGI worker 1 (new pid: 34755)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:08 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:08 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34755)...
+worker 1 killed successfully (pid: 34755)
+Respawned uWSGI worker 1 (new pid: 34756)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:09 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:09 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34756)...
+worker 1 killed successfully (pid: 34756)
+Respawned uWSGI worker 1 (new pid: 34757)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:10 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:10 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34757)...
+worker 1 killed successfully (pid: 34757)
+Respawned uWSGI worker 1 (new pid: 34758)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:11 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:11 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34758)...
+worker 1 killed successfully (pid: 34758)
+Respawned uWSGI worker 1 (new pid: 34759)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:12 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:12 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34759)...
+worker 1 killed successfully (pid: 34759)
+Respawned uWSGI worker 1 (new pid: 34760)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:13 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:13 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34760)...
+worker 1 killed successfully (pid: 34760)
+Respawned uWSGI worker 1 (new pid: 34761)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:14 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:14 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34761)...
+worker 1 killed successfully (pid: 34761)
+Respawned uWSGI worker 1 (new pid: 34762)
+emperor-i-am-ready-to-accept/write(): Bad file descriptor [core/uwsgi.c line 3578]
+Wed Jan  5 15:41:15 2022 - lost communication with the Emperor, goodbye...
+Wed Jan  5 15:41:15 2022 - graceful shutdown triggered...
+Gracefully killing worker 1 (pid: 34762)...
+*** Starting uWSGI 2.0.20 (64bit) on [Wed Jan  5 15:42:00 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55939cd1a500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 24 seconds on interpreter 0x55939cd1a500 pid: 950 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 950)
+spawned uWSGI worker 1 (pid: 1367, cores: 1)
+spawned uWSGI worker 2 (pid: 1368, cores: 1)
+spawned uWSGI worker 3 (pid: 1369, cores: 1)
+spawned uWSGI worker 4 (pid: 1370, cores: 1)
+spawned uWSGI worker 5 (pid: 1371, cores: 1)
+spawned uWSGI worker 6 (pid: 1372, cores: 1)
+spawned uWSGI worker 7 (pid: 1373, cores: 1)
+spawned uWSGI worker 8 (pid: 1374, cores: 1)
+spawned uWSGI worker 9 (pid: 1375, cores: 1)
+spawned uWSGI worker 10 (pid: 1376, cores: 1)
+[pid: 1376|app: 0|req: 1/1] 192.241.195.22 () {36 vars in 558 bytes} [Wed Jan  5 16:24:54 2022] GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application => generated 143 bytes in 2845 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1370|app: 0|req: 1/2] 192.241.217.125 () {36 vars in 447 bytes} [Wed Jan  5 16:27:54 2022] GET /owa/auth/logon.aspx => generated 143 bytes in 877 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1374|app: 0|req: 1/3] 192.241.195.22 () {38 vars in 569 bytes} [Wed Jan  5 16:28:10 2022] GET /owa/auth/x.js => generated 143 bytes in 793 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1374|app: 0|req: 2/4] 154.209.125.33 () {36 vars in 474 bytes} [Wed Jan  5 16:38:43 2022] GET / => generated 143 bytes in 27 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+[pid: 1367|app: 0|req: 1/5] 161.35.188.242 () {34 vars in 379 bytes} [Wed Jan  5 17:05:17 2022] GET / => generated 143 bytes in 820 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1367|app: 0|req: 2/6] 161.35.188.242 () {36 vars in 491 bytes} [Wed Jan  5 17:05:19 2022] GET /global-protect/portal/images/favicon.ico => generated 143 bytes in 18 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1374|app: 0|req: 3/7] 161.35.188.242 () {36 vars in 429 bytes} [Wed Jan  5 17:05:19 2022] GET /.DS_Store => generated 143 bytes in 19 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1374|app: 0|req: 4/8] 161.35.188.242 () {36 vars in 444 bytes} [Wed Jan  5 17:05:20 2022] GET /frontend_dev.php/$ => generated 143 bytes in 19 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+[pid: 1375|app: 0|req: 1/9] 161.35.188.242 () {36 vars in 451 bytes} [Wed Jan  5 17:05:20 2022] GET /api/search?folderIds=0 => generated 143 bytes in 821 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1374|app: 0|req: 5/10] 161.35.86.181 () {34 vars in 378 bytes} [Wed Jan  5 18:29:50 2022] GET / => generated 143 bytes in 19 msecs (HTTP/1.1 400) 4 headers in 189 bytes (2 switches on core 0)
+[pid: 1374|app: 0|req: 6/11] 161.35.86.181 () {36 vars in 490 bytes} [Wed Jan  5 18:29:52 2022] GET /global-protect/portal/images/favicon.ico => generated 143 bytes in 20 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1374|app: 0|req: 7/12] 161.35.86.181 () {36 vars in 428 bytes} [Wed Jan  5 18:29:53 2022] GET /.DS_Store => generated 143 bytes in 16 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1374|app: 0|req: 8/13] 161.35.86.181 () {36 vars in 429 bytes} [Wed Jan  5 18:29:53 2022] GET /idx_config/ => generated 143 bytes in 15 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1374|app: 0|req: 9/14] 2.57.121.44 () {36 vars in 415 bytes} [Wed Jan  5 18:45:18 2022] GET / => generated 143 bytes in 15 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1367|app: 0|req: 3/15] 193.118.53.194 () {36 vars in 502 bytes} [Wed Jan  5 19:05:50 2022] GET / => generated 143 bytes in 16 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+[pid: 1374|app: 0|req: 10/16] 192.241.216.166 () {36 vars in 409 bytes} [Wed Jan  5 19:16:13 2022] GET / => generated 143 bytes in 15 msecs (HTTP/1.1 400) 4 headers in 189 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan  6 22:32:52 2022] ***
+compiled with version: 9.3.0 on 03 December 2021 15:01:46
+os: Linux-5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+nodename: cardano
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/cnode/env/md/vassals
+detected binary path: /home/cnode/env/md/bin/uwsgi
+chdir() to /home/cnode/git/minter/minter/
+your processes number limit is 39057
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cnode/git/minter/minter/minter.sock fd 3
+Python version: 3.8.10 (default, Nov 26 2021, 20:14:08)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/cnode/env/md
+Set PythonHome to /home/cnode/env/md
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b698add500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 32 seconds on interpreter 0x55b698add500 pid: 969 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 969)
+spawned uWSGI worker 1 (pid: 1265, cores: 1)
+spawned uWSGI worker 2 (pid: 1266, cores: 1)
+spawned uWSGI worker 3 (pid: 1267, cores: 1)
+spawned uWSGI worker 4 (pid: 1268, cores: 1)
+spawned uWSGI worker 5 (pid: 1269, cores: 1)
+spawned uWSGI worker 6 (pid: 1270, cores: 1)
+spawned uWSGI worker 7 (pid: 1271, cores: 1)
+spawned uWSGI worker 8 (pid: 1272, cores: 1)
+spawned uWSGI worker 9 (pid: 1273, cores: 1)
+spawned uWSGI worker 10 (pid: 1274, cores: 1)

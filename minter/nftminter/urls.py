@@ -11,7 +11,6 @@ urlpatterns = [
     path("login", views.login_view, name="login"),
     path("logout", views.logout_view, name="logout"),
     path("register", views.register, name="register"),
-    path("node", views.node, name="node"),
     path("createWallet", views.createWallet, name="createWallet"),
     path("balanceCheck", views.balanceCheck, name="balanceCheck"),
     path("mintAsset", views.mintAsset, name="mintAsset"),

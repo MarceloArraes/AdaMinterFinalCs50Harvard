@@ -6,7 +6,7 @@ from django.shortcuts import render,redirect
 from django.urls import reverse
 import numpy as np
 from PIL import Image
-from .models import  User
+from .models import User
 from django.http import JsonResponse
 import json
 import random
@@ -107,41 +107,29 @@ def ipfsRegister(request):
         if file_url is not None:
             #response = requests.get(file_url)
             print("file_url is not None")
+            #when on local test i can use this:
             #localfile_url = default_storage.url(file)
+
+            #Task: make the path less hardcoded
             localfile_url = '/home/cnode/git/minter/minter/nftminter/static/media/'+filename
+
             ipfs_hash = subprocess.check_output([f'{node_path}','./nftminter/static/ipfs/_pinImgToPinata.js', localfile_url,])
-        #here i put a else with the error message as JsonResponse.
         hashConfirmation1 = ipfs_hash.decode().strip()
-        #print(hashConfirmation1)
-        #I can responde as a JSON, maybe that way would be better. 
         return JsonResponse({'file_url': file_url, 'ipfs_hash': hashConfirmation1})
     return render(request, 'nftminter/upload.html')
 
 @csrf_exempt
-def node(request):
-    #here i have to implement something to fix the random to the user/browser. LOCALSTORAGE maybe? 
+def fees(request):
     profitfee = 4000000.0
-    #profitfee = random.uniform(3.1,3.2)
-    #profitfee = round(profitfee *1000000,4)
-    #profitfee = 3000000
     if(request.method == 'POST'):
         metadataOrigem = json.loads(request.body)
         print(f"this is the method: {request.method}. \n and the body title:{metadataOrigem['title']}")
-    url = 'http://localhost:3000/'
+    url = 'http://localhost:3000/fees'
     headers = {'metadata': json.dumps(metadataOrigem)}
-    #fee_value = {'fee':json.dumps(fee)}
     response = requests.get(url, headers=headers)
     cnodeReturned = json.loads(response.content)
     return JsonResponse({"metadata": cnodeReturned["metadata"], 'fee':float(cnodeReturned["fee"])+profitfee, 'wallet':cnodeReturned["wallet"]}, status=201)
 
-
-def fees(request):
-    js_1 = 'console.log("Running JavaScript in Python")'
-    res1 = js2py.eval_js(js_1)
-    # Print the result
-    res1
-
-    return JsonResponse({"message": "Like retrieved successfully."}, status=201)
 
 def login_view(request):
     if request.method == "POST":
