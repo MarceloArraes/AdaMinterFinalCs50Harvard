@@ -33,8 +33,8 @@ def create_presigned_url(bucket_name, object_name, expiration=3600):
     :return: Presigned URL as string. If error, returns None.
     """
     s3_client = boto3.client('s3',
-                        aws_access_key_id = 'AKIAY663ZAXW4TVGZG4V',
-                        aws_secret_access_key = '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')
+                        aws_access_key_id = '',
+                        aws_secret_access_key = '')
 
     # Generate a presigned URL for the S3 object
     #s3_client = boto3.client('s3')
@@ -98,7 +98,7 @@ def ipfsRegister(request):
         filename = ''.join(filter(str.isalnum, upload.name))
         filename = filename[:-3]+"."+filename[-3:]
         #i have to save the file on aws before send the url to the _pinImgToIPFS
-        s3 = boto3.resource('s3', aws_access_key_id='AKIAY663ZAXW4TVGZG4V', aws_secret_access_key='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')
+        s3 = boto3.resource('s3', aws_access_key_id='', aws_secret_access_key='')
         bucket = s3.Bucket('minterstaticbucket')
         bucket.put_object(Key=filename, Body=upload)
         file_url = create_presigned_url('minterstaticbucket', '%s' % filename)
